@@ -1,0 +1,210 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{B9FDD5F4-15F7-4C81-BC77-0EF561C3BF8B}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>ProjetoTCC</RootNamespace>
+    <AssemblyName>ProjetoTCC</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAddCriancas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAddCriancas.Designer.cs">
+      <DependentUpon>frmAddCriancas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAddDados.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAddDados.Designer.cs">
+      <DependentUpon>frmAddDados.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAddPets.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAddPets.Designer.cs">
+      <DependentUpon>frmAddPets.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAltCriancas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAltCriancas.Designer.cs">
+      <DependentUpon>frmAltCriancas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAltDados.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAltDados.Designer.cs">
+      <DependentUpon>frmAltDados.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAltPets.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAltPets.Designer.cs">
+      <DependentUpon>frmAltPets.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAptos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAptos.Designer.cs">
+      <DependentUpon>frmAptos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCriancas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCriancas.Designer.cs">
+      <DependentUpon>frmCriancas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmLocacao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLocacao.Designer.cs">
+      <DependentUpon>frmLocacao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMenu.Designer.cs">
+      <DependentUpon>frmMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmObras.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmObras.Designer.cs">
+      <DependentUpon>frmObras.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmOcorrencias.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmOcorrencias.Designer.cs">
+      <DependentUpon>frmOcorrencias.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPets.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPets.Designer.cs">
+      <DependentUpon>frmPets.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmVeiculos.cs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmVeiculos.cs.Designer.cs">
+      <DependentUpon>frmVeiculos.cs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAddCriancas.resx">
+      <DependentUpon>frmAddCriancas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAddDados.resx">
+      <DependentUpon>frmAddDados.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAddPets.resx">
+      <DependentUpon>frmAddPets.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAltCriancas.resx">
+      <DependentUpon>frmAltCriancas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAltDados.resx">
+      <DependentUpon>frmAltDados.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAltPets.resx">
+      <DependentUpon>frmAltPets.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAptos.resx">
+      <DependentUpon>frmAptos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCriancas.resx">
+      <DependentUpon>frmCriancas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLocacao.resx">
+      <DependentUpon>frmLocacao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMenu.resx">
+      <DependentUpon>frmMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmObras.resx">
+      <DependentUpon>frmObras.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmOcorrencias.resx">
+      <DependentUpon>frmOcorrencias.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPets.resx">
+      <DependentUpon>frmPets.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmVeiculos.cs.resx">
+      <DependentUpon>frmVeiculos.cs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
