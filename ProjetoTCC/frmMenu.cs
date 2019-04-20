@@ -35,7 +35,10 @@ namespace ProjetoTCC
 
         private void btnMoradores_Click(object sender, EventArgs e)
         {
-
+            this.Hide();
+            frmMoradores morador = new frmMoradores();
+            morador.Closed += (s, args) => this.Close();
+            morador.Show();
         }
 
         private void btnAnimais_Click(object sender, EventArgs e)

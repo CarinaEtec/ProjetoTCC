@@ -20,9 +20,9 @@ namespace ProjetoTCC
         private void btnVoltar_Click(object sender, EventArgs e)
         {
             this.Hide();
-            frmAltDados menuzinho = new frmAltDados();
-            menuzinho.Closed += (s, args) => this.Close();
-            menuzinho.Show();
+            frmAltPets1 busca = new frmAltPets1();
+            busca.Closed += (s, args) => this.Close();
+            busca.Show();
         }
     }
 }

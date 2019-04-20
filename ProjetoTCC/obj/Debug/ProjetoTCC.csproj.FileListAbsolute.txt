@@ -90,3 +90,9 @@ C:\Users\carina\Downloads\tcc\ProjetoTCC\ProjetoTCC\obj\Debug\ProjetoTCC.frmVeic
 C:\Users\carina\Downloads\tcc\ProjetoTCC\ProjetoTCC\obj\Debug\ProjetoTCC.frmAltCriancas.resources
 C:\Users\carina\Downloads\tcc\ProjetoTCC\ProjetoTCC\obj\Debug\ProjetoTCC.frmAltDados.resources
 C:\Users\carina\Downloads\tcc\ProjetoTCC\ProjetoTCC\obj\Debug\ProjetoTCC.frmAltPets.resources
+C:\Users\carina\Downloads\tcc\ProjetoTCC\ProjetoTCC\obj\Debug\ProjetoTCC.frmAltCriancas1.resources
+C:\Users\carina\Downloads\tcc\ProjetoTCC\ProjetoTCC\obj\Debug\ProjetoTCC.frmAltPets1.resources
+C:\Users\carina\Downloads\tcc\ProjetoTCC\ProjetoTCC\obj\Debug\ProjetoTCC.frmAddMorador.resources
+C:\Users\carina\Downloads\tcc\ProjetoTCC\ProjetoTCC\obj\Debug\ProjetoTCC.frmMoradores.resources
+C:\Users\carina\Downloads\tcc\ProjetoTCC\ProjetoTCC\obj\Debug\ProjetoTCC.frmAltMorador.resources
+C:\Users\carina\Downloads\tcc\ProjetoTCC\ProjetoTCC\obj\Debug\ProjetoTCC.frmAltMorador1.resources

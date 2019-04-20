@@ -70,6 +70,7 @@
             this.btnMoradores.TabIndex = 35;
             this.btnMoradores.Text = "Moradores";
             this.btnMoradores.UseVisualStyleBackColor = true;
+            this.btnMoradores.Click += new System.EventHandler(this.btnMoradores_Click);
             // 
             // btnObras
             // 

@@ -10,29 +10,19 @@ using System.Windows.Forms;
 
 namespace ProjetoTCC
 {
-    public partial class frmAltCriancas : Form
+    public partial class frmAddMorador : Form
     {
-        public frmAltCriancas()
+        public frmAddMorador()
         {
             InitializeComponent();
-        }
-
-        private void btnAlterar_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void btnVoltar_Click(object sender, EventArgs e)
         {
             this.Hide();
-            frmAltCriancas1 busca = new frmAltCriancas1();
-            busca.Closed += (s, args) => this.Close();
-            busca.Show();
-        }
-
-        private void btnExcluir_Click(object sender, EventArgs e)
-        {
-
+            frmAddDados add = new frmAddDados();
+            add.Closed += (s, args) => this.Close();
+            add.Show();
         }
     }
 }

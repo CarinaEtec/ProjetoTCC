@@ -40,5 +40,13 @@ namespace ProjetoTCC
             menuzinho.Closed += (s, args) => this.Close();
             menuzinho.Show();
         }
+
+        private void btnMoradores_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            frmAddMorador morador = new frmAddMorador();
+            morador.Closed += (s, args) => this.Close();
+            morador.Show();
+        }
     }
 }

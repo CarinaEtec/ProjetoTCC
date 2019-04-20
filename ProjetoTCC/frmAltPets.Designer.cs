@@ -53,9 +53,9 @@
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.Location = new System.Drawing.Point(195, 38);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(199, 39);
+            this.label7.Size = new System.Drawing.Size(236, 39);
             this.label7.TabIndex = 56;
-            this.label7.Text = "Alterar Pets";
+            this.label7.Text = "Alterar Animal";
             // 
             // btnAlterar
             // 
@@ -103,9 +103,9 @@
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.Location = new System.Drawing.Point(41, 328);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(137, 24);
+            this.label6.Size = new System.Drawing.Size(84, 24);
             this.label6.TabIndex = 74;
-            this.label6.Text = "Espécie / Raça";
+            this.label6.Text = "Espécie ";
             // 
             // txtRaca
             // 

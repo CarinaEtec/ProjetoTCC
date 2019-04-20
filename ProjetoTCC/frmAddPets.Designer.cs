@@ -58,7 +58,7 @@
             // btnVoltar
             // 
             this.btnVoltar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnVoltar.Location = new System.Drawing.Point(505, 597);
+            this.btnVoltar.Location = new System.Drawing.Point(513, 601);
             this.btnVoltar.Name = "btnVoltar";
             this.btnVoltar.Size = new System.Drawing.Size(139, 59);
             this.btnVoltar.TabIndex = 42;
@@ -69,7 +69,7 @@
             // btnCadastrar
             // 
             this.btnCadastrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCadastrar.Location = new System.Drawing.Point(505, 495);
+            this.btnCadastrar.Location = new System.Drawing.Point(513, 516);
             this.btnCadastrar.Name = "btnCadastrar";
             this.btnCadastrar.Size = new System.Drawing.Size(139, 59);
             this.btnCadastrar.TabIndex = 41;
@@ -82,9 +82,9 @@
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.Location = new System.Drawing.Point(194, 40);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(249, 39);
+            this.label7.Size = new System.Drawing.Size(304, 39);
             this.label7.TabIndex = 40;
-            this.label7.Text = "Cadastrar Pets";
+            this.label7.Text = "Cadastrar Animais";
             // 
             // label6
             // 
@@ -92,9 +92,9 @@
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.Location = new System.Drawing.Point(41, 330);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(137, 24);
+            this.label6.Size = new System.Drawing.Size(84, 24);
             this.label6.TabIndex = 39;
-            this.label6.Text = "Espécie / Raça";
+            this.label6.Text = "Espécie ";
             // 
             // txtRaca
             // 

@@ -64,6 +64,12 @@
     <Compile Include="frmAddDados.Designer.cs">
       <DependentUpon>frmAddDados.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmAddMorador.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAddMorador.Designer.cs">
+      <DependentUpon>frmAddMorador.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmAddPets.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -76,17 +82,41 @@
     <Compile Include="frmAltCriancas.Designer.cs">
       <DependentUpon>frmAltCriancas.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmAltCriancas1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAltCriancas1.Designer.cs">
+      <DependentUpon>frmAltCriancas1.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmAltDados.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmAltDados.Designer.cs">
       <DependentUpon>frmAltDados.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmAltMorador.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAltMorador.Designer.cs">
+      <DependentUpon>frmAltMorador.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAltMorador1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAltMorador1.Designer.cs">
+      <DependentUpon>frmAltMorador1.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmAltPets.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmAltPets.Designer.cs">
       <DependentUpon>frmAltPets.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAltPets1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAltPets1.Designer.cs">
+      <DependentUpon>frmAltPets1.cs</DependentUpon>
     </Compile>
     <Compile Include="frmAptos.cs">
       <SubType>Form</SubType>
@@ -111,6 +141,12 @@
     </Compile>
     <Compile Include="frmMenu.Designer.cs">
       <DependentUpon>frmMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMoradores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMoradores.Designer.cs">
+      <DependentUpon>frmMoradores.cs</DependentUpon>
     </Compile>
     <Compile Include="frmObras.cs">
       <SubType>Form</SubType>
@@ -152,17 +188,32 @@
     <EmbeddedResource Include="frmAddDados.resx">
       <DependentUpon>frmAddDados.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmAddMorador.resx">
+      <DependentUpon>frmAddMorador.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmAddPets.resx">
       <DependentUpon>frmAddPets.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmAltCriancas.resx">
       <DependentUpon>frmAltCriancas.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmAltCriancas1.resx">
+      <DependentUpon>frmAltCriancas1.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmAltDados.resx">
       <DependentUpon>frmAltDados.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmAltMorador.resx">
+      <DependentUpon>frmAltMorador.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAltMorador1.resx">
+      <DependentUpon>frmAltMorador1.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmAltPets.resx">
       <DependentUpon>frmAltPets.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAltPets1.resx">
+      <DependentUpon>frmAltPets1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmAptos.resx">
       <DependentUpon>frmAptos.cs</DependentUpon>
@@ -175,6 +226,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmMenu.resx">
       <DependentUpon>frmMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMoradores.resx">
+      <DependentUpon>frmMoradores.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmObras.resx">
       <DependentUpon>frmObras.cs</DependentUpon>
