@@ -48,5 +48,29 @@ namespace ProjetoTCC
             morador.Closed += (s, args) => this.Close();
             morador.Show();
         }
+
+        private void btnLocacao_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            frmAltLocacao1 locacao = new frmAltLocacao1();
+            locacao.Closed += (s, args) => this.Close();
+            locacao.Show();
+        }
+
+        private void btnOcorrencias_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            frmAltOcorrencias1 ocorrencias = new frmAltOcorrencias1();
+            ocorrencias.Closed += (s, args) => this.Close();
+            ocorrencias.Show();
+        }
+
+        private void btnVeiculos_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            frmAltVeiculos1 veiculos = new frmAltVeiculos1();
+            veiculos.Closed += (s, args) => this.Close();
+            veiculos.Show();
+        }
     }
 }

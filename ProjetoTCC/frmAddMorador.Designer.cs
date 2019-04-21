@@ -41,8 +41,8 @@
             this.btnExcluir = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
             this.txtNome = new System.Windows.Forms.TextBox();
-            this.txtBloco = new System.Windows.Forms.TextBox();
             this.txtApto = new System.Windows.Forms.TextBox();
+            this.txtBloco = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -168,21 +168,21 @@
             this.txtNome.Size = new System.Drawing.Size(334, 29);
             this.txtNome.TabIndex = 77;
             // 
-            // txtBloco
-            // 
-            this.txtBloco.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBloco.Location = new System.Drawing.Point(318, 202);
-            this.txtBloco.Name = "txtBloco";
-            this.txtBloco.Size = new System.Drawing.Size(123, 29);
-            this.txtBloco.TabIndex = 79;
-            // 
             // txtApto
             // 
             this.txtApto.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtApto.Location = new System.Drawing.Point(318, 241);
+            this.txtApto.Location = new System.Drawing.Point(318, 202);
             this.txtApto.Name = "txtApto";
-            this.txtApto.Size = new System.Drawing.Size(123, 29);
-            this.txtApto.TabIndex = 78;
+            this.txtApto.Size = new System.Drawing.Size(145, 29);
+            this.txtApto.TabIndex = 79;
+            // 
+            // txtBloco
+            // 
+            this.txtBloco.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBloco.Location = new System.Drawing.Point(318, 241);
+            this.txtBloco.Name = "txtBloco";
+            this.txtBloco.Size = new System.Drawing.Size(143, 29);
+            this.txtBloco.TabIndex = 78;
             // 
             // label6
             // 
@@ -210,9 +210,9 @@
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(66, 202);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(58, 24);
+            this.label2.Size = new System.Drawing.Size(49, 24);
             this.label2.TabIndex = 88;
-            this.label2.Text = "Bloco";
+            this.label2.Text = "Apto";
             // 
             // label1
             // 
@@ -220,9 +220,9 @@
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(66, 241);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(49, 24);
+            this.label1.Size = new System.Drawing.Size(58, 24);
             this.label1.TabIndex = 87;
-            this.label1.Text = "Apto";
+            this.label1.Text = "Bloco";
             // 
             // frmAddMorador
             // 
@@ -242,8 +242,8 @@
             this.Controls.Add(this.btnExcluir);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.txtNome);
-            this.Controls.Add(this.txtBloco);
             this.Controls.Add(this.txtApto);
+            this.Controls.Add(this.txtBloco);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -271,8 +271,8 @@
         private System.Windows.Forms.Button btnExcluir;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox txtNome;
-        private System.Windows.Forms.TextBox txtBloco;
         private System.Windows.Forms.TextBox txtApto;
+        private System.Windows.Forms.TextBox txtBloco;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;

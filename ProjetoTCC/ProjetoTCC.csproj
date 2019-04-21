@@ -118,6 +118,18 @@
     <Compile Include="frmAltDados.Designer.cs">
       <DependentUpon>frmAltDados.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmAltLocacao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAltLocacao.Designer.cs">
+      <DependentUpon>frmAltLocacao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAltLocacao1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAltLocacao1.Designer.cs">
+      <DependentUpon>frmAltLocacao1.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmAltMorador.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -130,6 +142,18 @@
     <Compile Include="frmAltMorador1.Designer.cs">
       <DependentUpon>frmAltMorador1.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmAltOcorrencias.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAltOcorrencias.Designer.cs">
+      <DependentUpon>frmAltOcorrencias.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAltOcorrencias1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAltOcorrencias1.Designer.cs">
+      <DependentUpon>frmAltOcorrencias1.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmAltPets.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -141,6 +165,18 @@
     </Compile>
     <Compile Include="frmAltPets1.Designer.cs">
       <DependentUpon>frmAltPets1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAltVeiculos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAltVeiculos.Designer.cs">
+      <DependentUpon>frmAltVeiculos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAltVeiculos1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAltVeiculos1.Designer.cs">
+      <DependentUpon>frmAltVeiculos1.cs</DependentUpon>
     </Compile>
     <Compile Include="frmAptos.cs">
       <SubType>Form</SubType>
@@ -239,17 +275,35 @@
     <EmbeddedResource Include="frmAltDados.resx">
       <DependentUpon>frmAltDados.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmAltLocacao.resx">
+      <DependentUpon>frmAltLocacao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAltLocacao1.resx">
+      <DependentUpon>frmAltLocacao1.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmAltMorador.resx">
       <DependentUpon>frmAltMorador.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmAltMorador1.resx">
       <DependentUpon>frmAltMorador1.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmAltOcorrencias.resx">
+      <DependentUpon>frmAltOcorrencias.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAltOcorrencias1.resx">
+      <DependentUpon>frmAltOcorrencias1.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmAltPets.resx">
       <DependentUpon>frmAltPets.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmAltPets1.resx">
       <DependentUpon>frmAltPets1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAltVeiculos.resx">
+      <DependentUpon>frmAltVeiculos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAltVeiculos1.resx">
+      <DependentUpon>frmAltVeiculos1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmAptos.resx">
       <DependentUpon>frmAptos.cs</DependentUpon>

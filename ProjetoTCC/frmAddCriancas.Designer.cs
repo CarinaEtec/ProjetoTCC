@@ -36,8 +36,8 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.txtApto = new System.Windows.Forms.TextBox();
             this.txtBloco = new System.Windows.Forms.TextBox();
+            this.txtApto = new System.Windows.Forms.TextBox();
             this.txtNome = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -88,9 +88,9 @@
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(65, 239);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(49, 24);
+            this.label1.Size = new System.Drawing.Size(58, 24);
             this.label1.TabIndex = 62;
-            this.label1.Text = "Apto";
+            this.label1.Text = "Bloco";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // label2
@@ -99,9 +99,9 @@
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(65, 200);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(58, 24);
+            this.label2.Size = new System.Drawing.Size(49, 24);
             this.label2.TabIndex = 63;
-            this.label2.Text = "Bloco";
+            this.label2.Text = "Apto";
             this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // label3
@@ -126,23 +126,23 @@
             this.label6.Text = "Data de nascimento";
             this.label6.Click += new System.EventHandler(this.label6_Click);
             // 
-            // txtApto
-            // 
-            this.txtApto.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtApto.Location = new System.Drawing.Point(317, 239);
-            this.txtApto.Name = "txtApto";
-            this.txtApto.Size = new System.Drawing.Size(123, 29);
-            this.txtApto.TabIndex = 2;
-            this.txtApto.TextChanged += new System.EventHandler(this.txtApto_TextChanged);
-            // 
             // txtBloco
             // 
             this.txtBloco.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBloco.Location = new System.Drawing.Point(317, 200);
+            this.txtBloco.Location = new System.Drawing.Point(317, 239);
             this.txtBloco.Name = "txtBloco";
-            this.txtBloco.Size = new System.Drawing.Size(123, 29);
-            this.txtBloco.TabIndex = 3;
-            this.txtBloco.TextChanged += new System.EventHandler(this.txtBloco_TextChanged);
+            this.txtBloco.Size = new System.Drawing.Size(144, 29);
+            this.txtBloco.TabIndex = 2;
+            this.txtBloco.TextChanged += new System.EventHandler(this.txtApto_TextChanged);
+            // 
+            // txtApto
+            // 
+            this.txtApto.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtApto.Location = new System.Drawing.Point(317, 200);
+            this.txtApto.Name = "txtApto";
+            this.txtApto.Size = new System.Drawing.Size(143, 29);
+            this.txtApto.TabIndex = 3;
+            this.txtApto.TextChanged += new System.EventHandler(this.txtBloco_TextChanged);
             // 
             // txtNome
             // 
@@ -259,8 +259,8 @@
             this.Controls.Add(this.btnExcluir);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.txtNome);
-            this.Controls.Add(this.txtBloco);
             this.Controls.Add(this.txtApto);
+            this.Controls.Add(this.txtBloco);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -282,8 +282,8 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox txtApto;
         private System.Windows.Forms.TextBox txtBloco;
+        private System.Windows.Forms.TextBox txtApto;
         private System.Windows.Forms.TextBox txtNome;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label4;

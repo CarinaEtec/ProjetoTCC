@@ -100,3 +100,9 @@ C:\Users\carina\Downloads\tcc\ProjetoTCC\ProjetoTCC\obj\Debug\ProjetoTCC.frmAddO
 C:\Users\carina\Downloads\tcc\ProjetoTCC\ProjetoTCC\obj\Debug\ProjetoTCC.frmAddVeiculos.resources
 C:\Users\carina\Downloads\tcc\ProjetoTCC\ProjetoTCC\obj\Debug\ProjetoTCC.frmAddLocacao.resources
 C:\Users\carina\Downloads\tcc\ProjetoTCC\ProjetoTCC\obj\Debug\ProjetoTCC.frmAddOcorrencia.resources
+C:\Users\carina\Downloads\tcc\ProjetoTCC\ProjetoTCC\obj\Debug\ProjetoTCC.frmAltLocacao.resources
+C:\Users\carina\Downloads\tcc\ProjetoTCC\ProjetoTCC\obj\Debug\ProjetoTCC.frmAltLocacao1.resources
+C:\Users\carina\Downloads\tcc\ProjetoTCC\ProjetoTCC\obj\Debug\ProjetoTCC.frmAltOcorrencias.resources
+C:\Users\carina\Downloads\tcc\ProjetoTCC\ProjetoTCC\obj\Debug\ProjetoTCC.frmAltOcorrencias1.resources
+C:\Users\carina\Downloads\tcc\ProjetoTCC\ProjetoTCC\obj\Debug\ProjetoTCC.frmAltVeiculos.resources
+C:\Users\carina\Downloads\tcc\ProjetoTCC\ProjetoTCC\obj\Debug\ProjetoTCC.frmAltVeiculos1.resources

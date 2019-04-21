@@ -91,6 +91,7 @@
             this.btnVeiculos.TabIndex = 43;
             this.btnVeiculos.Text = "Veículos";
             this.btnVeiculos.UseVisualStyleBackColor = true;
+            this.btnVeiculos.Click += new System.EventHandler(this.btnVeiculos_Click);
             // 
             // btnOcorrencias
             // 
@@ -101,6 +102,7 @@
             this.btnOcorrencias.TabIndex = 42;
             this.btnOcorrencias.Text = "Ocorrências";
             this.btnOcorrencias.UseVisualStyleBackColor = true;
+            this.btnOcorrencias.Click += new System.EventHandler(this.btnOcorrencias_Click);
             // 
             // btnLocacao
             // 
@@ -111,6 +113,7 @@
             this.btnLocacao.TabIndex = 41;
             this.btnLocacao.Text = "Locação";
             this.btnLocacao.UseVisualStyleBackColor = true;
+            this.btnLocacao.Click += new System.EventHandler(this.btnLocacao_Click);
             // 
             // btnAnimais
             // 
