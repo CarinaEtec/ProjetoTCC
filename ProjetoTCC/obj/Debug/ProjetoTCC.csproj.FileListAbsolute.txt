@@ -96,3 +96,7 @@ C:\Users\carina\Downloads\tcc\ProjetoTCC\ProjetoTCC\obj\Debug\ProjetoTCC.frmAddM
 C:\Users\carina\Downloads\tcc\ProjetoTCC\ProjetoTCC\obj\Debug\ProjetoTCC.frmMoradores.resources
 C:\Users\carina\Downloads\tcc\ProjetoTCC\ProjetoTCC\obj\Debug\ProjetoTCC.frmAltMorador.resources
 C:\Users\carina\Downloads\tcc\ProjetoTCC\ProjetoTCC\obj\Debug\ProjetoTCC.frmAltMorador1.resources
+C:\Users\carina\Downloads\tcc\ProjetoTCC\ProjetoTCC\obj\Debug\ProjetoTCC.frmAddObras.resources
+C:\Users\carina\Downloads\tcc\ProjetoTCC\ProjetoTCC\obj\Debug\ProjetoTCC.frmAddVeiculos.resources
+C:\Users\carina\Downloads\tcc\ProjetoTCC\ProjetoTCC\obj\Debug\ProjetoTCC.frmAddLocacao.resources
+C:\Users\carina\Downloads\tcc\ProjetoTCC\ProjetoTCC\obj\Debug\ProjetoTCC.frmAddOcorrencia.resources

@@ -64,17 +64,41 @@
     <Compile Include="frmAddDados.Designer.cs">
       <DependentUpon>frmAddDados.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmAddLocacao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAddLocacao.Designer.cs">
+      <DependentUpon>frmAddLocacao.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmAddMorador.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmAddMorador.Designer.cs">
       <DependentUpon>frmAddMorador.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmAddObras.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAddObras.Designer.cs">
+      <DependentUpon>frmAddObras.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAddOcorrencia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAddOcorrencia.Designer.cs">
+      <DependentUpon>frmAddOcorrencia.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmAddPets.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmAddPets.Designer.cs">
       <DependentUpon>frmAddPets.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAddVeiculos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAddVeiculos.Designer.cs">
+      <DependentUpon>frmAddVeiculos.cs</DependentUpon>
     </Compile>
     <Compile Include="frmAltCriancas.cs">
       <SubType>Form</SubType>
@@ -188,11 +212,23 @@
     <EmbeddedResource Include="frmAddDados.resx">
       <DependentUpon>frmAddDados.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmAddLocacao.resx">
+      <DependentUpon>frmAddLocacao.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmAddMorador.resx">
       <DependentUpon>frmAddMorador.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmAddObras.resx">
+      <DependentUpon>frmAddObras.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAddOcorrencia.resx">
+      <DependentUpon>frmAddOcorrencia.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmAddPets.resx">
       <DependentUpon>frmAddPets.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAddVeiculos.resx">
+      <DependentUpon>frmAddVeiculos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmAltCriancas.resx">
       <DependentUpon>frmAltCriancas.cs</DependentUpon>
