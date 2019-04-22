@@ -72,5 +72,13 @@ namespace ProjetoTCC
             veiculos.Closed += (s, args) => this.Close();
             veiculos.Show();
         }
+
+        private void btnObras_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            frmAltObras1 obras = new frmAltObras1();
+            obras.Closed += (s, args) => this.Close();
+            obras.Show();
+        }
     }
 }

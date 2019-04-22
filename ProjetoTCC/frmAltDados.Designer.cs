@@ -81,6 +81,7 @@
             this.btnObras.TabIndex = 44;
             this.btnObras.Text = "Obras";
             this.btnObras.UseVisualStyleBackColor = true;
+            this.btnObras.Click += new System.EventHandler(this.btnObras_Click);
             // 
             // btnVeiculos
             // 

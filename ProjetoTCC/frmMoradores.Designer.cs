@@ -177,7 +177,7 @@
             // Column4
             // 
             this.Column4.FillWeight = 15F;
-            this.Column4.HeaderText = "CPF";
+            this.Column4.HeaderText = "Situação";
             this.Column4.Name = "Column4";
             this.Column4.ReadOnly = true;
             this.Column4.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;

@@ -142,6 +142,18 @@
     <Compile Include="frmAltMorador1.Designer.cs">
       <DependentUpon>frmAltMorador1.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmAltObras.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAltObras.Designer.cs">
+      <DependentUpon>frmAltObras.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAltObras1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAltObras1.Designer.cs">
+      <DependentUpon>frmAltObras1.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmAltOcorrencias.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -286,6 +298,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmAltMorador1.resx">
       <DependentUpon>frmAltMorador1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAltObras.resx">
+      <DependentUpon>frmAltObras.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAltObras1.resx">
+      <DependentUpon>frmAltObras1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmAltOcorrencias.resx">
       <DependentUpon>frmAltOcorrencias.cs</DependentUpon>

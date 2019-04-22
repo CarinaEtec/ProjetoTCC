@@ -106,3 +106,5 @@ C:\Users\carina\Downloads\tcc\ProjetoTCC\ProjetoTCC\obj\Debug\ProjetoTCC.frmAltO
 C:\Users\carina\Downloads\tcc\ProjetoTCC\ProjetoTCC\obj\Debug\ProjetoTCC.frmAltOcorrencias1.resources
 C:\Users\carina\Downloads\tcc\ProjetoTCC\ProjetoTCC\obj\Debug\ProjetoTCC.frmAltVeiculos.resources
 C:\Users\carina\Downloads\tcc\ProjetoTCC\ProjetoTCC\obj\Debug\ProjetoTCC.frmAltVeiculos1.resources
+C:\Users\carina\Downloads\tcc\ProjetoTCC\ProjetoTCC\obj\Debug\ProjetoTCC.frmAltObras.resources
+C:\Users\carina\Downloads\tcc\ProjetoTCC\ProjetoTCC\obj\Debug\ProjetoTCC.frmAltObras1.resources
