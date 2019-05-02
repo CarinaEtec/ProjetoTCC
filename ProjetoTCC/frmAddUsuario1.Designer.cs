@@ -64,7 +64,7 @@
             this.btnCondominio.Name = "btnCondominio";
             this.btnCondominio.Size = new System.Drawing.Size(230, 82);
             this.btnCondominio.TabIndex = 60;
-            this.btnCondominio.Text = "Condomínio";
+            this.btnCondominio.Text = "Condomínios";
             this.btnCondominio.UseVisualStyleBackColor = true;
             this.btnCondominio.Click += new System.EventHandler(this.btnCondominio_Click);
             // 
