@@ -31,12 +31,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmVeiculos));
             this.btnVoltar = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.Apto = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Bloco = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.rbtPlaca = new System.Windows.Forms.RadioButton();
             this.btnBuscar = new System.Windows.Forms.Button();
@@ -44,6 +38,12 @@
             this.rbtApto = new System.Windows.Forms.RadioButton();
             this.rbtBloco = new System.Windows.Forms.RadioButton();
             this.label1 = new System.Windows.Forms.Label();
+            this.Apto = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Bloco = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -75,54 +75,6 @@
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.Size = new System.Drawing.Size(683, 339);
             this.dataGridView1.TabIndex = 38;
-            // 
-            // Apto
-            // 
-            this.Apto.FillWeight = 3F;
-            this.Apto.HeaderText = "Apto";
-            this.Apto.Name = "Apto";
-            this.Apto.ReadOnly = true;
-            this.Apto.Width = 60;
-            // 
-            // Bloco
-            // 
-            this.Bloco.FillWeight = 2F;
-            this.Bloco.HeaderText = "Bloco";
-            this.Bloco.Name = "Bloco";
-            this.Bloco.ReadOnly = true;
-            this.Bloco.Width = 60;
-            // 
-            // Column2
-            // 
-            this.Column2.FillWeight = 200F;
-            this.Column2.HeaderText = "Proprietário";
-            this.Column2.Name = "Column2";
-            this.Column2.ReadOnly = true;
-            this.Column2.Width = 250;
-            // 
-            // Column4
-            // 
-            this.Column4.FillWeight = 15F;
-            this.Column4.HeaderText = "Placa";
-            this.Column4.Name = "Column4";
-            this.Column4.ReadOnly = true;
-            this.Column4.Width = 90;
-            // 
-            // Column1
-            // 
-            this.Column1.FillWeight = 90F;
-            this.Column1.HeaderText = "Marca";
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
-            this.Column1.Width = 90;
-            // 
-            // Column3
-            // 
-            this.Column3.FillWeight = 90F;
-            this.Column3.HeaderText = "Cor";
-            this.Column3.Name = "Column3";
-            this.Column3.ReadOnly = true;
-            this.Column3.Width = 90;
             // 
             // pictureBox1
             // 
@@ -196,6 +148,54 @@
             this.label1.Size = new System.Drawing.Size(140, 29);
             this.label1.TabIndex = 42;
             this.label1.Text = "VEÍCULOS";
+            // 
+            // Apto
+            // 
+            this.Apto.FillWeight = 3F;
+            this.Apto.HeaderText = "Apto";
+            this.Apto.Name = "Apto";
+            this.Apto.ReadOnly = true;
+            this.Apto.Width = 60;
+            // 
+            // Bloco
+            // 
+            this.Bloco.FillWeight = 2F;
+            this.Bloco.HeaderText = "Bloco";
+            this.Bloco.Name = "Bloco";
+            this.Bloco.ReadOnly = true;
+            this.Bloco.Width = 60;
+            // 
+            // Column2
+            // 
+            this.Column2.FillWeight = 200F;
+            this.Column2.HeaderText = "Proprietário";
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
+            this.Column2.Width = 250;
+            // 
+            // Column4
+            // 
+            this.Column4.FillWeight = 15F;
+            this.Column4.HeaderText = "Placa";
+            this.Column4.Name = "Column4";
+            this.Column4.ReadOnly = true;
+            this.Column4.Width = 90;
+            // 
+            // Column1
+            // 
+            this.Column1.FillWeight = 90F;
+            this.Column1.HeaderText = "Modelo";
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            this.Column1.Width = 90;
+            // 
+            // Column3
+            // 
+            this.Column3.FillWeight = 90F;
+            this.Column3.HeaderText = "Cor";
+            this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
+            this.Column3.Width = 90;
             // 
             // frmVeiculos
             // 

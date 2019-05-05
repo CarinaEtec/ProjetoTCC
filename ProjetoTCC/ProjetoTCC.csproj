@@ -94,6 +94,24 @@
     <Compile Include="frmAddPets.Designer.cs">
       <DependentUpon>frmAddPets.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmAddUsuario1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAddUsuario1.Designer.cs">
+      <DependentUpon>frmAddUsuario1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAddUsuario2Cond.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAddUsuario2Cond.Designer.cs">
+      <DependentUpon>frmAddUsuario2Cond.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAddUsuario2Func.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAddUsuario2Func.Designer.cs">
+      <DependentUpon>frmAddUsuario2Func.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmAddVeiculos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -177,6 +195,24 @@
     </Compile>
     <Compile Include="frmAltPets1.Designer.cs">
       <DependentUpon>frmAltPets1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAltUsuario1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAltUsuario1.Designer.cs">
+      <DependentUpon>frmAltUsuario1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAltUsuario2Cond.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAltUsuario2Cond.Designer.cs">
+      <DependentUpon>frmAltUsuario2Cond.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAltUsuario2Func.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAltUsuario2Func.Designer.cs">
+      <DependentUpon>frmAltUsuario2Func.cs</DependentUpon>
     </Compile>
     <Compile Include="frmAltVeiculos.cs">
       <SubType>Form</SubType>
@@ -275,6 +311,15 @@
     <EmbeddedResource Include="frmAddPets.resx">
       <DependentUpon>frmAddPets.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmAddUsuario1.resx">
+      <DependentUpon>frmAddUsuario1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAddUsuario2Cond.resx">
+      <DependentUpon>frmAddUsuario2Cond.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAddUsuario2Func.resx">
+      <DependentUpon>frmAddUsuario2Func.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmAddVeiculos.resx">
       <DependentUpon>frmAddVeiculos.cs</DependentUpon>
     </EmbeddedResource>
@@ -316,6 +361,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmAltPets1.resx">
       <DependentUpon>frmAltPets1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAltUsuario1.resx">
+      <DependentUpon>frmAltUsuario1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAltUsuario2Cond.resx">
+      <DependentUpon>frmAltUsuario2Cond.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAltUsuario2Func.resx">
+      <DependentUpon>frmAltUsuario2Func.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmAltVeiculos.resx">
       <DependentUpon>frmAltVeiculos.cs</DependentUpon>

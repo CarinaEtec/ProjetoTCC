@@ -80,5 +80,13 @@ namespace ProjetoTCC
             add.Closed += (s, args) => this.Close();
             add.Show();
         }
+
+        private void btnUsuarios_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            frmAddUsuario1 add = new frmAddUsuario1();
+            add.Closed += (s, args) => this.Close();
+            add.Show();
+        }
     }
 } 

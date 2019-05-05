@@ -37,7 +37,7 @@
             this.txtCor = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.txtMarca = new System.Windows.Forms.TextBox();
+            this.txtModelo = new System.Windows.Forms.TextBox();
             this.txtPlaca = new System.Windows.Forms.TextBox();
             this.txtProprietario = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
@@ -123,17 +123,17 @@
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.Location = new System.Drawing.Point(42, 329);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(62, 24);
+            this.label6.Size = new System.Drawing.Size(74, 24);
             this.label6.TabIndex = 124;
-            this.label6.Text = "Marca";
+            this.label6.Text = "Modelo";
             // 
-            // txtMarca
+            // txtModelo
             // 
-            this.txtMarca.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtMarca.Location = new System.Drawing.Point(311, 329);
-            this.txtMarca.Name = "txtMarca";
-            this.txtMarca.Size = new System.Drawing.Size(334, 29);
-            this.txtMarca.TabIndex = 123;
+            this.txtModelo.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtModelo.Location = new System.Drawing.Point(311, 329);
+            this.txtModelo.Name = "txtModelo";
+            this.txtModelo.Size = new System.Drawing.Size(334, 29);
+            this.txtModelo.TabIndex = 123;
             // 
             // txtPlaca
             // 
@@ -217,7 +217,7 @@
             this.Controls.Add(this.txtCor);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.txtMarca);
+            this.Controls.Add(this.txtModelo);
             this.Controls.Add(this.txtPlaca);
             this.Controls.Add(this.txtProprietario);
             this.Controls.Add(this.label4);
@@ -248,7 +248,7 @@
         private System.Windows.Forms.TextBox txtCor;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox txtMarca;
+        private System.Windows.Forms.TextBox txtModelo;
         private System.Windows.Forms.TextBox txtPlaca;
         private System.Windows.Forms.TextBox txtProprietario;
         private System.Windows.Forms.Label label4;
