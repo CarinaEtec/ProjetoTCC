@@ -99,3 +99,8 @@ C:\Users\carina\Downloads\tcc\ProjetoTCC\Projeto_TCC\obj\Debug\Projeto_TCC.cspro
 C:\Users\carina\Downloads\tcc\ProjetoTCC\Projeto_TCC\obj\Debug\Projeto_TCC.csproj.CoreCompileInputs.cache
 C:\Users\carina\Downloads\tcc\ProjetoTCC\Projeto_TCC\obj\Debug\Projeto_TCC.exe
 C:\Users\carina\Downloads\tcc\ProjetoTCC\Projeto_TCC\obj\Debug\Projeto_TCC.pdb
+C:\Users\carina\Downloads\tcc\ProjetoTCC\Projeto_TCC\bin\Debug\MySql.Data.dll
+C:\Users\carina\Downloads\tcc\ProjetoTCC\Projeto_TCC\bin\Debug\Google.Protobuf.dll
+C:\Users\carina\Downloads\tcc\ProjetoTCC\Projeto_TCC\bin\Debug\BouncyCastle.Crypto.dll
+C:\Users\carina\Downloads\tcc\ProjetoTCC\Projeto_TCC\bin\Debug\MySql.Data.xml
+C:\Users\carina\Downloads\tcc\ProjetoTCC\Projeto_TCC\obj\Debug\Projeto_TCC.csproj.CopyComplete
