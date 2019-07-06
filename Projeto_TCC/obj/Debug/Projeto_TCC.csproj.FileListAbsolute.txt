@@ -60,7 +60,6 @@ C:\Users\carina\Downloads\tcc\ProjetoTCC\Projeto_TCC\obj\Debug\Projeto_TCC.Adici
 C:\Users\carina\Downloads\tcc\ProjetoTCC\Projeto_TCC\obj\Debug\Projeto_TCC.Adicionar.frmPets.resources
 C:\Users\carina\Downloads\tcc\ProjetoTCC\Projeto_TCC\obj\Debug\Projeto_TCC.Adicionar.frmUsuario1.resources
 C:\Users\carina\Downloads\tcc\ProjetoTCC\Projeto_TCC\obj\Debug\Projeto_TCC.Adicionar.frmUsuario2Cond.resources
-C:\Users\carina\Downloads\tcc\ProjetoTCC\Projeto_TCC\obj\Debug\Projeto_TCC.Adicionar.frmUsuario2Func.resources
 C:\Users\carina\Downloads\tcc\ProjetoTCC\Projeto_TCC\obj\Debug\Projeto_TCC.Adicionar.frmUsuario3Cond.resources
 C:\Users\carina\Downloads\tcc\ProjetoTCC\Projeto_TCC\obj\Debug\Projeto_TCC.Adicionar.frmVeiculos.resources
 C:\Users\carina\Downloads\tcc\ProjetoTCC\Projeto_TCC\obj\Debug\Projeto_TCC.Alterar.frmCriancas1.resources

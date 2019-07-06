@@ -25,7 +25,6 @@ namespace Projeto_TCC.DAO
                 comando.Parameters.AddWithValue("@cond_Cnpj", condominios.Cond_Cnpj);
                 comando.Parameters.AddWithValue("@cond_Nome", condominios.Cond_Nome);
                 comando.Parameters.AddWithValue("@cond_CEP", condominios.Cond_CEP);
-
                 comando.Parameters.AddWithValue("@cond_Endereco", condominios.Cond_Endereco);
                 comando.Parameters.AddWithValue("@cond_Bairro", condominios.Cond_Bairro);
                 comando.Parameters.AddWithValue("@cond_Cidade", condominios.Cond_Cidade);
@@ -37,7 +36,6 @@ namespace Projeto_TCC.DAO
             {
                 throw new Exception("Não foi possível se conectar" + ex.Message);
             }
-
         }
     }
 }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Projeto_TCC.Adicionar;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -28,6 +29,14 @@ namespace Projeto_TCC
         private void btnSair_Click(object sender, EventArgs e)
         {
             Close();
+        }
+
+        private void btnNovo_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            frmUsuario2Cond add = new frmUsuario2Cond();
+            add.Closed += (s, args) => this.Close();
+            add.Show();
         }
     }
 }

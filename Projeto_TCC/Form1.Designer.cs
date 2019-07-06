@@ -38,6 +38,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.btnEnrar = new System.Windows.Forms.Button();
+            this.btnNovo = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnSair
@@ -143,12 +144,24 @@
             this.btnEnrar.UseVisualStyleBackColor = true;
             this.btnEnrar.Click += new System.EventHandler(this.btnEnrar_Click);
             // 
+            // btnNovo
+            // 
+            this.btnNovo.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnNovo.Location = new System.Drawing.Point(193, 369);
+            this.btnNovo.Name = "btnNovo";
+            this.btnNovo.Size = new System.Drawing.Size(102, 40);
+            this.btnNovo.TabIndex = 20;
+            this.btnNovo.Text = "Novo";
+            this.btnNovo.UseVisualStyleBackColor = true;
+            this.btnNovo.Click += new System.EventHandler(this.btnNovo_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.ClientSize = new System.Drawing.Size(484, 491);
+            this.Controls.Add(this.btnNovo);
             this.Controls.Add(this.btnSair);
             this.Controls.Add(this.cbbFuncao);
             this.Controls.Add(this.cbbCondominio);
@@ -179,6 +192,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnEnrar;
+        private System.Windows.Forms.Button btnNovo;
     }
 }
 

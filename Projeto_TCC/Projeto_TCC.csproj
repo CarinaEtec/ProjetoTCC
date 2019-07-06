@@ -97,12 +97,6 @@
     <Compile Include="Adicionar\frmUsuario2Cond.Designer.cs">
       <DependentUpon>frmUsuario2Cond.cs</DependentUpon>
     </Compile>
-    <Compile Include="Adicionar\frmUsuario2Func.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Adicionar\frmUsuario2Func.Designer.cs">
-      <DependentUpon>frmUsuario2Func.cs</DependentUpon>
-    </Compile>
     <Compile Include="Adicionar\frmUsuario3Cond.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -229,6 +223,7 @@
     <Compile Include="Alterar\frmVeiculos2.Designer.cs">
       <DependentUpon>frmVeiculos2.cs</DependentUpon>
     </Compile>
+    <Compile Include="BO\BABO.cs" />
     <Compile Include="BO\CondominioBO.cs" />
     <Compile Include="Connected Services\WSCorreios\Reference.cs">
       <AutoGen>True</AutoGen>
@@ -283,6 +278,7 @@
     <Compile Include="Consultar\frmVeiculos.Designer.cs">
       <DependentUpon>frmVeiculos.cs</DependentUpon>
     </Compile>
+    <Compile Include="DAO\BADAO.cs" />
     <Compile Include="DAO\CondominioDAO.cs" />
     <Compile Include="DAO\ConexaoBanco.cs" />
     <Compile Include="Form1.cs">
@@ -345,9 +341,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Adicionar\frmUsuario2Cond.resx">
       <DependentUpon>frmUsuario2Cond.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Adicionar\frmUsuario2Func.resx">
-      <DependentUpon>frmUsuario2Func.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Adicionar\frmUsuario3Cond.resx">
       <DependentUpon>frmUsuario3Cond.cs</DependentUpon>

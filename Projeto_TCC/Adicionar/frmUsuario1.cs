@@ -18,23 +18,9 @@ namespace Projeto_TCC.Adicionar
             InitializeComponent();
         }
 
-        private void btnCondominio_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            frmUsuario2Cond add = new frmUsuario2Cond();
-            add.Closed += (s, args) => this.Close();
-            add.Show();
-        }
 
-        private void btnFuncionario_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            frmUsuario2Func add = new frmUsuario2Func();
-            add.Closed += (s, args) => this.Close();
-            add.Show();
-        }
 
-        private void btnVoltar_Click(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
             this.Hide();
             frmAddDados add = new frmAddDados();

@@ -22,9 +22,9 @@ namespace Projeto_TCC.Adicionar
         private void btnVoltar_Click(object sender, EventArgs e)
         {
             this.Hide();
-            frmUsuario1 add = new frmUsuario1();
-            add.Closed += (s, args) => this.Close();
-            add.Show();
+            Form1 inicio = new Form1();
+            inicio.Closed += (s, args) => this.Close();
+            inicio.Show();
         }
 
         private void btnProximo_Click(object sender, EventArgs e)
@@ -48,11 +48,13 @@ namespace Projeto_TCC.Adicionar
                     condominioBO.Gravar(condominios);
                     MessageBox.Show("Condomínio cadastrado com sucesso");
 
-
-                    this.Hide();
-                    frmUsuario3Cond add = new frmUsuario3Cond();
-                    add.Closed += (s, args) => this.Close();
-                    add.Show();
+                    txtCNPJ.Clear();
+                    txtNome.Clear();
+                    txtCEP.Clear();
+                    txtEndereco.Clear();
+                    txtBairro.Clear();
+                    txtCidade.Clear();
+                    mskTelefone.Clear();
                 }
                 else
                 {
@@ -84,6 +86,14 @@ namespace Projeto_TCC.Adicionar
                 txtBairro.Clear();
                 txtCidade.Clear();
             }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            frmUsuario3Cond add = new frmUsuario3Cond();
+            add.Closed += (s, args) => this.Close();
+            add.Show();
         }
     }
 }

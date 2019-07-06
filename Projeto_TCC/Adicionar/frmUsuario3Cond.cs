@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Projeto_TCC.BO;
+using Projeto_TCC.Model;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -35,7 +37,24 @@ namespace Projeto_TCC.Adicionar
 
         private void btnSalvarBloco_Click(object sender, EventArgs e)
         {
-            grpCadApto.Visible = true;
+            try
+            {
+                    BA ba = new BA();
+                    BABO baBO = new BABO();
+
+                    ba.Ba_Bloco = txtBloco.Text;
+                    ba.Ba_Apto = "0";
+                    ba.Condominios.Cond_Cnpj = Convert.ToInt64(txtCNPJ.Text);
+
+                    baBO.Gravar(ba);
+                    MessageBox.Show("Bloco cadastrado com sucesso");
+
+                    grpCadApto.Visible = true;
+            }
+            catch
+            {
+                MessageBox.Show("Verifique os dados e tente novamente");
+            }
 
         }
 
