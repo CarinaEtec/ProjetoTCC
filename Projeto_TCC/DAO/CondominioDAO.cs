@@ -37,5 +37,51 @@ namespace Projeto_TCC.DAO
                 throw new Exception("Não foi possível se conectar" + ex.Message);
             }
         }
+
+
+        public void Delete(Condominios condominios)
+        {
+            try
+            {
+                MySqlCommand comando = new MySqlCommand();
+                comando.CommandType = CommandType.Text;
+                comando.CommandText = "Delete from Condominios where cond_Cnpj=@cond_Cnpj";
+
+                comando.Parameters.AddWithValue("@cond_Cnpj", condominios.Cond_Cnpj);
+
+                ConexaoBanco.CRUD(comando);
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Não foi possível se conectar" + ex.Message);
+            }
+        }
+
+        public void Update(Condominios condominios)
+        {
+            try
+            {
+                MySqlCommand comando = new MySqlCommand();
+                comando.CommandType = CommandType.Text;
+                comando.CommandText = "Update condominios set cond_Nome=@cond_Nome, cond_CEP=@cond_CEP, " +
+                    "cond_Endereco=@cond_Endereco, cond_Bairro=@cond_Bairro, cond_Cidade=@cond_Cidade, " +
+                    "cond_Telefone=@cond_Telefone where cond_Cnpj=@cond_Cnpj";
+
+                comando.Parameters.AddWithValue("@cond_Cnpj", condominios.Cond_Cnpj);
+                comando.Parameters.AddWithValue("@cond_Nome", condominios.Cond_Nome);
+                comando.Parameters.AddWithValue("@cond_CEP", condominios.Cond_CEP);
+                comando.Parameters.AddWithValue("@cond_Endereco", condominios.Cond_Endereco);
+                comando.Parameters.AddWithValue("@cond_Bairro", condominios.Cond_Bairro);
+                comando.Parameters.AddWithValue("@cond_Cidade", condominios.Cond_Cidade);
+                comando.Parameters.AddWithValue("@cond_Telefone", condominios.Cond_Telefone);
+
+                ConexaoBanco.CRUD(comando);
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Não foi possível se conectar" + ex.Message);
+            }
+
+        }
     }
 }

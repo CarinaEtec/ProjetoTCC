@@ -29,14 +29,12 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmObras));
-            this.mskHorario = new System.Windows.Forms.MaskedTextBox();
             this.mskData = new System.Windows.Forms.MaskedTextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnVoltar = new System.Windows.Forms.Button();
             this.btnCadastrar = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
             this.txtProprietario = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.lbl = new System.Windows.Forms.Label();
@@ -47,23 +45,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
-            // mskHorario
-            // 
-            this.mskHorario.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mskHorario.Location = new System.Drawing.Point(311, 326);
-            this.mskHorario.Mask = "00:00";
-            this.mskHorario.Name = "mskHorario";
-            this.mskHorario.Size = new System.Drawing.Size(77, 29);
-            this.mskHorario.TabIndex = 5;
-            this.mskHorario.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
             // mskData
             // 
             this.mskData.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mskData.Location = new System.Drawing.Point(311, 276);
-            this.mskData.Mask = "00/00/0000";
+            this.mskData.Mask = "00/00/0000 00:00";
             this.mskData.Name = "mskData";
-            this.mskData.Size = new System.Drawing.Size(114, 29);
+            this.mskData.Size = new System.Drawing.Size(158, 29);
             this.mskData.TabIndex = 4;
             this.mskData.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -71,7 +59,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(42, 375);
+            this.label3.Location = new System.Drawing.Point(42, 332);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(117, 24);
             this.label3.TabIndex = 75;
@@ -117,16 +105,6 @@
             this.label7.TabIndex = 71;
             this.label7.Text = "Cadastrar Obras";
             // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(42, 329);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(72, 24);
-            this.label6.TabIndex = 70;
-            this.label6.Text = "Horário";
-            // 
             // txtProprietario
             // 
             this.txtProprietario.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -160,7 +138,7 @@
             this.txtBloco.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBloco.Location = new System.Drawing.Point(311, 176);
             this.txtBloco.Name = "txtBloco";
-            this.txtBloco.Size = new System.Drawing.Size(123, 29);
+            this.txtBloco.Size = new System.Drawing.Size(158, 29);
             this.txtBloco.TabIndex = 2;
             // 
             // txtApto
@@ -168,7 +146,7 @@
             this.txtApto.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtApto.Location = new System.Drawing.Point(311, 129);
             this.txtApto.Name = "txtApto";
-            this.txtApto.Size = new System.Drawing.Size(123, 29);
+            this.txtApto.Size = new System.Drawing.Size(158, 29);
             this.txtApto.TabIndex = 1;
             // 
             // label2
@@ -197,14 +175,12 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.ClientSize = new System.Drawing.Size(684, 691);
-            this.Controls.Add(this.mskHorario);
             this.Controls.Add(this.mskData);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btnVoltar);
             this.Controls.Add(this.btnCadastrar);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.label6);
             this.Controls.Add(this.txtProprietario);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.lbl);
@@ -222,15 +198,12 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.MaskedTextBox mskHorario;
         private System.Windows.Forms.MaskedTextBox mskData;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button btnVoltar;
         private System.Windows.Forms.Button btnCadastrar;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox txtProprietario;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label lbl;

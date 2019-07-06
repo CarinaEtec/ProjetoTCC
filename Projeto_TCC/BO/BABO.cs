@@ -18,5 +18,7 @@ namespace Projeto_TCC.BO
                 baDao.Insert(ba);
             }
         }
+
+        
     }
 }

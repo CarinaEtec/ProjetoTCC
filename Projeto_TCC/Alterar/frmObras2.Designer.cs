@@ -29,11 +29,9 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmObras2));
-            this.mskHorario = new System.Windows.Forms.MaskedTextBox();
             this.mskData = new System.Windows.Forms.MaskedTextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label6 = new System.Windows.Forms.Label();
             this.txtProprietario = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.lbl = new System.Windows.Forms.Label();
@@ -48,23 +46,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
-            // mskHorario
-            // 
-            this.mskHorario.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mskHorario.Location = new System.Drawing.Point(311, 323);
-            this.mskHorario.Mask = "00:00";
-            this.mskHorario.Name = "mskHorario";
-            this.mskHorario.Size = new System.Drawing.Size(77, 29);
-            this.mskHorario.TabIndex = 5;
-            this.mskHorario.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
             // mskData
             // 
             this.mskData.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mskData.Location = new System.Drawing.Point(311, 273);
-            this.mskData.Mask = "00/00/0000";
+            this.mskData.Mask = "00/00/0000 00:00";
             this.mskData.Name = "mskData";
-            this.mskData.Size = new System.Drawing.Size(114, 29);
+            this.mskData.Size = new System.Drawing.Size(156, 29);
             this.mskData.TabIndex = 4;
             this.mskData.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -86,16 +74,6 @@
             this.pictureBox1.Size = new System.Drawing.Size(256, 256);
             this.pictureBox1.TabIndex = 145;
             this.pictureBox1.TabStop = false;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(42, 326);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(72, 24);
-            this.label6.TabIndex = 144;
-            this.label6.Text = "Horário";
             // 
             // txtProprietario
             // 
@@ -208,11 +186,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.ClientSize = new System.Drawing.Size(684, 691);
-            this.Controls.Add(this.mskHorario);
             this.Controls.Add(this.mskData);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.label6);
             this.Controls.Add(this.txtProprietario);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.lbl);
@@ -234,12 +210,9 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.MaskedTextBox mskHorario;
         private System.Windows.Forms.MaskedTextBox mskData;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox txtProprietario;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label lbl;

@@ -29,14 +29,8 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmLocacao2));
-            this.mskHorarioTermino = new System.Windows.Forms.MaskedTextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.mskHorarioInicio = new System.Windows.Forms.MaskedTextBox();
-            this.mskData = new System.Windows.Forms.MaskedTextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label6 = new System.Windows.Forms.Label();
             this.txtProprietario = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
             this.lbl = new System.Windows.Forms.Label();
             this.txtBloco = new System.Windows.Forms.TextBox();
             this.txtApto = new System.Windows.Forms.TextBox();
@@ -46,48 +40,12 @@
             this.btnVoltar = new System.Windows.Forms.Button();
             this.btnExcluir = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
+            this.mskHorarioTermino = new System.Windows.Forms.MaskedTextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.mskHorarioInicio = new System.Windows.Forms.MaskedTextBox();
+            this.label6 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // mskHorarioTermino
-            // 
-            this.mskHorarioTermino.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mskHorarioTermino.Location = new System.Drawing.Point(310, 371);
-            this.mskHorarioTermino.Mask = "00:00";
-            this.mskHorarioTermino.Name = "mskHorarioTermino";
-            this.mskHorarioTermino.Size = new System.Drawing.Size(77, 29);
-            this.mskHorarioTermino.TabIndex = 6;
-            this.mskHorarioTermino.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(41, 374);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(148, 24);
-            this.label3.TabIndex = 124;
-            this.label3.Text = "Horário Término";
-            // 
-            // mskHorarioInicio
-            // 
-            this.mskHorarioInicio.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mskHorarioInicio.Location = new System.Drawing.Point(310, 323);
-            this.mskHorarioInicio.Mask = "00:00";
-            this.mskHorarioInicio.Name = "mskHorarioInicio";
-            this.mskHorarioInicio.Size = new System.Drawing.Size(77, 29);
-            this.mskHorarioInicio.TabIndex = 5;
-            this.mskHorarioInicio.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // mskData
-            // 
-            this.mskData.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mskData.Location = new System.Drawing.Point(310, 273);
-            this.mskData.Mask = "00/00/0000";
-            this.mskData.Name = "mskData";
-            this.mskData.Size = new System.Drawing.Size(114, 29);
-            this.mskData.TabIndex = 4;
-            this.mskData.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // pictureBox1
             // 
@@ -98,16 +56,6 @@
             this.pictureBox1.TabIndex = 121;
             this.pictureBox1.TabStop = false;
             // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(41, 326);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(121, 24);
-            this.label6.TabIndex = 120;
-            this.label6.Text = "Horário Início";
-            // 
             // txtProprietario
             // 
             this.txtProprietario.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -115,16 +63,6 @@
             this.txtProprietario.Name = "txtProprietario";
             this.txtProprietario.Size = new System.Drawing.Size(334, 29);
             this.txtProprietario.TabIndex = 3;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(41, 273);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(47, 24);
-            this.label4.TabIndex = 118;
-            this.label4.Text = "Data";
             // 
             // lbl
             // 
@@ -213,6 +151,46 @@
             this.label7.TabIndex = 109;
             this.label7.Text = "Alterar Locação";
             // 
+            // mskHorarioTermino
+            // 
+            this.mskHorarioTermino.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mskHorarioTermino.Location = new System.Drawing.Point(310, 321);
+            this.mskHorarioTermino.Mask = "00/00/0000 00:00";
+            this.mskHorarioTermino.Name = "mskHorarioTermino";
+            this.mskHorarioTermino.Size = new System.Drawing.Size(157, 29);
+            this.mskHorarioTermino.TabIndex = 123;
+            this.mskHorarioTermino.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(41, 324);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(81, 24);
+            this.label3.TabIndex = 125;
+            this.label3.Text = "Término";
+            // 
+            // mskHorarioInicio
+            // 
+            this.mskHorarioInicio.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mskHorarioInicio.Location = new System.Drawing.Point(310, 273);
+            this.mskHorarioInicio.Mask = "00/00/0000 00:00";
+            this.mskHorarioInicio.Name = "mskHorarioInicio";
+            this.mskHorarioInicio.Size = new System.Drawing.Size(157, 29);
+            this.mskHorarioInicio.TabIndex = 122;
+            this.mskHorarioInicio.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(41, 276);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(54, 24);
+            this.label6.TabIndex = 124;
+            this.label6.Text = "Início";
+            // 
             // frmLocacao2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -222,11 +200,9 @@
             this.Controls.Add(this.mskHorarioTermino);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.mskHorarioInicio);
-            this.Controls.Add(this.mskData);
-            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label6);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.txtProprietario);
-            this.Controls.Add(this.label4);
             this.Controls.Add(this.lbl);
             this.Controls.Add(this.txtBloco);
             this.Controls.Add(this.txtApto);
@@ -246,15 +222,8 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.MaskedTextBox mskHorarioTermino;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.MaskedTextBox mskHorarioInicio;
-        private System.Windows.Forms.MaskedTextBox mskData;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox txtProprietario;
-        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label lbl;
         private System.Windows.Forms.TextBox txtBloco;
         private System.Windows.Forms.TextBox txtApto;
@@ -264,5 +233,9 @@
         private System.Windows.Forms.Button btnVoltar;
         private System.Windows.Forms.Button btnExcluir;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.MaskedTextBox mskHorarioTermino;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.MaskedTextBox mskHorarioInicio;
+        private System.Windows.Forms.Label label6;
     }
 }

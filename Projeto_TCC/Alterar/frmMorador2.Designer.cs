@@ -31,7 +31,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMorador2));
             this.cbbSituacao = new System.Windows.Forms.ComboBox();
             this.label9 = new System.Windows.Forms.Label();
-            this.mskCpf = new System.Windows.Forms.MaskedTextBox();
             this.mskDataNasc = new System.Windows.Forms.MaskedTextBox();
             this.mskCelular = new System.Windows.Forms.MaskedTextBox();
             this.mskTelefone = new System.Windows.Forms.MaskedTextBox();
@@ -50,6 +49,7 @@
             this.btnVoltar = new System.Windows.Forms.Button();
             this.btnExcluir = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
+            this.txtCPF = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -75,16 +75,6 @@
             this.label9.Size = new System.Drawing.Size(82, 24);
             this.label9.TabIndex = 132;
             this.label9.Text = "Situação";
-            // 
-            // mskCpf
-            // 
-            this.mskCpf.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mskCpf.Location = new System.Drawing.Point(321, 145);
-            this.mskCpf.Mask = "000,000,000-00";
-            this.mskCpf.Name = "mskCpf";
-            this.mskCpf.Size = new System.Drawing.Size(144, 29);
-            this.mskCpf.TabIndex = 2;
-            this.mskCpf.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // mskDataNasc
             // 
@@ -260,15 +250,23 @@
             this.label7.TabIndex = 113;
             this.label7.Text = "Alterar Morador";
             // 
+            // txtCPF
+            // 
+            this.txtCPF.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCPF.Location = new System.Drawing.Point(322, 145);
+            this.txtCPF.Name = "txtCPF";
+            this.txtCPF.Size = new System.Drawing.Size(144, 29);
+            this.txtCPF.TabIndex = 133;
+            // 
             // frmMorador2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.ClientSize = new System.Drawing.Size(684, 691);
+            this.Controls.Add(this.txtCPF);
             this.Controls.Add(this.cbbSituacao);
             this.Controls.Add(this.label9);
-            this.Controls.Add(this.mskCpf);
             this.Controls.Add(this.mskDataNasc);
             this.Controls.Add(this.mskCelular);
             this.Controls.Add(this.mskTelefone);
@@ -300,7 +298,6 @@
 
         private System.Windows.Forms.ComboBox cbbSituacao;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.MaskedTextBox mskCpf;
         private System.Windows.Forms.MaskedTextBox mskDataNasc;
         private System.Windows.Forms.MaskedTextBox mskCelular;
         private System.Windows.Forms.MaskedTextBox mskTelefone;
@@ -319,5 +316,6 @@
         private System.Windows.Forms.Button btnVoltar;
         private System.Windows.Forms.Button btnExcluir;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.TextBox txtCPF;
     }
 }

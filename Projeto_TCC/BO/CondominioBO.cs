@@ -18,5 +18,24 @@ namespace Projeto_TCC.BO
                 condominioDao.Insert(condominios);
             }
         }
+
+        public void Deletar(Condominios condominios)
+        {
+            CondominioDAO condominioDao = new CondominioDAO();
+
+            if (condominios.Cond_Cnpj != 0)
+            {
+                condominioDao.Delete(condominios);
+            }
+        }
+
+        public void Editar(Condominios condominios)
+        {
+            CondominioDAO condominioDao = new CondominioDAO();
+            if (condominios.Cond_Cnpj != 0)
+            {
+                condominioDao.Update(condominios);
+            }
+        }
     }
 }
