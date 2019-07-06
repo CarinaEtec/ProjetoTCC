@@ -298,6 +298,15 @@
     <Compile Include="frmMenu.Designer.cs">
       <DependentUpon>frmMenu.cs</DependentUpon>
     </Compile>
+    <Compile Include="Model\BA.cs" />
+    <Compile Include="Model\Condominios.cs" />
+    <Compile Include="Model\Funcionarios.cs" />
+    <Compile Include="Model\Locacoes.cs" />
+    <Compile Include="Model\Moradores.cs" />
+    <Compile Include="Model\Obras.cs" />
+    <Compile Include="Model\Ocorrencias.cs" />
+    <Compile Include="Model\Pets.cs" />
+    <Compile Include="Model\Veiculos.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Adicionar\frmCriancas.resx">
@@ -448,6 +457,9 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="BO\" />
+    <Folder Include="DAO\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
