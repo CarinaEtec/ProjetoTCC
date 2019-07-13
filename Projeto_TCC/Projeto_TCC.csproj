@@ -109,23 +109,11 @@
     <Compile Include="Adicionar\frmVeiculos.Designer.cs">
       <DependentUpon>frmVeiculos.cs</DependentUpon>
     </Compile>
-    <Compile Include="Alterar\frmCriancas1.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Alterar\frmCriancas1.Designer.cs">
-      <DependentUpon>frmCriancas1.cs</DependentUpon>
-    </Compile>
     <Compile Include="Alterar\frmCriancas2.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Alterar\frmCriancas2.Designer.cs">
       <DependentUpon>frmCriancas2.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Alterar\frmLocacao1.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Alterar\frmLocacao1.Designer.cs">
-      <DependentUpon>frmLocacao1.cs</DependentUpon>
     </Compile>
     <Compile Include="Alterar\frmLocacao2.cs">
       <SubType>Form</SubType>
@@ -133,23 +121,11 @@
     <Compile Include="Alterar\frmLocacao2.Designer.cs">
       <DependentUpon>frmLocacao2.cs</DependentUpon>
     </Compile>
-    <Compile Include="Alterar\frmMorador1.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Alterar\frmMorador1.Designer.cs">
-      <DependentUpon>frmMorador1.cs</DependentUpon>
-    </Compile>
     <Compile Include="Alterar\frmMorador2.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Alterar\frmMorador2.Designer.cs">
       <DependentUpon>frmMorador2.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Alterar\frmObras1.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Alterar\frmObras1.Designer.cs">
-      <DependentUpon>frmObras1.cs</DependentUpon>
     </Compile>
     <Compile Include="Alterar\frmObras2.cs">
       <SubType>Form</SubType>
@@ -157,23 +133,11 @@
     <Compile Include="Alterar\frmObras2.Designer.cs">
       <DependentUpon>frmObras2.cs</DependentUpon>
     </Compile>
-    <Compile Include="Alterar\frmOcorrencias1.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Alterar\frmOcorrencias1.Designer.cs">
-      <DependentUpon>frmOcorrencias1.cs</DependentUpon>
-    </Compile>
     <Compile Include="Alterar\frmOcorrencias2.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Alterar\frmOcorrencias2.Designer.cs">
       <DependentUpon>frmOcorrencias2.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Alterar\frmPets1.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Alterar\frmPets1.Designer.cs">
-      <DependentUpon>frmPets1.cs</DependentUpon>
     </Compile>
     <Compile Include="Alterar\frmPets2.cs">
       <SubType>Form</SubType>
@@ -187,18 +151,6 @@
     <Compile Include="Alterar\frmUsuario1.Designer.cs">
       <DependentUpon>frmUsuario1.cs</DependentUpon>
     </Compile>
-    <Compile Include="Alterar\frmUsuario2Cond.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Alterar\frmUsuario2Cond.Designer.cs">
-      <DependentUpon>frmUsuario2Cond.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Alterar\frmUsuario2Func.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Alterar\frmUsuario2Func.Designer.cs">
-      <DependentUpon>frmUsuario2Func.cs</DependentUpon>
-    </Compile>
     <Compile Include="Alterar\frmUsuario3Cond.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -210,12 +162,6 @@
     </Compile>
     <Compile Include="Alterar\frmUsuario3Func.Designer.cs">
       <DependentUpon>frmUsuario3Func.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Alterar\frmVeiculos1.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Alterar\frmVeiculos1.Designer.cs">
-      <DependentUpon>frmVeiculos1.cs</DependentUpon>
     </Compile>
     <Compile Include="Alterar\frmVeiculos2.cs">
       <SubType>Form</SubType>
@@ -348,38 +294,20 @@
     <EmbeddedResource Include="Adicionar\frmVeiculos.resx">
       <DependentUpon>frmVeiculos.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Alterar\frmCriancas1.resx">
-      <DependentUpon>frmCriancas1.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Alterar\frmCriancas2.resx">
       <DependentUpon>frmCriancas2.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Alterar\frmLocacao1.resx">
-      <DependentUpon>frmLocacao1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Alterar\frmLocacao2.resx">
       <DependentUpon>frmLocacao2.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Alterar\frmMorador1.resx">
-      <DependentUpon>frmMorador1.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Alterar\frmMorador2.resx">
       <DependentUpon>frmMorador2.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Alterar\frmObras1.resx">
-      <DependentUpon>frmObras1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Alterar\frmObras2.resx">
       <DependentUpon>frmObras2.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Alterar\frmOcorrencias1.resx">
-      <DependentUpon>frmOcorrencias1.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Alterar\frmOcorrencias2.resx">
       <DependentUpon>frmOcorrencias2.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Alterar\frmPets1.resx">
-      <DependentUpon>frmPets1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Alterar\frmPets2.resx">
       <DependentUpon>frmPets2.cs</DependentUpon>
@@ -387,20 +315,11 @@
     <EmbeddedResource Include="Alterar\frmUsuario1.resx">
       <DependentUpon>frmUsuario1.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Alterar\frmUsuario2Cond.resx">
-      <DependentUpon>frmUsuario2Cond.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Alterar\frmUsuario2Func.resx">
-      <DependentUpon>frmUsuario2Func.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Alterar\frmUsuario3Cond.resx">
       <DependentUpon>frmUsuario3Cond.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Alterar\frmUsuario3Func.resx">
       <DependentUpon>frmUsuario3Func.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Alterar\frmVeiculos1.resx">
-      <DependentUpon>frmVeiculos1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Alterar\frmVeiculos2.resx">
       <DependentUpon>frmVeiculos2.cs</DependentUpon>

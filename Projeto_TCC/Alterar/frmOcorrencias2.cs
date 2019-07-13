@@ -20,9 +20,23 @@ namespace Projeto_TCC.Alterar
         private void btnVoltar_Click(object sender, EventArgs e)
         {
             this.Hide();
-            frmOcorrencias1 alterar = new frmOcorrencias1();
-            alterar.Closed += (s, args) => this.Close();
-            alterar.Show();
+            frmAltDados menu = new frmAltDados();
+            menu.Closed += (s, args) => this.Close();
+            menu.Show();
+        }
+
+        private void frmOcorrencias2_Load(object sender, EventArgs e)
+        {
+            panel1.Enabled = false;
+            panel2.Visible = true;
+
+            btnAlterar.Enabled = false;
+        }
+
+        private void btnBuscar_Click(object sender, EventArgs e)
+        {
+            panel1.Enabled = true;
+            btnAlterar.Enabled = true;
         }
     }
 }

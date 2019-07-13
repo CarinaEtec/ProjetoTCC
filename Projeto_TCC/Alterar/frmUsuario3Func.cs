@@ -20,9 +20,23 @@ namespace Projeto_TCC.Alterar
         private void btnVoltar_Click(object sender, EventArgs e)
         {
             this.Hide();
-            frmUsuario3Func alt = new frmUsuario3Func();
-            alt.Closed += (s, args) => this.Close();
-            alt.Show();
+            frmAltDados menuzinho = new frmAltDados();
+            menuzinho.Closed += (s, args) => this.Close();
+            menuzinho.Show();
+        }
+
+        private void btnBuscar_Click(object sender, EventArgs e)
+        {
+            panel1.Enabled = true;
+            btnAlterar.Enabled = true;
+            btnExcluir.Enabled = true;
+        }
+
+        private void frmUsuario3Func_Load(object sender, EventArgs e)
+        {
+            panel1.Enabled = false;
+            btnAlterar.Enabled = false;
+            btnExcluir.Enabled = false;
         }
     }
 }

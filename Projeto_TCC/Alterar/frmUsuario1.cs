@@ -20,7 +20,7 @@ namespace Projeto_TCC.Alterar
         private void btnCondominio_Click(object sender, EventArgs e)
         {
             this.Hide();
-            frmUsuario2Cond alt = new frmUsuario2Cond();
+            frmUsuario3Cond alt = new frmUsuario3Cond();
             alt.Closed += (s, args) => this.Close();
             alt.Show();
         }
@@ -36,7 +36,7 @@ namespace Projeto_TCC.Alterar
         private void btnFuncionario_Click(object sender, EventArgs e)
         {
             this.Hide();
-            frmUsuario2Func alt = new frmUsuario2Func();
+            frmUsuario3Func alt = new frmUsuario3Func();
             alt.Closed += (s, args) => this.Close();
             alt.Show();
         }

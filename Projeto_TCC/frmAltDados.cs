@@ -39,7 +39,7 @@ namespace Projeto_TCC
         private void btnMoradores_Click_1(object sender, EventArgs e)
         {
             this.Hide();
-            frmMorador1 morador = new frmMorador1();
+            frmMorador2 morador = new frmMorador2();
             morador.Closed += (s, args) => this.Close();
             morador.Show();
         }
@@ -47,7 +47,7 @@ namespace Projeto_TCC
         private void btnCriancas_Click_1(object sender, EventArgs e)
         {
             this.Hide();
-            frmCriancas1 pirralhos = new frmCriancas1();
+            frmCriancas2 pirralhos = new frmCriancas2();
             pirralhos.Closed += (s, args) => this.Close();
             pirralhos.Show();
         }
@@ -55,7 +55,7 @@ namespace Projeto_TCC
         private void btnAnimais_Click_1(object sender, EventArgs e)
         {
             this.Hide();
-            frmPets1 pets = new frmPets1();
+            frmPets2 pets = new frmPets2();
             pets.Closed += (s, args) => this.Close();
             pets.Show();
         }
@@ -63,7 +63,7 @@ namespace Projeto_TCC
         private void btnLocacao_Click_1(object sender, EventArgs e)
         {
             this.Hide();
-            frmLocacao1 locacao = new frmLocacao1();
+            frmLocacao2 locacao = new frmLocacao2();
             locacao.Closed += (s, args) => this.Close();
             locacao.Show();
         }
@@ -71,7 +71,7 @@ namespace Projeto_TCC
         private void btnOcorrencias_Click_1(object sender, EventArgs e)
         {
             this.Hide();
-            frmOcorrencias1 ocorrencias = new frmOcorrencias1();
+            frmOcorrencias2 ocorrencias = new frmOcorrencias2();
             ocorrencias.Closed += (s, args) => this.Close();
             ocorrencias.Show();
         }
@@ -79,7 +79,7 @@ namespace Projeto_TCC
         private void btnVeiculos_Click_1(object sender, EventArgs e)
         {
             this.Hide();
-            frmVeiculos1 veiculos = new frmVeiculos1();
+            frmVeiculos2 veiculos = new frmVeiculos2();
             veiculos.Closed += (s, args) => this.Close();
             veiculos.Show();
         }
@@ -87,7 +87,7 @@ namespace Projeto_TCC
         private void btnObras_Click_1(object sender, EventArgs e)
         {
             this.Hide();
-            frmObras1 obras = new frmObras1();
+            frmObras2 obras = new frmObras2();
             obras.Closed += (s, args) => this.Close();
             obras.Show();
         }

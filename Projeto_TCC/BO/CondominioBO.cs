@@ -1,4 +1,5 @@
-﻿using Projeto_TCC.DAO;
+﻿using Projeto_TCC.Alterar;
+using Projeto_TCC.DAO;
 using Projeto_TCC.Model;
 using System;
 using System.Collections.Generic;
@@ -37,5 +38,10 @@ namespace Projeto_TCC.BO
                 condominioDao.Update(condominios);
             }
         }
+
+
+
+
+
     }
 }

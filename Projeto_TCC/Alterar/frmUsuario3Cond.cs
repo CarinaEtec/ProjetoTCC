@@ -22,9 +22,9 @@ namespace Projeto_TCC.Alterar
         private void btnVoltar_Click(object sender, EventArgs e)
         {
             this.Hide();
-            frmUsuario2Cond alt = new frmUsuario2Cond();
-            alt.Closed += (s, args) => this.Close();
-            alt.Show();
+            frmAltDados menuzinho = new frmAltDados();
+            menuzinho.Closed += (s, args) => this.Close();
+            menuzinho.Show();
         }
 
         private void btnAlterar_Click(object sender, EventArgs e)
@@ -96,6 +96,24 @@ namespace Projeto_TCC.Alterar
                 txtBairro.Clear();
                 txtCidade.Clear();
             }
+        }
+
+        private void frmUsuario3Cond_Load(object sender, EventArgs e)
+        {
+            panel1.Enabled = false;
+            panel2.Visible = true;
+
+            btnAlterar.Enabled = false;
+            btnExcluir.Enabled = false;
+        }
+
+        
+
+        private void btnBuscar_Click(object sender, EventArgs e)
+        {
+            panel1.Enabled = true;
+            btnAlterar.Enabled = true;
+            btnExcluir.Enabled = true;
         }
     }
 }
