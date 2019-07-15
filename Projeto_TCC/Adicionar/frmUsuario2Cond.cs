@@ -37,13 +37,13 @@ namespace Projeto_TCC.Adicionar
                     Condominios condominios = new Condominios();
                     CondominioBO condominioBO = new CondominioBO();
 
-                    condominios.Cond_Cnpj = Convert.ToInt64(txtCNPJ.Text);
-                    condominios.Cond_Nome = txtNome.Text;
-                    condominios.Cond_CEP = txtCEP.Text;
-                    condominios.Cond_Endereco = txtEndereco.Text;
-                    condominios.Cond_Bairro = txtBairro.Text;
-                    condominios.Cond_Cidade = txtCidade.Text;
-                    condominios.Cond_Telefone = mskTelefone.Text;
+                    condominios.Cnpj = Convert.ToInt64(txtCNPJ.Text);
+                    condominios.Nome = txtNome.Text;
+                    condominios.Cep = txtCEP.Text;
+                    condominios.Endereco = txtEndereco.Text;
+                    condominios.Bairro = txtBairro.Text;
+                    condominios.Cidade = txtCidade.Text;
+                    condominios.Telefone = mskTelefone.Text;
 
                     condominioBO.Gravar(condominios);
                     MessageBox.Show("Condomínio cadastrado com sucesso");

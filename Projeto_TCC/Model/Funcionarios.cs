@@ -8,25 +8,25 @@ namespace Projeto_TCC.Model
 {
     class Funcionarios
     {
-        private string func_Nome;
-        private long func_Cpf;
+        private string nome;
+        private long cpf;
         private Condominios condominios;
-        private string func_Funcao;
-        private string func_Telefone;
-        private string func_Celular;
-        private string func_Senha;
+        private string funcao;
+        private string telefone;
+        private string celular;
+        private string senha;
 
         public Funcionarios()
         {
             Condominios = new Condominios();
         }
 
-        public string Func_Nome { get => func_Nome; set => func_Nome = value; }
-        public long Func_Cpf { get => func_Cpf; set => func_Cpf = value; }
-        public string Func_Funcao { get => func_Funcao; set => func_Funcao = value; }
-        public string Func_Telefone { get => func_Telefone; set => func_Telefone = value; }
-        public string Func_Celular { get => func_Celular; set => func_Celular = value; }
-        public string Func_Senha { get => func_Senha; set => func_Senha = value; }
+        public string Nome { get => nome; set => nome = value; }
+        public long Cpf { get => cpf; set => cpf = value; }
         internal Condominios Condominios { get => condominios; set => condominios = value; }
+        public string Funcao { get => funcao; set => funcao = value; }
+        public string Telefone { get => telefone; set => telefone = value; }
+        public string Celular { get => celular; set => celular = value; }
+        public string Senha { get => senha; set => senha = value; }
     }
 }

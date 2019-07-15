@@ -14,7 +14,7 @@ namespace Projeto_TCC.BO
         public void Gravar(Condominios condominios) //GRAVAR NOVO CONDOMÍNIO
         {
             CondominioDAO condominioDao = new CondominioDAO();
-            if ((condominios.Cond_Cnpj != 0) && (condominios.Cond_Nome != ""))
+            if ((condominios.Cnpj != 0) && (condominios.Nome != ""))
             {
                 condominioDao.Insert(condominios);
             }
@@ -24,7 +24,7 @@ namespace Projeto_TCC.BO
         {
             CondominioDAO condominioDao = new CondominioDAO();
 
-            if (condominios.Cond_Cnpj != 0)
+            if (condominios.Cnpj != 0)
             {
                 condominioDao.Delete(condominios);
             }
@@ -33,7 +33,7 @@ namespace Projeto_TCC.BO
         public void Editar(Condominios condominios)
         {
             CondominioDAO condominioDao = new CondominioDAO();
-            if (condominios.Cond_Cnpj != 0)
+            if (condominios.Cnpj != 0)
             {
                 condominioDao.Update(condominios);
             }
@@ -41,7 +41,40 @@ namespace Projeto_TCC.BO
 
 
 
+        public void BuscarCNPJ(Condominios cond)
+        {
+            CondominioDAO condDao = new CondominioDAO();
 
+            if (cond.Cnpj > 0)
+            {
+
+                var condTemp = condDao.BuscaPorCNPJ(cond.Cnpj);
+
+                cond.Nome = condTemp.Nome;
+                cond.Cep = condTemp.Cep;
+                cond.Endereco = condTemp.Endereco;
+                cond.Bairro = condTemp.Bairro;
+                cond.Cidade = condTemp.Cidade;
+                cond.Telefone = condTemp.Telefone;
+            }
+        }
+
+
+
+        public IList<Condominios> BuscarPorNome(Condominios cond)
+        {
+            CondominioDAO condDao = new CondominioDAO();
+
+            if (cond.Nome != "")
+            {
+                IList<Condominios> condTemp = condDao.BuscaPorNome(cond.Nome);
+                return condTemp;
+            }
+            else
+            {
+                return null;
+            }
+        }
 
     }
 }

@@ -9,8 +9,8 @@ namespace Projeto_TCC.Model
     class BA
     {
         private int ba_Cod;
-        private string ba_Apto;
-        private string ba_Bloco;
+        private string apto;
+        private string bloco;
         private Condominios condominios;
 
         public BA()
@@ -19,8 +19,8 @@ namespace Projeto_TCC.Model
         }
 
         public int Ba_Cod { get => ba_Cod; set => ba_Cod = value; }
-        public string Ba_Apto { get => ba_Apto; set => ba_Apto = value; }
-        public string Ba_Bloco { get => ba_Bloco; set => ba_Bloco = value; }
+        public string Apto { get => apto; set => apto = value; }
+        public string Bloco { get => bloco; set => bloco = value; }
         internal Condominios Condominios { get => condominios; set => condominios = value; }
     }
 }

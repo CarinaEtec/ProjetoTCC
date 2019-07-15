@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Projeto_TCC.BO;
+using Projeto_TCC.Model;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -27,6 +29,19 @@ namespace Projeto_TCC.Alterar
 
         private void btnBuscar_Click(object sender, EventArgs e)
         {
+
+
+
+
+
+
+
+
+
+
+
+
+
             panel1.Enabled = true;
             btnAlterar.Enabled = true;
             btnExcluir.Enabled = true;

@@ -8,12 +8,12 @@ namespace Projeto_TCC.Model
 {
     class Moradores
     {
-        private int mo_CodMorador;
-        private string mo_Nome;
-        private DateTime mo_DataNasc;
-        private string mo_Situacao;
-        private string mo_Telefone;
-        private string mo_Celular;
+        private int codMorador;
+        private string nme;
+        private DateTime dataNasc;
+        private string situacao;
+        private string telefone;
+        private string celular;
         private BA bA;
 
         public Moradores()
@@ -21,12 +21,12 @@ namespace Projeto_TCC.Model
             BA = new BA();
         }
 
-        public int Mo_CodMorador { get => mo_CodMorador; set => mo_CodMorador = value; }
-        public string Mo_Nome { get => mo_Nome; set => mo_Nome = value; }
-        public DateTime Mo_DataNasc { get => mo_DataNasc; set => mo_DataNasc = value; }
-        public string Mo_Situacao { get => mo_Situacao; set => mo_Situacao = value; }
-        public string Mo_Telefone { get => mo_Telefone; set => mo_Telefone = value; }
-        public string Mo_Celular { get => mo_Celular; set => mo_Celular = value; }
+        public int CodMorador { get => codMorador; set => codMorador = value; }
+        public string Nme { get => nme; set => nme = value; }
+        public DateTime DataNasc { get => dataNasc; set => dataNasc = value; }
+        public string Situacao { get => situacao; set => situacao = value; }
+        public string Telefone { get => telefone; set => telefone = value; }
+        public string Celular { get => celular; set => celular = value; }
         internal BA BA { get => bA; set => bA = value; }
     }
 }

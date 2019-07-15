@@ -9,9 +9,9 @@ namespace Projeto_TCC.Model
     class Veiculos
     {
         private Moradores moradores;
-        private string ve_Placa;
-        private string ve_Modelo;
-        private string ve_Cor;
+        private string placa;
+        private string modelo;
+        private string cor;
         private BA bA;
 
         public Veiculos()
@@ -19,9 +19,10 @@ namespace Projeto_TCC.Model
             BA = new BA();
         }
 
-        public string Ve_Placa { get => ve_Placa; set => ve_Placa = value; }
-        public string Ve_Modelo { get => ve_Modelo; set => ve_Modelo = value; }
-        public string Ve_Cor { get => ve_Cor; set => ve_Cor = value; }
+        public string Placa { get => placa; set => placa = value; }
+        public string Modelo { get => modelo; set => modelo = value; }
+        public string Cor { get => cor; set => cor = value; }
+
         internal Moradores Moradores { get => moradores; set => moradores = value; }
         internal BA BA { get => bA; set => bA = value; }
     }

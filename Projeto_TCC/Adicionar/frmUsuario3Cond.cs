@@ -42,9 +42,9 @@ namespace Projeto_TCC.Adicionar
                     BA ba = new BA();
                     BABO baBO = new BABO();
 
-                    ba.Ba_Bloco = txtBloco.Text;
-                    ba.Ba_Apto = "0";
-                    ba.Condominios.Cond_Cnpj = Convert.ToInt64(txtCNPJ.Text);
+                    ba.Bloco = txtBloco.Text;
+                    ba.Apto = "0";
+                    ba.Condominios.Cnpj = Convert.ToInt64(txtCNPJ.Text);
 
                     baBO.Gravar(ba);
                     MessageBox.Show("Bloco cadastrado com sucesso");

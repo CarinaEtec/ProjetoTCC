@@ -8,10 +8,10 @@ namespace Projeto_TCC.Model
 {
     class Pets
     {
-        private int pet_CodPet;
-        private string pet_Nome;
+        private int codPet;
+        private string nome;
         private Moradores moradores;
-        private string pet_Especie;
+        private string especie;
         private BA bA;
 
         public Pets()
@@ -19,9 +19,10 @@ namespace Projeto_TCC.Model
             BA = new BA();
         }
 
-        public int Pet_CodPet { get => pet_CodPet; set => pet_CodPet = value; }
-        public string Pet_Nome { get => pet_Nome; set => pet_Nome = value; }
-        public string Pet_Especie { get => pet_Especie; set => pet_Especie = value; }
+        public int CodPet { get => codPet; set => codPet = value; }
+        public string Nome { get => nome; set => nome = value; }
+        public string Especie { get => especie; set => especie = value; }
+
         internal Moradores Moradores { get => moradores; set => moradores = value; }
         internal BA BA { get => bA; set => bA = value; }
     }

@@ -8,10 +8,10 @@ namespace Projeto_TCC.Model
 {
     class Locacoes
     {
-        private int lo_CodLocacao;
+        private int codLocacao;
         private Moradores moradores;
-        private DateTime lo_Inicio;
-        private DateTime lo_Termino;
+        private DateTime inicio;
+        private DateTime termino;
         private BA bA;
 
         public Locacoes()
@@ -19,10 +19,12 @@ namespace Projeto_TCC.Model
             BA = new BA();
         }
 
-        public int Lo_CodLocacao { get => lo_CodLocacao; set => lo_CodLocacao = value; }
         internal Moradores Moradores { get => moradores; set => moradores = value; }
-        public DateTime Lo_Inicio { get => lo_Inicio; set => lo_Inicio = value; }
-        public DateTime Lo_Termino { get => lo_Termino; set => lo_Termino = value; }
+
+        public int CodLocacao { get => codLocacao; set => codLocacao = value; }
+        public DateTime Inicio { get => inicio; set => inicio = value; }
+        public DateTime Termino { get => termino; set => termino = value; }
         internal BA BA { get => bA; set => bA = value; }
+
     }
 }

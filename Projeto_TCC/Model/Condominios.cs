@@ -8,20 +8,20 @@ namespace Projeto_TCC.Model
 {
     class Condominios
     {
-        private long cond_Cnpj;
-        private string cond_Nome;
-        private string cond_CEP;
-        private string cond_Endereco;
-        private string cond_Bairro;
-        private string cond_Cidade;
-        private string cond_Telefone;
+        private long cnpj;
+        private string nome;
+        private string cep;
+        private string endereco;
+        private string bairro;
+        private string cidade;
+        private string telefone;
 
-        public long Cond_Cnpj { get => cond_Cnpj; set => cond_Cnpj = value; }
-        public string Cond_Nome { get => cond_Nome; set => cond_Nome = value; }
-        public string Cond_CEP { get => cond_CEP; set => cond_CEP = value; }
-        public string Cond_Endereco { get => cond_Endereco; set => cond_Endereco = value; }
-        public string Cond_Bairro { get => cond_Bairro; set => cond_Bairro = value; }
-        public string Cond_Cidade { get => cond_Cidade; set => cond_Cidade = value; }
-        public string Cond_Telefone { get => cond_Telefone; set => cond_Telefone = value; }
+        public long Cnpj { get => cnpj; set => cnpj = value; }
+        public string Nome { get => nome; set => nome = value; }
+        public string Cep { get => cep; set => cep = value; }
+        public string Endereco { get => endereco; set => endereco = value; }
+        public string Bairro { get => bairro; set => bairro = value; }
+        public string Cidade { get => cidade; set => cidade = value; }
+        public string Telefone { get => telefone; set => telefone = value; }
     }
 }

@@ -8,10 +8,10 @@ namespace Projeto_TCC.Model
 {
     class Ocorrencias
     {
-        private int oc_CodOcorrencia;
+        private int codOcorrencia;
         private Moradores moradores;
-        private string oc_motivo;
-        private DateTime oc_Data;
+        private string motivo;
+        private DateTime data;
         private BA bA;
 
         public Ocorrencias()
@@ -19,9 +19,9 @@ namespace Projeto_TCC.Model
             BA = new BA();
         }
 
-        public int Oc_CodOcorrencia { get => oc_CodOcorrencia; set => oc_CodOcorrencia = value; }
-        public string Oc_motivo { get => oc_motivo; set => oc_motivo = value; }
-        public DateTime Oc_Data { get => oc_Data; set => oc_Data = value; }
+        public int CodOcorrencia { get => codOcorrencia; set => codOcorrencia = value; }
+        public string Motivo { get => motivo; set => motivo = value; }
+        public DateTime Data { get => data; set => data = value; }
         internal Moradores Moradores { get => moradores; set => moradores = value; }
         internal BA BA { get => bA; set => bA = value; }
     }

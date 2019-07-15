@@ -33,8 +33,8 @@
             this.btnAlterar = new System.Windows.Forms.Button();
             this.btnVoltar = new System.Windows.Forms.Button();
             this.btnExcluir = new System.Windows.Forms.Button();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.cbbCondominio = new System.Windows.Forms.ComboBox();
+            this.cbbFuncao = new System.Windows.Forms.ComboBox();
             this.mskCpf = new System.Windows.Forms.MaskedTextBox();
             this.mskCelular = new System.Windows.Forms.MaskedTextBox();
             this.mskTelefone = new System.Windows.Forms.MaskedTextBox();
@@ -102,29 +102,29 @@
             this.btnExcluir.Text = "Excluir";
             this.btnExcluir.UseVisualStyleBackColor = true;
             // 
-            // comboBox1
-            // 
-            this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "Administração",
-            "Portaria"});
-            this.comboBox1.Location = new System.Drawing.Point(295, 197);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(183, 32);
-            this.comboBox1.TabIndex = 3;
-            // 
             // cbbCondominio
             // 
             this.cbbCondominio.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbbCondominio.FormattingEnabled = true;
             this.cbbCondominio.Items.AddRange(new object[] {
-            "Atlas",
-            "Antilles"});
-            this.cbbCondominio.Location = new System.Drawing.Point(295, 245);
+            "Administração",
+            "Portaria"});
+            this.cbbCondominio.Location = new System.Drawing.Point(295, 197);
             this.cbbCondominio.Name = "cbbCondominio";
             this.cbbCondominio.Size = new System.Drawing.Size(183, 32);
-            this.cbbCondominio.TabIndex = 4;
+            this.cbbCondominio.TabIndex = 3;
+            // 
+            // cbbFuncao
+            // 
+            this.cbbFuncao.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbbFuncao.FormattingEnabled = true;
+            this.cbbFuncao.Items.AddRange(new object[] {
+            "Atlas",
+            "Antilles"});
+            this.cbbFuncao.Location = new System.Drawing.Point(295, 245);
+            this.cbbFuncao.Name = "cbbFuncao";
+            this.cbbFuncao.Size = new System.Drawing.Size(183, 32);
+            this.cbbFuncao.TabIndex = 4;
             // 
             // mskCpf
             // 
@@ -241,9 +241,9 @@
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.txtNome);
-            this.panel1.Controls.Add(this.comboBox1);
-            this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.cbbCondominio);
+            this.panel1.Controls.Add(this.label4);
+            this.panel1.Controls.Add(this.cbbFuncao);
             this.panel1.Controls.Add(this.label5);
             this.panel1.Controls.Add(this.mskCpf);
             this.panel1.Controls.Add(this.label8);
@@ -382,8 +382,8 @@
         private System.Windows.Forms.Button btnAlterar;
         private System.Windows.Forms.Button btnVoltar;
         private System.Windows.Forms.Button btnExcluir;
-        private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.ComboBox cbbCondominio;
+        private System.Windows.Forms.ComboBox cbbFuncao;
         private System.Windows.Forms.MaskedTextBox mskCpf;
         private System.Windows.Forms.MaskedTextBox mskCelular;
         private System.Windows.Forms.MaskedTextBox mskTelefone;

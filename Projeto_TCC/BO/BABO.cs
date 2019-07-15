@@ -13,7 +13,7 @@ namespace Projeto_TCC.BO
         public void Gravar(BA ba) //GRAVAR NOVO BLOCO/APTO
         {
             BADAO baDao = new BADAO();
-            if (ba.Ba_Bloco != "")
+            if (ba.Bloco != "")
             {
                 baDao.Insert(ba);
             }

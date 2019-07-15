@@ -32,13 +32,13 @@ namespace Projeto_TCC.Alterar
             Condominios condominios = new Condominios();
             CondominioBO condominioBO = new CondominioBO();
 
-            condominios.Cond_Cnpj = Convert.ToInt64(txtCNPJ.Text);
-            condominios.Cond_Nome = txtNome.Text;
-            condominios.Cond_CEP = txtCEP.Text;
-            condominios.Cond_Endereco = txtEndereco.Text;
-            condominios.Cond_Bairro = txtBairro.Text;
-            condominios.Cond_Cidade = txtCidade.Text;
-            condominios.Cond_Telefone = mskTelefone.Text;
+            condominios.Cnpj = Convert.ToInt64(txtCNPJ.Text);
+            condominios.Nome = txtNome.Text;
+            condominios.Cep = txtCEP.Text;
+            condominios.Endereco = txtEndereco.Text;
+            condominios.Bairro = txtBairro.Text;
+            condominios.Cidade = txtCidade.Text;
+            condominios.Telefone = mskTelefone.Text;
 
             condominioBO.Editar(condominios);
             MessageBox.Show("Condomínio editado com sucesso");
@@ -50,6 +50,12 @@ namespace Projeto_TCC.Alterar
             txtBairro.Clear();
             txtCidade.Clear();
             mskTelefone.Clear();
+            txtBusca.Clear();
+
+            for (int i = 0; i < dataGridView1.RowCount; i++)
+            {
+                dataGridView1.Rows[i].DataGridView.Columns.Clear();
+            }
         }
 
         private void btnExcluir_Click(object sender, EventArgs e)
@@ -59,7 +65,7 @@ namespace Projeto_TCC.Alterar
 
             try
             {
-                condominios.Cond_Cnpj = Convert.ToInt64(txtCNPJ.Text);
+                condominios.Cnpj = Convert.ToInt64(txtCNPJ.Text);
                 condominioBO.Deletar(condominios);
 
                 MessageBox.Show("Condominio excluído com sucesso");
@@ -71,6 +77,13 @@ namespace Projeto_TCC.Alterar
                 txtBairro.Clear();
                 txtCidade.Clear();
                 mskTelefone.Clear();
+                txtBusca.Clear();
+
+
+                for (int i = 0; i < dataGridView1.RowCount; i++)
+                {
+                    dataGridView1.Rows[i].DataGridView.Columns.Clear();
+                }
             }
             catch
             {
@@ -107,10 +120,85 @@ namespace Projeto_TCC.Alterar
             btnExcluir.Enabled = false;
         }
 
-        
-
+       
         private void btnBuscar_Click(object sender, EventArgs e)
         {
+            for (int i = 0; i < dataGridView1.RowCount; i++)
+            {
+                dataGridView1.Rows[i].DataGridView.Columns.Clear();
+            }
+            txtCNPJ.Clear();
+            txtNome.Clear();
+            txtCEP.Clear();
+            txtEndereco.Clear();
+            txtBairro.Clear();
+            txtCidade.Clear();
+            mskTelefone.Clear();
+
+            Condominios cond = new Condominios();
+            CondominioBO condBO = new CondominioBO();
+
+            if (rbtCNPJ.Checked)
+            {
+                try
+                {
+                    cond.Cnpj = Convert.ToInt64(txtBusca.Text);
+                    condBO.BuscarCNPJ(cond);
+
+                    if (cond.Nome == "")
+                    {
+                        MessageBox.Show("Condomínio não encontrado");
+                        txtBusca.Clear();
+                    }
+                    else
+                    {
+                        txtNome.Text = cond.Nome;
+                        txtCNPJ.Text = Convert.ToString(cond.Cnpj);
+                        txtCEP.Text = cond.Cep;
+                        txtEndereco.Text = cond.Endereco;
+                        txtBairro.Text = cond.Bairro;
+                        txtCidade.Text = cond.Cidade;
+                        mskTelefone.Text = cond.Telefone;
+
+                        panel1.Enabled = true;
+                        btnAlterar.Enabled = true;
+                        btnExcluir.Enabled = true;
+                    }
+                }
+                catch
+                {
+                    MessageBox.Show("Preencha corretamente as informações");
+
+                }
+            }
+            else if (rbtNome.Checked)
+            {
+                try
+                {
+                    cond.Nome = txtBusca.Text;
+                    dataGridView1.DataSource = condBO.BuscarPorNome(cond);
+                }
+                catch
+                {
+                    MessageBox.Show("Preencha os dados corretamente");
+                }
+            }
+        }
+
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            DataGridViewRow linhaSelecionada;
+            linhaSelecionada = dataGridView1.CurrentRow;
+
+
+            txtCNPJ.Text = linhaSelecionada.Cells[0].Value.ToString();
+            txtNome.Text = linhaSelecionada.Cells[1].Value.ToString();
+            txtCEP.Text = linhaSelecionada.Cells[2].Value.ToString();
+            txtEndereco.Text = linhaSelecionada.Cells[3].Value.ToString();
+            txtBairro.Text = linhaSelecionada.Cells[4].Value.ToString();
+            txtCidade.Text = linhaSelecionada.Cells[5].Value.ToString();
+            mskTelefone.Text = linhaSelecionada.Cells[6].Value.ToString();
+
             panel1.Enabled = true;
             btnAlterar.Enabled = true;
             btnExcluir.Enabled = true;

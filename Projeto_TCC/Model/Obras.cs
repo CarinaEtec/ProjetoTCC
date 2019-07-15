@@ -8,9 +8,9 @@ namespace Projeto_TCC.Model
 {
     class Obras
     {
-        private int ob_CodObras;
+        private int codObras;
         private Moradores moradores;
-        private DateTime ob_DataHora;
+        private DateTime dataHora;
         private BA bA;
 
         public Obras()
@@ -18,8 +18,8 @@ namespace Projeto_TCC.Model
             BA = new BA();
         }
 
-        public int Ob_CodObras { get => ob_CodObras; set => ob_CodObras = value; }
-        public DateTime Ob_DataHora { get => ob_DataHora; set => ob_DataHora = value; }
+        public int CodObras { get => codObras; set => codObras = value; }
+        public DateTime DataHora { get => dataHora; set => dataHora = value; }
         internal Moradores Moradores { get => moradores; set => moradores = value; }
         internal BA BA { get => bA; set => bA = value; }
     }
