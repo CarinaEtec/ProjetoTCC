@@ -31,7 +31,7 @@ namespace Projeto_TCC
         private void btnUsuarios_Click_1(object sender, EventArgs e)
         {
             this.Hide();
-            frmUsuario1 usu = new frmUsuario1();
+            frmUsuario3Func usu = new frmUsuario3Func();
             usu.Closed += (s, args) => this.Close();
             usu.Show();
         }

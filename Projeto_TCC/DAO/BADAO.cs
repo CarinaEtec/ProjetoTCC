@@ -18,12 +18,10 @@ namespace Projeto_TCC.DAO
                 MySqlCommand comando = new MySqlCommand();
                 comando.CommandType = CommandType.Text;
                 comando.CommandText =
-                "Insert into BA(Apto,Bloco,Cnpj) " +
-                "values(@Apto,@Bloco,@Cnpj)";
+                "Insert into BA(Apto,Bloco) values(@Apto,@Bloco)";
 
                 comando.Parameters.AddWithValue("@Apto", ba.Apto);
                 comando.Parameters.AddWithValue("@Bloco", ba.Bloco);
-                comando.Parameters.AddWithValue("@Cnpj", ba.Condominios.Cnpj);
                 ConexaoBanco.CRUD(comando);
             }
             catch (Exception ex)

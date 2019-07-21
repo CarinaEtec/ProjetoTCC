@@ -34,7 +34,7 @@ namespace Projeto_TCC
         private void btnNovo_Click(object sender, EventArgs e)
         {
             this.Hide();
-            frmUsuario2Cond add = new frmUsuario2Cond();
+            frmUsuario1 add = new frmUsuario1();
             add.Closed += (s, args) => this.Close();
             add.Show();
         }

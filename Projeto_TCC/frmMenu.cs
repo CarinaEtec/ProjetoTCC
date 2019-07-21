@@ -1,4 +1,5 @@
 ﻿using Projeto_TCC;
+using Projeto_TCC.Adicionar;
 using Projeto_TCC.Consultar;
 using System;
 using System.Collections.Generic;
@@ -43,7 +44,7 @@ namespace Projeto_TCC
         private void btnAptos_Click(object sender, EventArgs e)
         {
             this.Hide();
-            frmApto apto = new frmApto();
+            frmUsuario3Cond apto = new frmUsuario3Cond();
             apto.Closed += (s, args) => this.Close();
             apto.Show();
         }
@@ -59,7 +60,7 @@ namespace Projeto_TCC
         private void btnCriancas_Click(object sender, EventArgs e)
         {
             this.Hide();
-            frmCriancas crias = new frmCriancas();
+            Consultar.frmCriancas crias = new Consultar.frmCriancas();
             crias.Closed += (s, args) => this.Close();
             crias.Show();
         }
@@ -67,7 +68,7 @@ namespace Projeto_TCC
         private void btnAnimais_Click(object sender, EventArgs e)
         {
             this.Hide();
-            frmPets doguinho = new frmPets();
+            Consultar.frmPets doguinho = new Consultar.frmPets();
             doguinho.Closed += (s, args) => this.Close();
             doguinho.Show();
         }
@@ -75,7 +76,7 @@ namespace Projeto_TCC
         private void btnLocacao_Click(object sender, EventArgs e)
         {
             this.Hide();
-            frmLocacao lazer = new frmLocacao();
+            Consultar.frmLocacao lazer = new Consultar.frmLocacao();
             lazer.Closed += (s, args) => this.Close();
             lazer.Show();
         }
@@ -91,7 +92,7 @@ namespace Projeto_TCC
         private void btnVeiculos_Click(object sender, EventArgs e)
         {
             this.Hide();
-            frmVeiculos veiculos = new frmVeiculos();
+            Consultar.frmVeiculos veiculos = new Consultar.frmVeiculos();
             veiculos.Closed += (s, args) => this.Close();
             veiculos.Show();
         }
@@ -99,7 +100,7 @@ namespace Projeto_TCC
         private void btnObras_Click(object sender, EventArgs e)
         {
             this.Hide();
-            frmObras obras = new frmObras();
+            Consultar.frmObras obras = new Consultar.frmObras();
             obras.Closed += (s, args) => this.Close();
             obras.Show();
         }

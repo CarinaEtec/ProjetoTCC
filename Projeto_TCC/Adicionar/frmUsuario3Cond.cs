@@ -30,7 +30,7 @@ namespace Projeto_TCC.Adicionar
         private void btnVoltar_Click(object sender, EventArgs e)
         {
             this.Hide();
-            frmUsuario2Cond add = new frmUsuario2Cond();
+            frmMenu add = new frmMenu();
             add.Closed += (s, args) => this.Close();
             add.Show();
         }
@@ -44,12 +44,12 @@ namespace Projeto_TCC.Adicionar
 
                     ba.Bloco = txtBloco.Text;
                     ba.Apto = "0";
-                    ba.Condominios.Cnpj = Convert.ToInt64(txtCNPJ.Text);
 
                     baBO.Gravar(ba);
                     MessageBox.Show("Bloco cadastrado com sucesso");
 
                     grpCadApto.Visible = true;
+                txtBloco.Clear();
             }
             catch
             {

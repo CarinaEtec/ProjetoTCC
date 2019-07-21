@@ -33,7 +33,6 @@
             this.btnAlterar = new System.Windows.Forms.Button();
             this.btnVoltar = new System.Windows.Forms.Button();
             this.btnExcluir = new System.Windows.Forms.Button();
-            this.cbbCondominio = new System.Windows.Forms.ComboBox();
             this.cbbFuncao = new System.Windows.Forms.ComboBox();
             this.mskCpf = new System.Windows.Forms.MaskedTextBox();
             this.mskCelular = new System.Windows.Forms.MaskedTextBox();
@@ -44,18 +43,16 @@
             this.label7 = new System.Windows.Forms.Label();
             this.txtNome = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.txtSenha = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.label9 = new System.Windows.Forms.Label();
             this.btnBuscar = new System.Windows.Forms.Button();
             this.txtBusca = new System.Windows.Forms.TextBox();
-            this.rbtNome = new System.Windows.Forms.RadioButton();
-            this.rbtCondomínio = new System.Windows.Forms.RadioButton();
             this.label6 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.Bloco = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -80,6 +77,7 @@
             this.btnAlterar.TabIndex = 7;
             this.btnAlterar.Text = "Alterar";
             this.btnAlterar.UseVisualStyleBackColor = true;
+            this.btnAlterar.Click += new System.EventHandler(this.btnAlterar_Click);
             // 
             // btnVoltar
             // 
@@ -101,18 +99,7 @@
             this.btnExcluir.TabIndex = 8;
             this.btnExcluir.Text = "Excluir";
             this.btnExcluir.UseVisualStyleBackColor = true;
-            // 
-            // cbbCondominio
-            // 
-            this.cbbCondominio.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbbCondominio.FormattingEnabled = true;
-            this.cbbCondominio.Items.AddRange(new object[] {
-            "Administração",
-            "Portaria"});
-            this.cbbCondominio.Location = new System.Drawing.Point(295, 197);
-            this.cbbCondominio.Name = "cbbCondominio";
-            this.cbbCondominio.Size = new System.Drawing.Size(183, 32);
-            this.cbbCondominio.TabIndex = 3;
+            this.btnExcluir.Click += new System.EventHandler(this.btnExcluir_Click);
             // 
             // cbbFuncao
             // 
@@ -121,7 +108,7 @@
             this.cbbFuncao.Items.AddRange(new object[] {
             "Atlas",
             "Antilles"});
-            this.cbbFuncao.Location = new System.Drawing.Point(295, 245);
+            this.cbbFuncao.Location = new System.Drawing.Point(295, 203);
             this.cbbFuncao.Name = "cbbFuncao";
             this.cbbFuncao.Size = new System.Drawing.Size(183, 32);
             this.cbbFuncao.TabIndex = 4;
@@ -139,7 +126,7 @@
             // mskCelular
             // 
             this.mskCelular.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mskCelular.Location = new System.Drawing.Point(296, 349);
+            this.mskCelular.Location = new System.Drawing.Point(296, 307);
             this.mskCelular.Mask = "(00) 00000-0000";
             this.mskCelular.Name = "mskCelular";
             this.mskCelular.Size = new System.Drawing.Size(144, 29);
@@ -149,7 +136,7 @@
             // mskTelefone
             // 
             this.mskTelefone.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mskTelefone.Location = new System.Drawing.Point(295, 295);
+            this.mskTelefone.Location = new System.Drawing.Point(295, 253);
             this.mskTelefone.Mask = "(00) 0000-0000";
             this.mskTelefone.Name = "mskTelefone";
             this.mskTelefone.Size = new System.Drawing.Size(143, 29);
@@ -170,7 +157,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(43, 354);
+            this.label5.Location = new System.Drawing.Point(43, 312);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(69, 24);
             this.label5.TabIndex = 161;
@@ -180,7 +167,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(43, 300);
+            this.label4.Location = new System.Drawing.Point(43, 258);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(85, 24);
             this.label4.TabIndex = 160;
@@ -214,21 +201,11 @@
             this.label3.TabIndex = 158;
             this.label3.Text = "Nome";
             // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(43, 205);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(113, 24);
-            this.label2.TabIndex = 157;
-            this.label2.Text = "Condomínio";
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(43, 253);
+            this.label1.Location = new System.Drawing.Point(43, 211);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(75, 24);
             this.label1.TabIndex = 156;
@@ -236,12 +213,12 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.txtSenha);
+            this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label7);
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.txtNome);
-            this.panel1.Controls.Add(this.cbbCondominio);
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.cbbFuncao);
             this.panel1.Controls.Add(this.label5);
@@ -254,18 +231,46 @@
             this.panel1.Size = new System.Drawing.Size(667, 399);
             this.panel1.TabIndex = 169;
             // 
+            // txtSenha
+            // 
+            this.txtSenha.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSenha.Location = new System.Drawing.Point(295, 357);
+            this.txtSenha.Name = "txtSenha";
+            this.txtSenha.Size = new System.Drawing.Size(145, 29);
+            this.txtSenha.TabIndex = 170;
+            this.txtSenha.UseSystemPasswordChar = true;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(43, 357);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(65, 24);
+            this.label2.TabIndex = 169;
+            this.label2.Text = "Senha";
+            // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.label9);
             this.panel2.Controls.Add(this.btnBuscar);
             this.panel2.Controls.Add(this.txtBusca);
-            this.panel2.Controls.Add(this.rbtNome);
-            this.panel2.Controls.Add(this.rbtCondomínio);
             this.panel2.Controls.Add(this.label6);
             this.panel2.Controls.Add(this.dataGridView1);
             this.panel2.Location = new System.Drawing.Point(704, 57);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(500, 530);
             this.panel2.TabIndex = 170;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(27, 110);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(86, 31);
+            this.label9.TabIndex = 74;
+            this.label9.Text = "Nome";
             // 
             // btnBuscar
             // 
@@ -281,34 +286,10 @@
             // txtBusca
             // 
             this.txtBusca.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBusca.Location = new System.Drawing.Point(204, 110);
+            this.txtBusca.Location = new System.Drawing.Point(119, 110);
             this.txtBusca.Name = "txtBusca";
-            this.txtBusca.Size = new System.Drawing.Size(263, 29);
+            this.txtBusca.Size = new System.Drawing.Size(348, 29);
             this.txtBusca.TabIndex = 69;
-            // 
-            // rbtNome
-            // 
-            this.rbtNome.AutoSize = true;
-            this.rbtNome.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rbtNome.Location = new System.Drawing.Point(33, 142);
-            this.rbtNome.Name = "rbtNome";
-            this.rbtNome.Size = new System.Drawing.Size(80, 28);
-            this.rbtNome.TabIndex = 68;
-            this.rbtNome.TabStop = true;
-            this.rbtNome.Text = "Nome";
-            this.rbtNome.UseVisualStyleBackColor = true;
-            // 
-            // rbtCondomínio
-            // 
-            this.rbtCondomínio.AutoSize = true;
-            this.rbtCondomínio.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rbtCondomínio.Location = new System.Drawing.Point(33, 110);
-            this.rbtCondomínio.Name = "rbtCondomínio";
-            this.rbtCondomínio.Size = new System.Drawing.Size(131, 28);
-            this.rbtCondomínio.TabIndex = 67;
-            this.rbtCondomínio.TabStop = true;
-            this.rbtCondomínio.Text = "Condomínio";
-            this.rbtCondomínio.UseVisualStyleBackColor = true;
             // 
             // label6
             // 
@@ -324,31 +305,12 @@
             // 
             this.dataGridView1.AllowUserToDeleteRows = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Bloco,
-            this.Column1});
             this.dataGridView1.Location = new System.Drawing.Point(33, 230);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.Size = new System.Drawing.Size(434, 250);
             this.dataGridView1.TabIndex = 72;
             this.dataGridView1.VirtualMode = true;
-            // 
-            // Bloco
-            // 
-            this.Bloco.FillWeight = 10F;
-            this.Bloco.HeaderText = "Condomínio";
-            this.Bloco.Name = "Bloco";
-            this.Bloco.ReadOnly = true;
-            this.Bloco.Width = 150;
-            // 
-            // Column1
-            // 
-            this.Column1.FillWeight = 200F;
-            this.Column1.HeaderText = "Nome";
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
-            this.Column1.Width = 240;
             // 
             // frmUsuario3Func
             // 
@@ -382,7 +344,6 @@
         private System.Windows.Forms.Button btnAlterar;
         private System.Windows.Forms.Button btnVoltar;
         private System.Windows.Forms.Button btnExcluir;
-        private System.Windows.Forms.ComboBox cbbCondominio;
         private System.Windows.Forms.ComboBox cbbFuncao;
         private System.Windows.Forms.MaskedTextBox mskCpf;
         private System.Windows.Forms.MaskedTextBox mskCelular;
@@ -393,17 +354,15 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox txtNome;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button btnBuscar;
         private System.Windows.Forms.TextBox txtBusca;
-        private System.Windows.Forms.RadioButton rbtNome;
-        private System.Windows.Forms.RadioButton rbtCondomínio;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Bloco;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.TextBox txtSenha;
+        private System.Windows.Forms.Label label2;
     }
 }

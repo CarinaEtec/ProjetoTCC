@@ -59,7 +59,6 @@ C:\Users\carina\Downloads\tcc\ProjetoTCC\Projeto_TCC\obj\Debug\Projeto_TCC.Adici
 C:\Users\carina\Downloads\tcc\ProjetoTCC\Projeto_TCC\obj\Debug\Projeto_TCC.Adicionar.frmOcorrencia.resources
 C:\Users\carina\Downloads\tcc\ProjetoTCC\Projeto_TCC\obj\Debug\Projeto_TCC.Adicionar.frmPets.resources
 C:\Users\carina\Downloads\tcc\ProjetoTCC\Projeto_TCC\obj\Debug\Projeto_TCC.Adicionar.frmUsuario1.resources
-C:\Users\carina\Downloads\tcc\ProjetoTCC\Projeto_TCC\obj\Debug\Projeto_TCC.Adicionar.frmUsuario2Cond.resources
 C:\Users\carina\Downloads\tcc\ProjetoTCC\Projeto_TCC\obj\Debug\Projeto_TCC.Adicionar.frmUsuario3Cond.resources
 C:\Users\carina\Downloads\tcc\ProjetoTCC\Projeto_TCC\obj\Debug\Projeto_TCC.Adicionar.frmVeiculos.resources
 C:\Users\carina\Downloads\tcc\ProjetoTCC\Projeto_TCC\obj\Debug\Projeto_TCC.Alterar.frmCriancas2.resources
@@ -68,11 +67,8 @@ C:\Users\carina\Downloads\tcc\ProjetoTCC\Projeto_TCC\obj\Debug\Projeto_TCC.Alter
 C:\Users\carina\Downloads\tcc\ProjetoTCC\Projeto_TCC\obj\Debug\Projeto_TCC.Alterar.frmObras2.resources
 C:\Users\carina\Downloads\tcc\ProjetoTCC\Projeto_TCC\obj\Debug\Projeto_TCC.Alterar.frmOcorrencias2.resources
 C:\Users\carina\Downloads\tcc\ProjetoTCC\Projeto_TCC\obj\Debug\Projeto_TCC.Alterar.frmPets2.resources
-C:\Users\carina\Downloads\tcc\ProjetoTCC\Projeto_TCC\obj\Debug\Projeto_TCC.Alterar.frmUsuario1.resources
-C:\Users\carina\Downloads\tcc\ProjetoTCC\Projeto_TCC\obj\Debug\Projeto_TCC.Alterar.frmUsuario3Cond.resources
 C:\Users\carina\Downloads\tcc\ProjetoTCC\Projeto_TCC\obj\Debug\Projeto_TCC.Alterar.frmUsuario3Func.resources
 C:\Users\carina\Downloads\tcc\ProjetoTCC\Projeto_TCC\obj\Debug\Projeto_TCC.Alterar.frmVeiculos2.resources
-C:\Users\carina\Downloads\tcc\ProjetoTCC\Projeto_TCC\obj\Debug\Projeto_TCC.Consultar.frmApto.resources
 C:\Users\carina\Downloads\tcc\ProjetoTCC\Projeto_TCC\obj\Debug\Projeto_TCC.Consultar.frmCriancas.resources
 C:\Users\carina\Downloads\tcc\ProjetoTCC\Projeto_TCC\obj\Debug\Projeto_TCC.Consultar.frmLocacao.resources
 C:\Users\carina\Downloads\tcc\ProjetoTCC\Projeto_TCC\obj\Debug\Projeto_TCC.Consultar.frmMoradores.resources
