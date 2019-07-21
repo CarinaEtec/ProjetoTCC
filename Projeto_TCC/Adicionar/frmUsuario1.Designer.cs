@@ -44,7 +44,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.txtSenha = new System.Windows.Forms.TextBox();
             this.txtFuncao = new System.Windows.Forms.TextBox();
-            this.txtCpf = new System.Windows.Forms.TextBox();
+            this.mskCPF = new System.Windows.Forms.MaskedTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -194,13 +194,14 @@
             this.txtFuncao.Size = new System.Drawing.Size(154, 29);
             this.txtFuncao.TabIndex = 169;
             // 
-            // txtCpf
+            // mskCPF
             // 
-            this.txtCpf.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCpf.Location = new System.Drawing.Point(315, 180);
-            this.txtCpf.Name = "txtCpf";
-            this.txtCpf.Size = new System.Drawing.Size(154, 29);
-            this.txtCpf.TabIndex = 170;
+            this.mskCPF.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mskCPF.Location = new System.Drawing.Point(315, 180);
+            this.mskCPF.Mask = "00000000000";
+            this.mskCPF.Name = "mskCPF";
+            this.mskCPF.Size = new System.Drawing.Size(123, 29);
+            this.mskCPF.TabIndex = 171;
             // 
             // frmUsuario1
             // 
@@ -208,7 +209,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.ClientSize = new System.Drawing.Size(684, 691);
-            this.Controls.Add(this.txtCpf);
+            this.Controls.Add(this.mskCPF);
             this.Controls.Add(this.txtFuncao);
             this.Controls.Add(this.txtSenha);
             this.Controls.Add(this.label2);
@@ -250,6 +251,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtSenha;
         private System.Windows.Forms.TextBox txtFuncao;
-        private System.Windows.Forms.TextBox txtCpf;
+        private System.Windows.Forms.MaskedTextBox mskCPF;
     }
 }

@@ -29,53 +29,19 @@ namespace Projeto_TCC.Alterar
 
         private void btnBuscar_Click(object sender, EventArgs e)
         {
-            for (int i = 0; i < dataGridView1.RowCount; i++)
-            {
-                dataGridView1.Rows[i].DataGridView.Columns.Clear();
-            }
-            txtNome.Clear();
-            mskCpf.Clear();
-            cbbFuncao= null;
-            mskTelefone.Clear();
-            mskCelular.Clear();
-            txtSenha.Clear();
-
             Funcionarios func = new Funcionarios();
             FuncionariosBO funcBO = new FuncionariosBO();
 
-                try
-                {
-                    func.Nome = txtBusca.Text;
-                    funcBO.BuscarPorNome(func);
+            try
+            {
+                func.Nome = txtBusca.Text;
 
-                    if (func.Nome == "")
-                    {
-                        MessageBox.Show("Funcionário não encontrado");
-                        txtBusca.Clear();
-                    }
-                    else
-                    {
-                        txtNome.Text = func.Nome;
-                        mskCpf.Text = Convert.ToString(func.Cpf);
-                        cbbFuncao.Text = func.Funcao;
-                        mskTelefone.Text = func.Telefone;
-                        mskCelular.Text = func.Celular;
-                        txtSenha.Text = func.Senha;
-
-                        panel1.Enabled = true;
-                        btnAlterar.Enabled = true;
-                        btnExcluir.Enabled = true;
-                    }
-                }
-                catch
-                {
-                    MessageBox.Show("Preencha corretamente as informações");
-
-                }
-            
-
-
-
+                dataGridView1.DataSource = funcBO.BuscarPorNOME(func);
+            }
+            catch
+            {
+                MessageBox.Show("Preencha corretamente as informações");
+            }
         }
 
         private void frmUsuario3Func_Load(object sender, EventArgs e)
@@ -87,22 +53,35 @@ namespace Projeto_TCC.Alterar
 
         private void btnAlterar_Click(object sender, EventArgs e)
         {
-            Funcionarios func = new Funcionarios();
-            FuncionariosBO funcBO = new FuncionariosBO();
+            for (int i = 0; i < dataGridView1.RowCount; i++)
+            {
+                dataGridView1.Rows[i].DataGridView.Columns.Clear();
+            }
 
-            txtNome.Text = func.Nome;
-            mskCpf.Text = Convert.ToString(func.Cpf);
-            cbbFuncao.Text = func.Funcao;
-            mskTelefone.Text = func.Telefone;
-            mskCelular.Text = func.Celular;
-            txtSenha.Text = func.Senha;
+            try
+            {
+                Funcionarios func = new Funcionarios();
+                FuncionariosBO funcBO = new FuncionariosBO();
 
-            funcBO.Editar(func);
-            MessageBox.Show("Funcionário editado com sucesso");
+                func.Nome = txtNome.Text;
+                func.Cpf = Convert.ToInt64(mskCPF.Text);
+                func.Funcao = txtFuncao.Text;
+                func.Telefone = mskTelefone.Text;
+                func.Celular = mskCelular.Text;
+                func.Senha = txtSenha.Text;
+
+                funcBO.Editar(func);
+                MessageBox.Show("Funcionário editado com sucesso");
+            }
+            catch
+            {
+                MessageBox.Show("Verifique os dados e tente novamente");
+            }
+
 
             txtNome.Clear();
-            mskCpf.Clear();
-            cbbFuncao = null;
+            mskCPF.Clear();
+            txtFuncao.Clear(); ;
             mskTelefone.Clear();
             mskCelular.Clear();
             txtBusca.Clear();
@@ -111,45 +90,58 @@ namespace Projeto_TCC.Alterar
             btnAlterar.Enabled = false;
             btnExcluir.Enabled = false;
 
-            for (int i = 0; i < dataGridView1.RowCount; i++)
-            {
-                dataGridView1.Rows[i].DataGridView.Columns.Clear();
-            }
+
         }
 
         private void btnExcluir_Click(object sender, EventArgs e)
         {
+            for (int i = 0; i < dataGridView1.RowCount; i++)
+            {
+                dataGridView1.Rows[i].DataGridView.Columns.Clear();
+            }
+
             Funcionarios func = new Funcionarios();
             FuncionariosBO funcBO = new FuncionariosBO();
 
             try
             {
-                func.Cpf = Convert.ToInt64(mskCpf.Text);
+                func.Cpf = Convert.ToInt64(mskCPF.Text);
                 funcBO.Deletar(func);
 
                 MessageBox.Show("Funcionário excluído com sucesso");
-
-                txtNome.Clear();
-                mskCpf.Clear();
-                cbbFuncao = null;
-                mskTelefone.Clear();
-                mskCelular.Clear();
-                txtBusca.Clear();
-                txtSenha.Clear();
-                panel1.Enabled = false;
-                btnAlterar.Enabled = false;
-                btnExcluir.Enabled = false;
-
-
-                for (int i = 0; i < dataGridView1.RowCount; i++)
-                {
-                    dataGridView1.Rows[i].DataGridView.Columns.Clear();
-                }
             }
             catch
             {
                 MessageBox.Show("Preencha corretamente os campos e/ou verifique se esses dados não estão sendo usados");
             }
+            txtNome.Clear();
+            mskCPF.Clear();
+            txtFuncao.Clear(); ;
+            mskTelefone.Clear();
+            mskCelular.Clear();
+            txtBusca.Clear();
+            txtSenha.Clear();
+            panel1.Enabled = false;
+            btnAlterar.Enabled = false;
+            btnExcluir.Enabled = false;
+        }
+
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            DataGridViewRow linhaSelecionada;
+            linhaSelecionada = dataGridView1.CurrentRow;
+
+            txtNome.Text = linhaSelecionada.Cells[0].Value.ToString();
+            mskCPF.Text = linhaSelecionada.Cells[1].Value.ToString();
+            txtFuncao.Text = linhaSelecionada.Cells[2].Value.ToString();
+            mskTelefone.Text = linhaSelecionada.Cells[3].Value.ToString();
+            mskCelular.Text = linhaSelecionada.Cells[4].Value.ToString();
+            txtSenha.Text = linhaSelecionada.Cells[5].Value.ToString();
+            
+
+            panel1.Enabled = true;
+            btnAlterar.Enabled = true;
+            btnExcluir.Enabled = true;
         }
     }
 }

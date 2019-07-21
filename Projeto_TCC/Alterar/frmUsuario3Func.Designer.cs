@@ -33,8 +33,6 @@
             this.btnAlterar = new System.Windows.Forms.Button();
             this.btnVoltar = new System.Windows.Forms.Button();
             this.btnExcluir = new System.Windows.Forms.Button();
-            this.cbbFuncao = new System.Windows.Forms.ComboBox();
-            this.mskCpf = new System.Windows.Forms.MaskedTextBox();
             this.mskCelular = new System.Windows.Forms.MaskedTextBox();
             this.mskTelefone = new System.Windows.Forms.MaskedTextBox();
             this.label8 = new System.Windows.Forms.Label();
@@ -45,6 +43,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.txtFuncao = new System.Windows.Forms.TextBox();
             this.txtSenha = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -53,6 +52,7 @@
             this.txtBusca = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.mskCPF = new System.Windows.Forms.MaskedTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -101,35 +101,13 @@
             this.btnExcluir.UseVisualStyleBackColor = true;
             this.btnExcluir.Click += new System.EventHandler(this.btnExcluir_Click);
             // 
-            // cbbFuncao
-            // 
-            this.cbbFuncao.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbbFuncao.FormattingEnabled = true;
-            this.cbbFuncao.Items.AddRange(new object[] {
-            "Atlas",
-            "Antilles"});
-            this.cbbFuncao.Location = new System.Drawing.Point(295, 203);
-            this.cbbFuncao.Name = "cbbFuncao";
-            this.cbbFuncao.Size = new System.Drawing.Size(183, 32);
-            this.cbbFuncao.TabIndex = 4;
-            // 
-            // mskCpf
-            // 
-            this.mskCpf.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mskCpf.Location = new System.Drawing.Point(296, 147);
-            this.mskCpf.Mask = "000,000,000-00";
-            this.mskCpf.Name = "mskCpf";
-            this.mskCpf.Size = new System.Drawing.Size(144, 29);
-            this.mskCpf.TabIndex = 2;
-            this.mskCpf.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
             // mskCelular
             // 
             this.mskCelular.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mskCelular.Location = new System.Drawing.Point(296, 307);
             this.mskCelular.Mask = "(00) 00000-0000";
             this.mskCelular.Name = "mskCelular";
-            this.mskCelular.Size = new System.Drawing.Size(144, 29);
+            this.mskCelular.Size = new System.Drawing.Size(134, 29);
             this.mskCelular.TabIndex = 6;
             this.mskCelular.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -139,7 +117,7 @@
             this.mskTelefone.Location = new System.Drawing.Point(295, 253);
             this.mskTelefone.Mask = "(00) 0000-0000";
             this.mskTelefone.Name = "mskTelefone";
-            this.mskTelefone.Size = new System.Drawing.Size(143, 29);
+            this.mskTelefone.Size = new System.Drawing.Size(133, 29);
             this.mskTelefone.TabIndex = 5;
             this.mskTelefone.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -213,6 +191,8 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.mskCPF);
+            this.panel1.Controls.Add(this.txtFuncao);
             this.panel1.Controls.Add(this.txtSenha);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label7);
@@ -220,9 +200,7 @@
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.txtNome);
             this.panel1.Controls.Add(this.label4);
-            this.panel1.Controls.Add(this.cbbFuncao);
             this.panel1.Controls.Add(this.label5);
-            this.panel1.Controls.Add(this.mskCpf);
             this.panel1.Controls.Add(this.label8);
             this.panel1.Controls.Add(this.mskCelular);
             this.panel1.Controls.Add(this.mskTelefone);
@@ -231,12 +209,20 @@
             this.panel1.Size = new System.Drawing.Size(667, 399);
             this.panel1.TabIndex = 169;
             // 
+            // txtFuncao
+            // 
+            this.txtFuncao.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtFuncao.Location = new System.Drawing.Point(295, 206);
+            this.txtFuncao.Name = "txtFuncao";
+            this.txtFuncao.Size = new System.Drawing.Size(135, 29);
+            this.txtFuncao.TabIndex = 171;
+            // 
             // txtSenha
             // 
             this.txtSenha.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSenha.Location = new System.Drawing.Point(295, 357);
             this.txtSenha.Name = "txtSenha";
-            this.txtSenha.Size = new System.Drawing.Size(145, 29);
+            this.txtSenha.Size = new System.Drawing.Size(135, 29);
             this.txtSenha.TabIndex = 170;
             this.txtSenha.UseSystemPasswordChar = true;
             // 
@@ -311,6 +297,16 @@
             this.dataGridView1.Size = new System.Drawing.Size(434, 250);
             this.dataGridView1.TabIndex = 72;
             this.dataGridView1.VirtualMode = true;
+            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
+            // 
+            // mskCPF
+            // 
+            this.mskCPF.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mskCPF.Location = new System.Drawing.Point(295, 152);
+            this.mskCPF.Mask = "00000000000";
+            this.mskCPF.Name = "mskCPF";
+            this.mskCPF.Size = new System.Drawing.Size(123, 29);
+            this.mskCPF.TabIndex = 172;
             // 
             // frmUsuario3Func
             // 
@@ -344,8 +340,6 @@
         private System.Windows.Forms.Button btnAlterar;
         private System.Windows.Forms.Button btnVoltar;
         private System.Windows.Forms.Button btnExcluir;
-        private System.Windows.Forms.ComboBox cbbFuncao;
-        private System.Windows.Forms.MaskedTextBox mskCpf;
         private System.Windows.Forms.MaskedTextBox mskCelular;
         private System.Windows.Forms.MaskedTextBox mskTelefone;
         private System.Windows.Forms.Label label8;
@@ -364,5 +358,7 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox txtSenha;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox txtFuncao;
+        private System.Windows.Forms.MaskedTextBox mskCPF;
     }
 }

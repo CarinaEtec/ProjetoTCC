@@ -32,26 +32,27 @@ namespace Projeto_TCC.Adicionar
 
         private void btnCadastrar_Click(object sender, EventArgs e)
         {
-            //try
-            //{
-                string valor = txtCpf.Text;
+            try
+            {
+                string valor = mskCPF.Text;
                 if (ValidaCPF.IsCpf(valor))
                 {
                     Funcionarios func = new Funcionarios();
                     FuncionariosBO funcBO = new FuncionariosBO();
 
-                    txtNome.Text = func.Nome;
-                    txtCpf.Text = Convert.ToString(func.Cpf);
-                    txtFuncao.Text = func.Funcao;
-                    mskTelefone.Text = func.Telefone;
-                    mskCelular.Text = func.Celular;
-                    txtSenha.Text = func.Senha;
+                    func.Nome = txtNome.Text;
+                    func.Cpf = Convert.ToInt64(mskCPF.Text);
+                    func.Funcao = txtFuncao.Text;
+                    func.Telefone = mskTelefone.Text;
+                    func.Celular = mskCelular.Text;
+                    func.Senha = txtSenha.Text;
+
 
                     funcBO.Gravar(func);
                     MessageBox.Show("Funcionário cadastrado com sucesso");
 
                     txtNome.Clear();
-                    txtCpf.Clear();
+                    mskCPF.Clear();
                     txtFuncao.Clear();
                     mskTelefone.Clear();
                     mskCelular.Clear();
@@ -60,14 +61,15 @@ namespace Projeto_TCC.Adicionar
                 else
                 {
                     MessageBox.Show("CPF Inválido !");
-                    txtCpf.Clear();
+                    mskCPF.Clear();
                 }
-            //    }
-            //    catch
-            //    {
-            //        MessageBox.Show("Verifique os dados e tente novamente");
-            //    }
+            }
+            catch
+            {
+                MessageBox.Show("Verifique os dados e tente novamente");
+            }
         }
+
 
         private void frmUsuario1_Load(object sender, EventArgs e)
         {

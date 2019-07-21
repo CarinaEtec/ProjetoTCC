@@ -10,23 +10,41 @@ namespace Projeto_TCC.BO
 {
     class FuncionariosBO
     {
-        public void Gravar(Funcionarios func) //GRAVAR NOVO func
+        public void Gravar(Funcionarios func)
         {
             FuncionariosDAO funcDao = new FuncionariosDAO();
-            if ((func.Cpf != 0) && (func.Nome != ""))
+            if ((func.Nome != "") && (func.Cpf != 0))
             {
                 funcDao.Insert(func);
             }
         }
-        public void Deletar(Funcionarios func) 
+
+        public IList<Funcionarios> BuscarPorNOME(Funcionarios func)
         {
             FuncionariosDAO funcDao = new FuncionariosDAO();
 
-            if (func.Cpf != 0)
+            if (func.Nome != "")
+            {
+                IList<Funcionarios> funcTemp = funcDao.BuscarPorNOME(func.Nome);
+                return funcTemp;
+            }
+            else
+            {
+                return null;
+            }
+        }
+
+        public void Deletar(Funcionarios func)
+        {
+            FuncionariosDAO funcDao = new FuncionariosDAO();
+
+            if (func.Cpf > 0)
             {
                 funcDao.Delete(func);
             }
         }
+
+
         public void Editar(Funcionarios func)
         {
             FuncionariosDAO funcDao = new FuncionariosDAO();
@@ -35,19 +53,10 @@ namespace Projeto_TCC.BO
                 funcDao.Update(func);
             }
         }
-        public IList<Funcionarios> BuscarPorNome(Funcionarios func)
-        {
-            FuncionariosDAO funcDao = new FuncionariosDAO();
 
-            if (func.Nome != "")
-            {
-                IList<Funcionarios> funcTemp = funcDao.BuscaPorNome(func.Nome);
-                return funcTemp;
-            }
-            else
-            {
-                return null;
-            }
-        }
+
+
+
     }
+
 }
