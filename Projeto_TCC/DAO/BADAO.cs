@@ -29,5 +29,14 @@ namespace Projeto_TCC.DAO
                 throw new Exception("Não foi possível se conectar" + ex.Message);
             }
         }
+
+
+
+        //comando.CommandText = "select bloco from ba where apto = 0";
+
+
+
+
+
     }
 }

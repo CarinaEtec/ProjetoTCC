@@ -49,7 +49,7 @@ namespace Projeto_TCC.Adicionar
                     MessageBox.Show("Bloco cadastrado com sucesso");
 
                     grpCadApto.Visible = true;
-                txtBloco.Clear();
+                    txtBloco.Clear();
             }
             catch
             {
@@ -61,6 +61,31 @@ namespace Projeto_TCC.Adicionar
         private void frmUsuario3Cond_Load(object sender, EventArgs e)
         {
             grpCadApto.Visible = false;
+        }
+
+        private void btnSalvarApto_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                BA ba = new BA();
+                BABO baBO = new BABO();
+
+                ba.Bloco = txtBloco02.Text;
+                ba.Apto = txtApto.Text;
+
+                baBO.Gravar(ba);
+                MessageBox.Show("Apto cadastrado com sucesso");
+
+                grpCadApto.Visible = true;
+                txtBloco.Clear();
+                txtBloco02.Clear();
+                txtApto.Clear();
+            }
+            catch
+            {
+                MessageBox.Show("Verifique os dados e tente novamente");
+            }
+
         }
     }
 }

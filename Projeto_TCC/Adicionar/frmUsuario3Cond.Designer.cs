@@ -35,13 +35,13 @@
             this.btnSalvarBloco = new System.Windows.Forms.Button();
             this.grpCadApto = new System.Windows.Forms.GroupBox();
             this.btnSalvarApto = new System.Windows.Forms.Button();
-            this.cbbBloco = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtApto = new System.Windows.Forms.TextBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnFinalizar = new System.Windows.Forms.Button();
+            this.txtBloco02 = new System.Windows.Forms.TextBox();
             this.grpCadBloco.SuspendLayout();
             this.grpCadApto.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -90,11 +90,11 @@
             // grpCadApto
             // 
             this.grpCadApto.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.grpCadApto.Controls.Add(this.txtBloco02);
             this.grpCadApto.Controls.Add(this.btnSalvarApto);
-            this.grpCadApto.Controls.Add(this.cbbBloco);
             this.grpCadApto.Controls.Add(this.label3);
             this.grpCadApto.Controls.Add(this.label2);
-            this.grpCadApto.Controls.Add(this.textBox1);
+            this.grpCadApto.Controls.Add(this.txtApto);
             this.grpCadApto.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.grpCadApto.Location = new System.Drawing.Point(12, 312);
             this.grpCadApto.Name = "grpCadApto";
@@ -111,14 +111,7 @@
             this.btnSalvarApto.TabIndex = 4;
             this.btnSalvarApto.Text = "Salvar";
             this.btnSalvarApto.UseVisualStyleBackColor = true;
-            // 
-            // cbbBloco
-            // 
-            this.cbbBloco.FormattingEnabled = true;
-            this.cbbBloco.Location = new System.Drawing.Point(285, 50);
-            this.cbbBloco.Name = "cbbBloco";
-            this.cbbBloco.Size = new System.Drawing.Size(121, 32);
-            this.cbbBloco.TabIndex = 3;
+            this.btnSalvarApto.Click += new System.EventHandler(this.btnSalvarApto_Click);
             // 
             // label3
             // 
@@ -138,12 +131,12 @@
             this.label2.TabIndex = 1;
             this.label2.Text = "Identificação do Apartamento";
             // 
-            // textBox1
+            // txtApto
             // 
-            this.textBox1.Location = new System.Drawing.Point(287, 122);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(119, 29);
-            this.textBox1.TabIndex = 0;
+            this.txtApto.Location = new System.Drawing.Point(287, 122);
+            this.txtApto.Name = "txtApto";
+            this.txtApto.Size = new System.Drawing.Size(119, 29);
+            this.txtApto.TabIndex = 0;
             // 
             // pictureBox2
             // 
@@ -173,6 +166,13 @@
             this.btnFinalizar.Text = "Finalizar";
             this.btnFinalizar.UseVisualStyleBackColor = true;
             this.btnFinalizar.Click += new System.EventHandler(this.btnVoltar_Click);
+            // 
+            // txtBloco02
+            // 
+            this.txtBloco02.Location = new System.Drawing.Point(287, 58);
+            this.txtBloco02.Name = "txtBloco02";
+            this.txtBloco02.Size = new System.Drawing.Size(119, 29);
+            this.txtBloco02.TabIndex = 13;
             // 
             // frmUsuario3Cond
             // 
@@ -207,12 +207,12 @@
         private System.Windows.Forms.Button btnSalvarBloco;
         private System.Windows.Forms.GroupBox grpCadApto;
         private System.Windows.Forms.Button btnSalvarApto;
-        private System.Windows.Forms.ComboBox cbbBloco;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtApto;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button btnFinalizar;
+        private System.Windows.Forms.TextBox txtBloco02;
     }
 }
