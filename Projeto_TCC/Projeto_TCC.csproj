@@ -153,6 +153,7 @@
     </Compile>
     <Compile Include="BO\BABO.cs" />
     <Compile Include="BO\FuncionariosBO.cs" />
+    <Compile Include="BO\MoradoresBO.cs" />
     <Compile Include="Connected Services\WSCorreios\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -203,6 +204,7 @@
     <Compile Include="DAO\BADAO.cs" />
     <Compile Include="DAO\ConexaoBanco.cs" />
     <Compile Include="DAO\FuncionariosDAO.cs" />
+    <Compile Include="DAO\MoradorDAO.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>

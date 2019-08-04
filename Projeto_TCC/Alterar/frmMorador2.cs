@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Projeto_TCC.BO;
+using Projeto_TCC.Model;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -39,6 +41,77 @@ namespace Projeto_TCC.Alterar
             panel1.Enabled = true;
             btnAlterar.Enabled = true;
             btnExcluir.Enabled = true;
+        }
+
+        private void btnAlterar_Click(object sender, EventArgs e)
+        {
+            for (int i = 0; i < dataGridView1.RowCount; i++)
+            {
+                dataGridView1.Rows[i].DataGridView.Columns.Clear();
+            }
+
+            try
+            {
+                Moradores mor = new Moradores();
+                MoradoresBO morBO = new MoradoresBO();
+
+                mor.Nome = txtNome.Text;
+                mor.DataNasc = Convert.ToDateTime(mskDataNasc.Text);
+                mor.Situacao = txtSituacao.Text;
+                mor.Telefone = mskTelefone.Text;
+                mor.Celular = mskCelular.Text;
+                mor.BA.Ba_Cod = Convert.ToInt16(txtApto.Text);
+
+                morBO.Editar(mor);
+                MessageBox.Show("Morador editado com sucesso");
+            }
+            catch
+            {
+                MessageBox.Show("Verifique os dados e tente novamente");
+            }
+
+            txtNome.Clear();
+            mskDataNasc.Clear();
+            txtSituacao.Clear();
+            mskTelefone.Clear();
+            mskCelular.Clear();
+            txtApto.Clear();
+            txtBloco.Clear();
+            panel1.Enabled = false;
+            btnAlterar.Enabled = false;
+            btnExcluir.Enabled = false;
+        }
+
+        private void btnExcluir_Click(object sender, EventArgs e)
+        {
+            for (int i = 0; i < dataGridView1.RowCount; i++)
+            {
+                dataGridView1.Rows[i].DataGridView.Columns.Clear();
+            }
+            Moradores mor = new Moradores();
+            MoradoresBO morBO = new MoradoresBO();
+
+            try
+            {
+                mor.Nome = txtNome.Text;
+                morBO.Deletar(mor);
+
+                MessageBox.Show("Morador excluído com sucesso");
+            }
+            catch
+            {
+                MessageBox.Show("Preencha corretamente os campos e/ou verifique se esses dados não estão sendo usados");
+            }
+            txtNome.Clear();
+            mskDataNasc.Clear();
+            txtSituacao.Clear();
+            mskTelefone.Clear();
+            mskCelular.Clear();
+            txtApto.Clear();
+            txtBloco.Clear();
+            panel1.Enabled = false;
+            btnAlterar.Enabled = false;
+            btnExcluir.Enabled = false;
         }
     }
 }

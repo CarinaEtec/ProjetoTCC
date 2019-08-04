@@ -9,7 +9,7 @@ namespace Projeto_TCC.Model
     class Moradores
     {
         private int codMorador;
-        private string nme;
+        private string nome;
         private DateTime dataNasc;
         private string situacao;
         private string telefone;
@@ -22,7 +22,7 @@ namespace Projeto_TCC.Model
         }
 
         public int CodMorador { get => codMorador; set => codMorador = value; }
-        public string Nme { get => nme; set => nme = value; }
+        public string Nome { get => nome; set => nome = value; }
         public DateTime DataNasc { get => dataNasc; set => dataNasc = value; }
         public string Situacao { get => situacao; set => situacao = value; }
         public string Telefone { get => telefone; set => telefone = value; }
