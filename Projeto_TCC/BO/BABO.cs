@@ -20,5 +20,23 @@ namespace Projeto_TCC.BO
         }
 
 
+
+
+
+        public void BuscaCodBA(BA ba)
+        {
+            BADAO baDao = new BADAO();
+
+            if ((ba.Apto != "") && (ba.Bloco != ""))
+            {
+
+                var baTemp = baDao.BuscaCodBA(ba.Apto, ba.Bloco);
+                ba.Ba_Cod = baTemp.Ba_Cod;
+               // ba.Apto = baTemp.Apto;
+               // ba.Bloco = baTemp.Bloco;
+
+            }
+        }
+
     }
 }

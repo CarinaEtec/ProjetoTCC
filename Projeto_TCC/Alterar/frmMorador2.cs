@@ -64,22 +64,24 @@ namespace Projeto_TCC.Alterar
 
                 morBO.Editar(mor);
                 MessageBox.Show("Morador editado com sucesso");
+
+                txtNome.Clear();
+                mskDataNasc.Clear();
+                txtSituacao.Clear();
+                mskTelefone.Clear();
+                mskCelular.Clear();
+                txtApto.Clear();
+                txtBloco.Clear();
+                panel1.Enabled = false;
+                btnAlterar.Enabled = false;
+                btnExcluir.Enabled = false;
             }
             catch
             {
                 MessageBox.Show("Verifique os dados e tente novamente");
             }
 
-            txtNome.Clear();
-            mskDataNasc.Clear();
-            txtSituacao.Clear();
-            mskTelefone.Clear();
-            mskCelular.Clear();
-            txtApto.Clear();
-            txtBloco.Clear();
-            panel1.Enabled = false;
-            btnAlterar.Enabled = false;
-            btnExcluir.Enabled = false;
+
         }
 
         private void btnExcluir_Click(object sender, EventArgs e)
@@ -97,21 +99,23 @@ namespace Projeto_TCC.Alterar
                 morBO.Deletar(mor);
 
                 MessageBox.Show("Morador excluído com sucesso");
+
+                txtNome.Clear();
+                mskDataNasc.Clear();
+                txtSituacao.Clear();
+                mskTelefone.Clear();
+                mskCelular.Clear();
+                txtApto.Clear();
+                txtBloco.Clear();
+                panel1.Enabled = false;
+                btnAlterar.Enabled = false;
+                btnExcluir.Enabled = false;
             }
             catch
             {
                 MessageBox.Show("Preencha corretamente os campos e/ou verifique se esses dados não estão sendo usados");
             }
-            txtNome.Clear();
-            mskDataNasc.Clear();
-            txtSituacao.Clear();
-            mskTelefone.Clear();
-            mskCelular.Clear();
-            txtApto.Clear();
-            txtBloco.Clear();
-            panel1.Enabled = false;
-            btnAlterar.Enabled = false;
-            btnExcluir.Enabled = false;
+
         }
     }
 }

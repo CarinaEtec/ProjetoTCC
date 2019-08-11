@@ -17,6 +17,7 @@ namespace Projeto_TCC.Model
         public Pets()
         {
             BA = new BA();
+            Moradores = new Moradores();
         }
 
         public int CodPet { get => codPet; set => codPet = value; }

@@ -28,10 +28,6 @@ namespace Projeto_TCC.Adicionar
             add.Show();
         }
 
-        private void btnExcluir_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void btnCadastrar_Click(object sender, EventArgs e)
         {

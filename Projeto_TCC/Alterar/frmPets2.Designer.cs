@@ -31,7 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmPets2));
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.txtRaca = new System.Windows.Forms.TextBox();
+            this.txtEspecie = new System.Windows.Forms.TextBox();
             this.txtTutor = new System.Windows.Forms.TextBox();
             this.txtNome = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
@@ -45,6 +45,9 @@
             this.btnExcluir = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.lblMoradorCod = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.lblBACod = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.Apto = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -56,6 +59,7 @@
             this.rbtApto = new System.Windows.Forms.RadioButton();
             this.rbtBloco = new System.Windows.Forms.RadioButton();
             this.label5 = new System.Windows.Forms.Label();
+            this.txtCod = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -81,13 +85,13 @@
             this.label6.TabIndex = 89;
             this.label6.Text = "Espécie ";
             // 
-            // txtRaca
+            // txtEspecie
             // 
-            this.txtRaca.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtRaca.Location = new System.Drawing.Point(300, 319);
-            this.txtRaca.Name = "txtRaca";
-            this.txtRaca.Size = new System.Drawing.Size(334, 29);
-            this.txtRaca.TabIndex = 5;
+            this.txtEspecie.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEspecie.Location = new System.Drawing.Point(300, 319);
+            this.txtEspecie.Name = "txtEspecie";
+            this.txtEspecie.Size = new System.Drawing.Size(334, 29);
+            this.txtEspecie.TabIndex = 5;
             // 
             // txtTutor
             // 
@@ -128,7 +132,7 @@
             // txtBloco
             // 
             this.txtBloco.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBloco.Location = new System.Drawing.Point(300, 166);
+            this.txtBloco.Location = new System.Drawing.Point(300, 165);
             this.txtBloco.Name = "txtBloco";
             this.txtBloco.Size = new System.Drawing.Size(123, 29);
             this.txtBloco.TabIndex = 2;
@@ -170,6 +174,7 @@
             this.btnAlterar.TabIndex = 6;
             this.btnAlterar.Text = "Alterar";
             this.btnAlterar.UseVisualStyleBackColor = true;
+            this.btnAlterar.Click += new System.EventHandler(this.btnAlterar_Click);
             // 
             // btnVoltar
             // 
@@ -191,6 +196,7 @@
             this.btnExcluir.TabIndex = 7;
             this.btnExcluir.Text = "Excluir";
             this.btnExcluir.UseVisualStyleBackColor = true;
+            this.btnExcluir.Click += new System.EventHandler(this.btnExcluir_Click);
             // 
             // label7
             // 
@@ -204,11 +210,15 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.txtCod);
+            this.panel1.Controls.Add(this.lblMoradorCod);
+            this.panel1.Controls.Add(this.label8);
+            this.panel1.Controls.Add(this.lblBACod);
             this.panel1.Controls.Add(this.label7);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.label6);
             this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.txtRaca);
+            this.panel1.Controls.Add(this.txtEspecie);
             this.panel1.Controls.Add(this.txtApto);
             this.panel1.Controls.Add(this.txtTutor);
             this.panel1.Controls.Add(this.txtBloco);
@@ -219,6 +229,33 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(656, 375);
             this.panel1.TabIndex = 91;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // lblMoradorCod
+            // 
+            this.lblMoradorCod.AutoSize = true;
+            this.lblMoradorCod.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lblMoradorCod.Location = new System.Drawing.Point(277, 280);
+            this.lblMoradorCod.Name = "lblMoradorCod";
+            this.lblMoradorCod.Size = new System.Drawing.Size(2, 15);
+            this.lblMoradorCod.TabIndex = 92;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(328, 181);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(0, 13);
+            this.label8.TabIndex = 91;
+            // 
+            // lblBACod
+            // 
+            this.lblBACod.AutoSize = true;
+            this.lblBACod.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lblBACod.Location = new System.Drawing.Point(277, 133);
+            this.lblBACod.Name = "lblBACod";
+            this.lblBACod.Size = new System.Drawing.Size(2, 15);
+            this.lblBACod.TabIndex = 90;
             // 
             // panel2
             // 
@@ -338,6 +375,14 @@
             this.label5.TabIndex = 60;
             this.label5.Text = "Buscar Animal";
             // 
+            // txtCod
+            // 
+            this.txtCod.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCod.Location = new System.Drawing.Point(300, 71);
+            this.txtCod.Name = "txtCod";
+            this.txtCod.Size = new System.Drawing.Size(71, 29);
+            this.txtCod.TabIndex = 93;
+            // 
             // frmPets2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -368,7 +413,7 @@
 
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox txtRaca;
+        private System.Windows.Forms.TextBox txtEspecie;
         private System.Windows.Forms.TextBox txtTutor;
         private System.Windows.Forms.TextBox txtNome;
         private System.Windows.Forms.Label label4;
@@ -393,5 +438,9 @@
         private System.Windows.Forms.RadioButton rbtApto;
         private System.Windows.Forms.RadioButton rbtBloco;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label lblMoradorCod;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label lblBACod;
+        private System.Windows.Forms.TextBox txtCod;
     }
 }
