@@ -41,5 +41,29 @@ namespace Projeto_TCC.BO
             }
         }
 
+
+
+
+
+
+
+
+
+
+        public void Buscar(Moradores cliente)
+        {
+            MoradorDAO morDao = new MoradorDAO();
+
+            if (cliente.Nome != "")
+            {
+
+                var clienteTemp = morDao.BuscaPorNOME(cliente.Nome);
+
+                cliente.Nome = clienteTemp.Nome;
+                cliente.CodMorador = clienteTemp.CodMorador;
+
+            }
+        }
+
     }
 }

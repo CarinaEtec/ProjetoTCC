@@ -222,6 +222,7 @@
             this.Name = "frmPets";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmPets";
+            this.Load += new System.EventHandler(this.frmPets_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

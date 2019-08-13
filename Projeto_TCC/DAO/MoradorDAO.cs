@@ -82,5 +82,35 @@ namespace Projeto_TCC.DAO
         }
 
 
+
+
+
+
+
+        public Moradores BuscaPorNOME(string Nome)
+        {
+            MySqlCommand comando = new MySqlCommand();
+            comando.CommandType = CommandType.Text;
+            comando.CommandText = "Select * from Moradores where nome=@nome";
+
+            comando.Parameters.AddWithValue("@nome", Nome);
+
+            MySqlDataReader dr = ConexaoBanco.Selecionar(comando);
+
+            Moradores cliente = new Moradores();
+            if (dr.HasRows)
+            {
+                dr.Read();
+                cliente.CodMorador = (int)dr["CodMorador"];
+                cliente.Nome = (string)dr["Nome"];
+
+            }
+            else
+            {
+                cliente.CodMorador = 0;
+                cliente.Nome = "";
+            }
+            return cliente;
+        }
     }
 }
