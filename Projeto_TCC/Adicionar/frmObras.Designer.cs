@@ -30,7 +30,6 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmObras));
             this.mskData = new System.Windows.Forms.MaskedTextBox();
-            this.label3 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnVoltar = new System.Windows.Forms.Button();
             this.btnCadastrar = new System.Windows.Forms.Button();
@@ -54,16 +53,6 @@
             this.mskData.Size = new System.Drawing.Size(158, 29);
             this.mskData.TabIndex = 4;
             this.mskData.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(42, 332);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(117, 24);
-            this.label3.TabIndex = 75;
-            this.label3.Text = "Arquivo PDF";
             // 
             // pictureBox1
             // 
@@ -176,7 +165,6 @@
             this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.ClientSize = new System.Drawing.Size(684, 691);
             this.Controls.Add(this.mskData);
-            this.Controls.Add(this.label3);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btnVoltar);
             this.Controls.Add(this.btnCadastrar);
@@ -199,7 +187,6 @@
 
         #endregion
         private System.Windows.Forms.MaskedTextBox mskData;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button btnVoltar;
         private System.Windows.Forms.Button btnCadastrar;

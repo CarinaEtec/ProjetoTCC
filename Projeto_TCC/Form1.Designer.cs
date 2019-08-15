@@ -30,8 +30,6 @@
         {
             this.btnSair = new System.Windows.Forms.Button();
             this.cbbFuncao = new System.Windows.Forms.ComboBox();
-            this.cbbCondominio = new System.Windows.Forms.ComboBox();
-            this.label4 = new System.Windows.Forms.Label();
             this.txtLogin = new System.Windows.Forms.TextBox();
             this.txtSenha = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
@@ -44,7 +42,7 @@
             // btnSair
             // 
             this.btnSair.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSair.Location = new System.Drawing.Point(319, 369);
+            this.btnSair.Location = new System.Drawing.Point(319, 243);
             this.btnSair.Name = "btnSair";
             this.btnSair.Size = new System.Drawing.Size(102, 40);
             this.btnSair.TabIndex = 6;
@@ -59,37 +57,15 @@
             this.cbbFuncao.Items.AddRange(new object[] {
             "Administração",
             "Portaria"});
-            this.cbbFuncao.Location = new System.Drawing.Point(238, 215);
+            this.cbbFuncao.Location = new System.Drawing.Point(237, 170);
             this.cbbFuncao.Name = "cbbFuncao";
             this.cbbFuncao.Size = new System.Drawing.Size(183, 33);
             this.cbbFuncao.TabIndex = 3;
             // 
-            // cbbCondominio
-            // 
-            this.cbbCondominio.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbbCondominio.FormattingEnabled = true;
-            this.cbbCondominio.Items.AddRange(new object[] {
-            "Atlas",
-            "Antilles"});
-            this.cbbCondominio.Location = new System.Drawing.Point(238, 279);
-            this.cbbCondominio.Name = "cbbCondominio";
-            this.cbbCondominio.Size = new System.Drawing.Size(183, 33);
-            this.cbbCondominio.TabIndex = 4;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(64, 287);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(126, 25);
-            this.label4.TabIndex = 19;
-            this.label4.Text = "Condomínio";
-            // 
             // txtLogin
             // 
             this.txtLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtLogin.Location = new System.Drawing.Point(238, 82);
+            this.txtLogin.Location = new System.Drawing.Point(237, 37);
             this.txtLogin.Name = "txtLogin";
             this.txtLogin.Size = new System.Drawing.Size(183, 31);
             this.txtLogin.TabIndex = 1;
@@ -97,7 +73,7 @@
             // txtSenha
             // 
             this.txtSenha.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSenha.Location = new System.Drawing.Point(238, 148);
+            this.txtSenha.Location = new System.Drawing.Point(237, 103);
             this.txtSenha.Name = "txtSenha";
             this.txtSenha.Size = new System.Drawing.Size(183, 31);
             this.txtSenha.TabIndex = 2;
@@ -107,7 +83,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(64, 223);
+            this.label3.Location = new System.Drawing.Point(63, 178);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(84, 25);
             this.label3.TabIndex = 16;
@@ -117,7 +93,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(64, 154);
+            this.label2.Location = new System.Drawing.Point(63, 109);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(74, 25);
             this.label2.TabIndex = 15;
@@ -127,7 +103,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(64, 88);
+            this.label1.Location = new System.Drawing.Point(63, 43);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(65, 25);
             this.label1.TabIndex = 14;
@@ -136,7 +112,7 @@
             // btnEnrar
             // 
             this.btnEnrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEnrar.Location = new System.Drawing.Point(68, 369);
+            this.btnEnrar.Location = new System.Drawing.Point(68, 243);
             this.btnEnrar.Name = "btnEnrar";
             this.btnEnrar.Size = new System.Drawing.Size(102, 40);
             this.btnEnrar.TabIndex = 5;
@@ -147,7 +123,7 @@
             // btnNovo
             // 
             this.btnNovo.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnNovo.Location = new System.Drawing.Point(193, 369);
+            this.btnNovo.Location = new System.Drawing.Point(193, 243);
             this.btnNovo.Name = "btnNovo";
             this.btnNovo.Size = new System.Drawing.Size(102, 40);
             this.btnNovo.TabIndex = 20;
@@ -160,12 +136,10 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.ClientSize = new System.Drawing.Size(484, 491);
+            this.ClientSize = new System.Drawing.Size(484, 322);
             this.Controls.Add(this.btnNovo);
             this.Controls.Add(this.btnSair);
             this.Controls.Add(this.cbbFuncao);
-            this.Controls.Add(this.cbbCondominio);
-            this.Controls.Add(this.label4);
             this.Controls.Add(this.txtLogin);
             this.Controls.Add(this.txtSenha);
             this.Controls.Add(this.label3);
@@ -184,8 +158,6 @@
 
         private System.Windows.Forms.Button btnSair;
         private System.Windows.Forms.ComboBox cbbFuncao;
-        private System.Windows.Forms.ComboBox cbbCondominio;
-        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txtLogin;
         private System.Windows.Forms.TextBox txtSenha;
         private System.Windows.Forms.Label label3;

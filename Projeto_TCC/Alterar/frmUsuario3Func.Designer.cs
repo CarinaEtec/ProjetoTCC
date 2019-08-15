@@ -43,6 +43,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.mskCPF = new System.Windows.Forms.MaskedTextBox();
             this.txtFuncao = new System.Windows.Forms.TextBox();
             this.txtSenha = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -52,7 +53,6 @@
             this.txtBusca = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.mskCPF = new System.Windows.Forms.MaskedTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -107,7 +107,7 @@
             this.mskCelular.Location = new System.Drawing.Point(296, 307);
             this.mskCelular.Mask = "(00) 00000-0000";
             this.mskCelular.Name = "mskCelular";
-            this.mskCelular.Size = new System.Drawing.Size(134, 29);
+            this.mskCelular.Size = new System.Drawing.Size(143, 29);
             this.mskCelular.TabIndex = 6;
             this.mskCelular.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -117,7 +117,7 @@
             this.mskTelefone.Location = new System.Drawing.Point(295, 253);
             this.mskTelefone.Mask = "(00) 0000-0000";
             this.mskTelefone.Name = "mskTelefone";
-            this.mskTelefone.Size = new System.Drawing.Size(133, 29);
+            this.mskTelefone.Size = new System.Drawing.Size(142, 29);
             this.mskTelefone.TabIndex = 5;
             this.mskTelefone.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -209,12 +209,21 @@
             this.panel1.Size = new System.Drawing.Size(667, 399);
             this.panel1.TabIndex = 169;
             // 
+            // mskCPF
+            // 
+            this.mskCPF.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mskCPF.Location = new System.Drawing.Point(295, 152);
+            this.mskCPF.Mask = "00000000000";
+            this.mskCPF.Name = "mskCPF";
+            this.mskCPF.Size = new System.Drawing.Size(130, 29);
+            this.mskCPF.TabIndex = 172;
+            // 
             // txtFuncao
             // 
             this.txtFuncao.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtFuncao.Location = new System.Drawing.Point(295, 206);
             this.txtFuncao.Name = "txtFuncao";
-            this.txtFuncao.Size = new System.Drawing.Size(135, 29);
+            this.txtFuncao.Size = new System.Drawing.Size(144, 29);
             this.txtFuncao.TabIndex = 171;
             // 
             // txtSenha
@@ -222,7 +231,7 @@
             this.txtSenha.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSenha.Location = new System.Drawing.Point(295, 357);
             this.txtSenha.Name = "txtSenha";
-            this.txtSenha.Size = new System.Drawing.Size(135, 29);
+            this.txtSenha.Size = new System.Drawing.Size(144, 29);
             this.txtSenha.TabIndex = 170;
             this.txtSenha.UseSystemPasswordChar = true;
             // 
@@ -298,15 +307,6 @@
             this.dataGridView1.TabIndex = 72;
             this.dataGridView1.VirtualMode = true;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
-            // 
-            // mskCPF
-            // 
-            this.mskCPF.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mskCPF.Location = new System.Drawing.Point(295, 152);
-            this.mskCPF.Mask = "00000000000";
-            this.mskCPF.Name = "mskCPF";
-            this.mskCPF.Size = new System.Drawing.Size(123, 29);
-            this.mskCPF.TabIndex = 172;
             // 
             // frmUsuario3Func
             // 

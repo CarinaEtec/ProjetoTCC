@@ -30,7 +30,6 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmObras2));
             this.mskData = new System.Windows.Forms.MaskedTextBox();
-            this.label3 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.txtProprietario = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
@@ -46,9 +45,6 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.Apto = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Bloco = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnBuscar = new System.Windows.Forms.Button();
             this.txtBusca = new System.Windows.Forms.TextBox();
             this.rbtNome = new System.Windows.Forms.RadioButton();
@@ -70,16 +66,6 @@
             this.mskData.Size = new System.Drawing.Size(156, 29);
             this.mskData.TabIndex = 4;
             this.mskData.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(40, 373);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(117, 24);
-            this.label3.TabIndex = 146;
-            this.label3.Text = "Arquivo PDF";
             // 
             // pictureBox1
             // 
@@ -200,7 +186,6 @@
             this.panel1.Controls.Add(this.label7);
             this.panel1.Controls.Add(this.mskData);
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.txtApto);
             this.panel1.Controls.Add(this.txtProprietario);
@@ -230,40 +215,12 @@
             // 
             this.dataGridView1.AllowUserToDeleteRows = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Apto,
-            this.Bloco,
-            this.Column1});
             this.dataGridView1.Location = new System.Drawing.Point(33, 230);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.Size = new System.Drawing.Size(434, 250);
             this.dataGridView1.TabIndex = 59;
             this.dataGridView1.VirtualMode = true;
-            // 
-            // Apto
-            // 
-            this.Apto.FillWeight = 3F;
-            this.Apto.HeaderText = "Apto";
-            this.Apto.Name = "Apto";
-            this.Apto.ReadOnly = true;
-            this.Apto.Width = 60;
-            // 
-            // Bloco
-            // 
-            this.Bloco.FillWeight = 3F;
-            this.Bloco.HeaderText = "Bloco";
-            this.Bloco.Name = "Bloco";
-            this.Bloco.ReadOnly = true;
-            this.Bloco.Width = 60;
-            // 
-            // Column1
-            // 
-            this.Column1.FillWeight = 200F;
-            this.Column1.HeaderText = "Nome";
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
-            this.Column1.Width = 270;
             // 
             // btnBuscar
             // 
@@ -358,7 +315,6 @@
 
         #endregion
         private System.Windows.Forms.MaskedTextBox mskData;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.TextBox txtProprietario;
         private System.Windows.Forms.Label label4;
@@ -374,9 +330,6 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Apto;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Bloco;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.Button btnBuscar;
         private System.Windows.Forms.TextBox txtBusca;
         private System.Windows.Forms.RadioButton rbtNome;

@@ -37,7 +37,6 @@
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.txtModelo = new System.Windows.Forms.TextBox();
-            this.txtPlaca = new System.Windows.Forms.TextBox();
             this.txtProprietario = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -45,6 +44,7 @@
             this.txtApto = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.mskPlaca = new System.Windows.Forms.MaskedTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -124,14 +124,6 @@
             this.txtModelo.Size = new System.Drawing.Size(334, 29);
             this.txtModelo.TabIndex = 5;
             // 
-            // txtPlaca
-            // 
-            this.txtPlaca.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPlaca.Location = new System.Drawing.Point(310, 276);
-            this.txtPlaca.Name = "txtPlaca";
-            this.txtPlaca.Size = new System.Drawing.Size(334, 29);
-            this.txtPlaca.TabIndex = 4;
-            // 
             // txtProprietario
             // 
             this.txtProprietario.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -196,12 +188,22 @@
             this.label1.TabIndex = 60;
             this.label1.Text = "Apto";
             // 
+            // mskPlaca
+            // 
+            this.mskPlaca.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mskPlaca.Location = new System.Drawing.Point(310, 276);
+            this.mskPlaca.Mask = "aaa-0000";
+            this.mskPlaca.Name = "mskPlaca";
+            this.mskPlaca.Size = new System.Drawing.Size(100, 29);
+            this.mskPlaca.TabIndex = 76;
+            // 
             // frmVeiculos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.ClientSize = new System.Drawing.Size(684, 691);
+            this.Controls.Add(this.mskPlaca);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.txtCor);
             this.Controls.Add(this.pictureBox1);
@@ -210,7 +212,6 @@
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.txtModelo);
-            this.Controls.Add(this.txtPlaca);
             this.Controls.Add(this.txtProprietario);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -221,6 +222,7 @@
             this.Name = "frmVeiculos";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmVeiculos";
+            this.Load += new System.EventHandler(this.frmVeiculos_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -237,7 +239,6 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox txtModelo;
-        private System.Windows.Forms.TextBox txtPlaca;
         private System.Windows.Forms.TextBox txtProprietario;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
@@ -245,5 +246,6 @@
         private System.Windows.Forms.TextBox txtApto;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.MaskedTextBox mskPlaca;
     }
 }

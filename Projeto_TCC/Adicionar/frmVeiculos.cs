@@ -25,5 +25,10 @@ namespace Projeto_TCC.Adicionar
             add.Closed += (s, args) => this.Close();
             add.Show();
         }
+
+        private void frmVeiculos_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

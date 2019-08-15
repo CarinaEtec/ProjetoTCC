@@ -31,12 +31,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmObras));
             this.btnVoltar = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.Apto = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Bloco = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.rbtData = new System.Windows.Forms.RadioButton();
             this.btnBuscar = new System.Windows.Forms.Button();
             this.txtBusca = new System.Windows.Forms.TextBox();
@@ -63,63 +57,11 @@
             // 
             this.dataGridView1.AllowUserToDeleteRows = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Apto,
-            this.Bloco,
-            this.Column1,
-            this.Column3,
-            this.Column4,
-            this.Column5});
             this.dataGridView1.Location = new System.Drawing.Point(-1, 253);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.Size = new System.Drawing.Size(683, 339);
             this.dataGridView1.TabIndex = 6;
-            // 
-            // Apto
-            // 
-            this.Apto.FillWeight = 3F;
-            this.Apto.HeaderText = "Apto";
-            this.Apto.Name = "Apto";
-            this.Apto.ReadOnly = true;
-            this.Apto.Width = 60;
-            // 
-            // Bloco
-            // 
-            this.Bloco.FillWeight = 2F;
-            this.Bloco.HeaderText = "Bloco";
-            this.Bloco.Name = "Bloco";
-            this.Bloco.ReadOnly = true;
-            this.Bloco.Width = 60;
-            // 
-            // Column1
-            // 
-            this.Column1.FillWeight = 200F;
-            this.Column1.HeaderText = "Proprietário";
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
-            this.Column1.Width = 250;
-            // 
-            // Column3
-            // 
-            this.Column3.HeaderText = "Data";
-            this.Column3.Name = "Column3";
-            this.Column3.ReadOnly = true;
-            this.Column3.Width = 90;
-            // 
-            // Column4
-            // 
-            this.Column4.HeaderText = "Horário";
-            this.Column4.Name = "Column4";
-            this.Column4.ReadOnly = true;
-            this.Column4.Width = 90;
-            // 
-            // Column5
-            // 
-            this.Column5.HeaderText = "Visualizar";
-            this.Column5.Name = "Column5";
-            this.Column5.ReadOnly = true;
-            this.Column5.Width = 90;
             // 
             // rbtData
             // 
@@ -223,12 +165,6 @@
 
         private System.Windows.Forms.Button btnVoltar;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Apto;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Bloco;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
         private System.Windows.Forms.RadioButton rbtData;
         private System.Windows.Forms.Button btnBuscar;
         private System.Windows.Forms.TextBox txtBusca;

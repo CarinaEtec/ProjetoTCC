@@ -31,7 +31,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmOcorrencia));
             this.txtMotivo = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
             this.mskData = new System.Windows.Forms.MaskedTextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnVoltar = new System.Windows.Forms.Button();
@@ -64,16 +63,6 @@
             this.label5.Size = new System.Drawing.Size(65, 24);
             this.label5.TabIndex = 111;
             this.label5.Text = "Motivo";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(44, 376);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(117, 24);
-            this.label3.TabIndex = 110;
-            this.label3.Text = "Arquivo PDF";
             // 
             // mskData
             // 
@@ -197,7 +186,6 @@
             this.ClientSize = new System.Drawing.Size(684, 691);
             this.Controls.Add(this.txtMotivo);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.label3);
             this.Controls.Add(this.mskData);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btnVoltar);
@@ -223,7 +211,6 @@
 
         private System.Windows.Forms.TextBox txtMotivo;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.MaskedTextBox mskData;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button btnVoltar;

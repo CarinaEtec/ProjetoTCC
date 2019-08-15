@@ -45,21 +45,18 @@
             this.btnExcluir = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.txtCod = new System.Windows.Forms.TextBox();
             this.lblMoradorCod = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.lblBACod = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.Apto = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Bloco = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnBuscar = new System.Windows.Forms.Button();
             this.txtBusca = new System.Windows.Forms.TextBox();
             this.rbtNome = new System.Windows.Forms.RadioButton();
             this.rbtApto = new System.Windows.Forms.RadioButton();
             this.rbtBloco = new System.Windows.Forms.RadioButton();
             this.label5 = new System.Windows.Forms.Label();
-            this.txtCod = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -231,6 +228,14 @@
             this.panel1.TabIndex = 91;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
+            // txtCod
+            // 
+            this.txtCod.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCod.Location = new System.Drawing.Point(300, 71);
+            this.txtCod.Name = "txtCod";
+            this.txtCod.Size = new System.Drawing.Size(71, 29);
+            this.txtCod.TabIndex = 93;
+            // 
             // lblMoradorCod
             // 
             this.lblMoradorCod.AutoSize = true;
@@ -275,40 +280,12 @@
             // 
             this.dataGridView1.AllowUserToDeleteRows = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Apto,
-            this.Bloco,
-            this.Column1});
             this.dataGridView1.Location = new System.Drawing.Point(33, 230);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.Size = new System.Drawing.Size(434, 250);
             this.dataGridView1.TabIndex = 59;
             this.dataGridView1.VirtualMode = true;
-            // 
-            // Apto
-            // 
-            this.Apto.FillWeight = 3F;
-            this.Apto.HeaderText = "Apto";
-            this.Apto.Name = "Apto";
-            this.Apto.ReadOnly = true;
-            this.Apto.Width = 60;
-            // 
-            // Bloco
-            // 
-            this.Bloco.FillWeight = 3F;
-            this.Bloco.HeaderText = "Bloco";
-            this.Bloco.Name = "Bloco";
-            this.Bloco.ReadOnly = true;
-            this.Bloco.Width = 60;
-            // 
-            // Column1
-            // 
-            this.Column1.FillWeight = 200F;
-            this.Column1.HeaderText = "Nome";
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
-            this.Column1.Width = 270;
             // 
             // btnBuscar
             // 
@@ -375,14 +352,6 @@
             this.label5.TabIndex = 60;
             this.label5.Text = "Buscar Animal";
             // 
-            // txtCod
-            // 
-            this.txtCod.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCod.Location = new System.Drawing.Point(300, 71);
-            this.txtCod.Name = "txtCod";
-            this.txtCod.Size = new System.Drawing.Size(71, 29);
-            this.txtCod.TabIndex = 93;
-            // 
             // frmPets2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -429,9 +398,6 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Apto;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Bloco;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.Button btnBuscar;
         private System.Windows.Forms.TextBox txtBusca;
         private System.Windows.Forms.RadioButton rbtNome;

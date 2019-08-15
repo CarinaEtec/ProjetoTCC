@@ -30,12 +30,6 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCriancas));
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.Apto = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Bloco = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnBuscar = new System.Windows.Forms.Button();
             this.txtBusca = new System.Windows.Forms.TextBox();
             this.rbtNome = new System.Windows.Forms.RadioButton();
@@ -52,68 +46,12 @@
             // 
             this.dataGridView1.AllowUserToDeleteRows = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Apto,
-            this.Bloco,
-            this.Column1,
-            this.Column4,
-            this.Column2,
-            this.Column3});
             this.dataGridView1.Location = new System.Drawing.Point(-3, 255);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.Size = new System.Drawing.Size(684, 339);
             this.dataGridView1.TabIndex = 6;
             this.dataGridView1.VirtualMode = true;
-            // 
-            // Apto
-            // 
-            this.Apto.FillWeight = 3F;
-            this.Apto.HeaderText = "Apto";
-            this.Apto.Name = "Apto";
-            this.Apto.ReadOnly = true;
-            this.Apto.Width = 60;
-            // 
-            // Bloco
-            // 
-            this.Bloco.FillWeight = 3F;
-            this.Bloco.HeaderText = "Bloco";
-            this.Bloco.Name = "Bloco";
-            this.Bloco.ReadOnly = true;
-            this.Bloco.Width = 60;
-            // 
-            // Column1
-            // 
-            this.Column1.FillWeight = 200F;
-            this.Column1.HeaderText = "Nome";
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
-            this.Column1.Width = 250;
-            // 
-            // Column4
-            // 
-            this.Column4.FillWeight = 3F;
-            this.Column4.HeaderText = "Idade";
-            this.Column4.Name = "Column4";
-            this.Column4.ReadOnly = true;
-            this.Column4.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.Column4.Width = 50;
-            // 
-            // Column2
-            // 
-            this.Column2.FillWeight = 10F;
-            this.Column2.HeaderText = "Telefone";
-            this.Column2.Name = "Column2";
-            this.Column2.ReadOnly = true;
-            this.Column2.Width = 110;
-            // 
-            // Column3
-            // 
-            this.Column3.FillWeight = 11F;
-            this.Column3.HeaderText = "Celular";
-            this.Column3.Name = "Column3";
-            this.Column3.ReadOnly = true;
-            this.Column3.Width = 110;
             // 
             // btnBuscar
             // 
@@ -227,12 +165,6 @@
         #endregion
 
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Apto;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Bloco;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.Button btnBuscar;
         private System.Windows.Forms.TextBox txtBusca;
         private System.Windows.Forms.RadioButton rbtNome;
