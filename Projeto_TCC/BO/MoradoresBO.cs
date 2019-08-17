@@ -43,13 +43,6 @@ namespace Projeto_TCC.BO
 
 
 
-
-
-
-
-
-
-
         public void Buscar(Moradores cliente)
         {
             MoradorDAO morDao = new MoradorDAO();
@@ -65,5 +58,51 @@ namespace Projeto_TCC.BO
             }
         }
 
+
+
+
+
+
+
+
+
+        
+
+
+        public IList<Moradores> CONSULTA_MaiorIdade(Moradores moradores)
+        {
+            MoradorDAO morDao = new MoradorDAO();
+
+            if (moradores.Nome != "")
+            {
+                IList<Moradores> moradoresTemp = morDao.CONSULTA_MaiorIdade(moradores.Nome);
+
+                return moradoresTemp;
+            }
+            else
+            {
+                return null;
+            }
+        }
+
+
+
+
+        public IList<Moradores> CONSULTA_MenorIdade(Moradores moradores)
+        {
+            MoradorDAO morDao = new MoradorDAO();
+
+
+            if (moradores.Nome != "")
+            {
+                IList<Moradores> moradoresTemp = morDao.CONSULTA_MenorIdade(moradores.Nome);
+
+                return moradoresTemp;
+            }
+            else
+            {
+                return null;
+            }
+        }
     }
 }

@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Projeto_TCC.BO;
+using Projeto_TCC.Model;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -23,6 +25,25 @@ namespace Projeto_TCC.Consultar
             frmMenu menuzinho = new frmMenu();
             menuzinho.Closed += (s, args) => this.Close();
             menuzinho.Show();
+        }
+
+        private void btnBuscar_Click(object sender, EventArgs e)
+        {
+            if (rbtNome.Checked)
+            {
+                Moradores moradores = new Moradores();
+                MoradoresBO moradoresBO = new MoradoresBO();
+
+                //try
+                //{
+                    moradores.Nome = txtBusca.Text;
+                    dataGridView1.DataSource = moradoresBO.CONSULTA_MaiorIdade(moradores);
+                //}
+                //catch
+                //{
+                //    MessageBox.Show("Preencha corretamente as informações");
+                //}
+            }
         }
     }
 }

@@ -82,11 +82,6 @@ namespace Projeto_TCC.DAO
         }
 
 
-
-
-
-
-
         public Moradores BuscaPorNOME(string Nome)
         {
             MySqlCommand comando = new MySqlCommand();
@@ -112,5 +107,80 @@ namespace Projeto_TCC.DAO
             }
             return cliente;
         }
+
+        public IList<Moradores> CONSULTA_MaiorIdade(string nome)
+        {
+            MySqlCommand comando = new MySqlCommand();
+            comando.CommandType = CommandType.Text;
+            comando.CommandText = "SELECT* from MORADORES where(YEAR(FROM_DAYS(TO_DAYS(NOW())-TO_DAYS(DATANASC))) >= 18) AND nome like @nome";
+            // comando.CommandText = "SELECT m.nome,  m.situacao, m.telefone, m.celular, ba.apto, ba.bloco from moradores m, ba ba where(YEAR(FROM_DAYS(TO_DAYS(NOW())-TO_DAYS(DATANASC))) >= 18) AND m.ba_cod=ba.ba_cod";
+
+            comando.Parameters.AddWithValue("@nome", "%" + nome + "%");
+
+
+            MySqlDataReader dr = ConexaoBanco.Selecionar(comando);
+
+            IList<Moradores> mor = new List<Moradores>();
+
+            if (dr.HasRows)
+            {
+                while (dr.Read())
+                {
+                    Moradores moradores = new Moradores();
+                    moradores.Nome = (string)dr["nome"];
+                    moradores.DataNasc = (DateTime)dr["DataNasc"];
+                    moradores.Situacao = (string)dr["Situacao"];
+                    moradores.Telefone = (string)dr["telefone"];
+                    moradores.Celular = (string)dr["celular"];
+                    moradores.BA.Ba_Cod = (int)dr["Ba_Cod"];
+                    moradores.CodMorador = (int)dr["CodMorador"];
+
+                    mor.Add(moradores);
+                }
+            }
+            else
+            {
+                mor = null;
+            }
+            return mor;
+        }
+
+
+        public IList<Moradores> CONSULTA_MenorIdade(string nome)
+        {
+            MySqlCommand comando = new MySqlCommand();
+            comando.CommandType = CommandType.Text;
+            comando.CommandText = "SELECT* from MORADORES where(YEAR(FROM_DAYS(TO_DAYS(NOW())-TO_DAYS(DATANASC))) < 18) AND nome like @nome";
+
+            comando.Parameters.AddWithValue("@nome", "%" + nome + "%");
+
+
+            MySqlDataReader dr = ConexaoBanco.Selecionar(comando);
+
+            IList<Moradores> mor = new List<Moradores>();
+
+            if (dr.HasRows)
+            {
+                while (dr.Read())
+                {
+                    Moradores moradores = new Moradores();
+                    moradores.CodMorador = (int)dr["CodMorador"];
+                    moradores.Nome = (string)dr["nome"];
+                    moradores.DataNasc = (DateTime)dr["DataNasc"];
+                    moradores.Situacao = (string)dr["Situacao"];
+                    moradores.Telefone = (string)dr["telefone"];
+                    moradores.Celular = (string)dr["celular"];
+                    moradores.BA.Ba_Cod = (int)dr["Ba_Cod"];
+
+                    mor.Add(moradores);
+                }
+            }
+            else
+            {
+                mor = null;
+            }
+            return mor;
+        }
     }
+
 }
