@@ -34,12 +34,13 @@ namespace Projeto_TCC.DAO
 
         //comando.CommandText = "select bloco from ba where apto = 0";
 
-          public BA BuscaCodBA(string Bloco, string Apto)
+        public BA BuscaCodBA(string Apto, string Bloco)
 
         {
             MySqlCommand comando = new MySqlCommand();
             comando.CommandType = CommandType.Text;
-            comando.CommandText = "Select * from BA where Bloco=@Bloco and Apto=@Apto";
+            comando.CommandText = "Select * from BA where Bloco=@Bloco AND Apto=@Apto";
+
 
             comando.Parameters.AddWithValue("@Bloco", Bloco);
             comando.Parameters.AddWithValue("@Apto", Apto);
@@ -47,21 +48,21 @@ namespace Projeto_TCC.DAO
 
             MySqlDataReader dr = ConexaoBanco.Selecionar(comando);
 
-            BA cliente = new BA();
+            BA ba = new BA();
             if (dr.HasRows)
             {
                 dr.Read();
-                cliente.Ba_Cod = (int)dr["Ba_Cod"];
-                //cliente.Apto = (string)dr["Apto"];
-                //cliente.Bloco = (string)dr["Bloco"];
+                ba.Ba_Cod = (int)dr["Ba_Cod"];
+                ba.Apto = (string)dr["Apto"];
+                ba.Bloco = (string)dr["Bloco"];
             }
             else
             {
-                cliente.Ba_Cod = 0;
-                //cliente.Apto = "";
-                //cliente.Bloco = "";
+                ba.Ba_Cod = 0;
+                ba.Apto = "";
+                ba.Bloco = "";
             }
-            return cliente;
+            return ba;
         }
     }
 }

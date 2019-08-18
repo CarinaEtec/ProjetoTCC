@@ -32,8 +32,8 @@ namespace Projeto_TCC.BO
 
                 var baTemp = baDao.BuscaCodBA(ba.Apto, ba.Bloco);
                 ba.Ba_Cod = baTemp.Ba_Cod;
-               // ba.Apto = baTemp.Apto;
-               // ba.Bloco = baTemp.Bloco;
+                ba.Apto = baTemp.Apto;
+                ba.Bloco = baTemp.Bloco;
 
             }
         }

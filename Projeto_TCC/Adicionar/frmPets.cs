@@ -31,92 +31,93 @@ namespace Projeto_TCC.Adicionar
 
         private void btnCadastrar_Click(object sender, EventArgs e)
         {
-            //BA ba = new BA();
-            //BADAO baDao = new BADAO();
-
-            ////try
-            ////{
-            //    ba.Apto = txtApto.Text;
-            //    ba.Bloco = txtBloco.Text;
-
-            //    baDao.BuscaCodBA(ba.Apto, ba.Bloco);
-
-            //    if ((ba.Apto == "") && (ba.Bloco == ""))
-            //    {
-            //        MessageBox.Show("Apto/Bloco não encontrado");
-            //        txtApto.Clear();
-            //        txtBloco.Clear();
-            //    }
-            //    else
-            //    {
-            //        lblBACod.Text = Convert.ToString(ba.Ba_Cod);
-            //        txtTutor.Text = Convert.ToString(ba.Ba_Cod);
-            //    }
-            ////}
-
-
-
-
-
             try
             {
-                Moradores mor = new Moradores();
-                MoradoresBO morBO = new MoradoresBO();
+                //puxar codigo do ba
+                BA ba = new BA();
+                BABO babo = new BABO();
 
+                ba.Apto = txtApto.Text;
+                ba.Bloco = txtBloco.Text;
 
-                mor.Nome = txtTutor.Text;
-                morBO.Buscar(mor);
+                babo.BuscaCodBA(ba);
 
-                if (mor.Nome == "")
+                if ((ba.Bloco == "") && (ba.Apto == ""))
                 {
-                    MessageBox.Show("Morador não encontrado");
-                    txtTutor.Clear();
+                    MessageBox.Show("Bloco/Apartamento não encontrado");
                 }
 
                 else
                 {
-                    lblMoradorCod.Text = Convert.ToString(mor.CodMorador);
-
+                    lblBACod.Text = Convert.ToString(ba.Ba_Cod);
+                    //ouxar codigo do morador
                     try
                     {
-                        Pets pets = new Pets();
-                        PetsBO petsBO = new PetsBO();
+                        Moradores mor = new Moradores();
+                        MoradoresBO morBO = new MoradoresBO();
 
-                        pets.Nome = txtNome.Text;
-                        pets.Moradores.CodMorador = Convert.ToInt16(lblMoradorCod.Text);
-                        pets.BA.Ba_Cod = Convert.ToInt16(txtApto.Text);
-                        pets.Especie = txtEspecie.Text;
 
-                        petsBO.Gravar(pets);
-                        MessageBox.Show("Pet cadastrado com sucesso");
+                        mor.Nome = txtTutor.Text;
+                        morBO.Buscar(mor);
 
-                        txtNome.Clear();
-                        txtApto.Clear();
-                        txtBloco.Clear();
-                        txtTutor.Clear();
-                        txtEspecie.Clear();
+                        if (mor.Nome == "")
+                        {
+                            MessageBox.Show("Tutor não encontrado");
+                            txtTutor.Clear();
+                        }
+
+                        else
+                        {
+                            lblMoradorCod.Text = Convert.ToString(mor.CodMorador);
+
+                            try
+                            {
+                                //add pet
+                                Pets pets = new Pets();
+                                PetsBO petsBO = new PetsBO();
+
+                                pets.Nome = txtNome.Text;
+                                pets.Moradores.CodMorador = Convert.ToInt16(lblMoradorCod.Text);
+                                pets.BA.Ba_Cod = Convert.ToInt16(lblBACod.Text);
+                                pets.Especie = txtEspecie.Text;
+
+                                petsBO.Gravar(pets);
+                                MessageBox.Show("Pet cadastrado com sucesso");
+
+                                txtNome.Clear();
+                                txtApto.Clear();
+                                txtBloco.Clear();
+                                txtTutor.Clear();
+                                txtEspecie.Clear();
+
+                            }
+                            catch
+                            {
+                                MessageBox.Show("Verifique os dados e tente novamente");
+                            }
+                        }
                     }
+
                     catch
                     {
                         MessageBox.Show("Verifique os dados e tente novamente");
                     }
                 }
+
             }
-
-
-
-
-
-
             catch
             {
                 MessageBox.Show("Verifique os dados e tente novamente");
             }
         }
 
+
+
+
         private void frmPets_Load(object sender, EventArgs e)
         {
             lblMoradorCod.Visible = false;
+            lblBACod.Visible = false;
         }
     }
 

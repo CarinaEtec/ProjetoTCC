@@ -54,6 +54,9 @@ namespace Projeto_TCC.Alterar
             panel1.Enabled = false;
             btnAlterar.Enabled = false;
             btnExcluir.Enabled = false;
+
+            lblMoradorCod.Visible = false;
+            lblBACod.Visible = false;
         }
 
         private void btnAlterar_Click(object sender, EventArgs e)
@@ -63,29 +66,85 @@ namespace Projeto_TCC.Alterar
                 dataGridView1.Rows[i].DataGridView.Columns.Clear();
             }
 
+
             try
             {
-                Pets mor = new Pets();
-                PetsBO morBO = new PetsBO();
+                //pega codigo bloco apartamento
+                BA ba = new BA();
+                BABO babo = new BABO();
 
-                mor.CodPet = Convert.ToInt16(txtCod.Text);
-                mor.Nome = txtNome.Text;
-                mor.Moradores.CodMorador = Convert.ToInt16(txtTutor.Text);
-                mor.BA.Ba_Cod = Convert.ToInt16(txtApto.Text);
-                mor.Especie = txtEspecie.Text;
+                ba.Apto = txtApto.Text;
+                ba.Bloco = txtBloco.Text;
 
-                morBO.Editar(mor);
-                MessageBox.Show("Pet editado com sucesso");
+                babo.BuscaCodBA(ba);
 
-                txtNome.Clear();
-                txtApto.Clear();
-                txtBloco.Clear(); ;
-                txtTutor.Clear();
-                txtEspecie.Clear();
-                txtBusca.Clear();
-                panel1.Enabled = false;
-                btnAlterar.Enabled = false;
-                btnExcluir.Enabled = false;
+                if ((ba.Bloco == "") && (ba.Apto == ""))
+                {
+                    MessageBox.Show("Bloco/Apartamento não encontrado");
+                }
+
+                else
+                {
+                    lblBACod.Text = Convert.ToString(ba.Ba_Cod);
+
+
+                    try
+                    {   //pega codigo morador
+                        Moradores mor = new Moradores();
+                        MoradoresBO morBO = new MoradoresBO();
+
+
+                        mor.Nome = txtTutor.Text;
+                        morBO.Buscar(mor);
+
+                        if (mor.Nome == "")
+                        {
+                            MessageBox.Show("Tutor não encontrado");
+                            txtTutor.Clear();
+                        }
+
+                        else
+                        {
+                            lblMoradorCod.Text = Convert.ToString(mor.CodMorador);
+                            //altera o pet
+                            try
+                            {
+                                Pets pets = new Pets();
+                                PetsBO petsBO = new PetsBO();
+
+                                pets.CodPet = Convert.ToInt16(txtCod.Text);
+                                pets.Nome = txtNome.Text;
+                                pets.Moradores.CodMorador = Convert.ToInt16(lblMoradorCod.Text);
+                                pets.BA.Ba_Cod = Convert.ToInt16(lblBACod.Text);
+                                pets.Especie = txtEspecie.Text;
+
+                                petsBO.Editar(pets);
+                                MessageBox.Show("Pet editado com sucesso");
+
+                                txtNome.Clear();
+                                txtApto.Clear();
+                                txtBloco.Clear(); ;
+                                txtTutor.Clear();
+                                txtEspecie.Clear();
+                                txtBusca.Clear();
+                                panel1.Enabled = false;
+                                btnAlterar.Enabled = false;
+                                btnExcluir.Enabled = false;
+                                txtCod.Clear();
+                            }
+                            catch
+                            {
+                                MessageBox.Show("Verifique os dados e tente novamente");
+                            }
+                        }
+                    }
+
+                    catch
+                    {
+                        MessageBox.Show("Verifique os dados e tente novamente");
+                    }
+                }
+
             }
             catch
             {
@@ -124,10 +183,12 @@ namespace Projeto_TCC.Alterar
                 panel1.Enabled = false;
                 btnAlterar.Enabled = false;
                 btnExcluir.Enabled = false;
+
+                txtCod.Clear();
             }
             catch
             {
-                MessageBox.Show("Preencha corretamente os campos e/ou verifique se esses dados não estão sendo usados");
+                MessageBox.Show("Verifique os dados e tente novamente");
             }
 
         }
