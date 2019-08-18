@@ -16,13 +16,15 @@ namespace Projeto_TCC.Model
 
         public Ocorrencias()
         {
-            BA = new BA();
+            bA = new BA();
+            moradores = new Moradores();
+
         }
 
         public int CodOcorrencia { get => codOcorrencia; set => codOcorrencia = value; }
         public string Motivo { get => motivo; set => motivo = value; }
         public DateTime Data { get => data; set => data = value; }
-        internal Moradores Moradores { get => moradores; set => moradores = value; }
-        internal BA BA { get => bA; set => bA = value; }
+        public Moradores Moradores { get => moradores; set => moradores = value; }
+        public BA BA { get => bA; set => bA = value; }
     }
 }

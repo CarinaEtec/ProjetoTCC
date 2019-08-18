@@ -32,20 +32,18 @@ namespace Projeto_TCC.Alterar
             Pets pet = new Pets();
             PetsBO petBO = new PetsBO();
 
-            try
-            {
+            //try
+            //{
                 pet.Nome = txtBusca.Text;
-
-                //dataGridView1.DataSource = petBO.BuscarPorNOME(pet);
-                panel1.Enabled = true;
-                btnAlterar.Enabled = true;
-                btnExcluir.Enabled = true;
-            }
-            catch
-            {
-                MessageBox.Show("Preencha corretamente as informações");
-            }
-
+                dataGridView1.DataSource = petBO.BuscarPorNomePets(pet);
+            //    panel1.Enabled = true;
+            //    btnAlterar.Enabled = true;
+            //    btnExcluir.Enabled = true;
+            //}
+            //catch
+            //{
+            //    MessageBox.Show("Preencha corretamente as informações");
+            //}
 
         }
 

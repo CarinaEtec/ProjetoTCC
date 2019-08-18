@@ -34,10 +34,6 @@ namespace Projeto_TCC.DAO
             }
         }
 
-
-
-
-
         public void Delete(Pets pets)
         {
             try
@@ -83,6 +79,48 @@ namespace Projeto_TCC.DAO
 
 
 
-    }
+
+        public IList<Pets> BuscarPorNomePets(string nome)
+        {
+            {
+                MySqlCommand comando = new MySqlCommand();
+                comando.CommandType = CommandType.Text;
+                comando.CommandText = "Select * from Pets where nome like @nome";
+                //comando.CommandText = "Select p.Nome, p.Especie, m.Nome, Ba.Apto, Ba.Bloco from Pets p, Moradores m, ba Ba where m.codMorador=p.CodMorador and p.ba_cod=ba.ba_cod and nome like @nome";
+
+                comando.Parameters.AddWithValue("@nome", "%" + nome + "%");
+
+                MySqlDataReader dr = ConexaoBanco.Selecionar(comando);
+
+                IList<Pets> pets = new List<Pets>();
+
+                if (dr.HasRows)
+                {
+                    while (dr.Read())
+                    {
+
+                        Pets animais = new Pets();
+                        animais.Nome = (string)dr["Nome"];
+                        animais.Especie = (string)dr["Especie"];
+                        animais.CodPet = (int)dr["CodPet"];
+                        animais.Moradores.CodMorador = (int)dr["CodMorador"];
+                        animais.BA.Ba_Cod = (int)dr["Ba_Cod"];
+
+                        pets.Add(animais); 
+                    }
+                }
+
+                else
+                {
+                    pets = null;
+                }
+                return pets;
+
+            }
+        }
+
+
 
     }
+
+}

@@ -15,12 +15,14 @@ namespace Projeto_TCC.Model
 
         public Obras()
         {
-            BA = new BA();
+            bA = new BA();
+            moradores = new Moradores();
+
         }
 
         public int CodObras { get => codObras; set => codObras = value; }
         public DateTime DataHora { get => dataHora; set => dataHora = value; }
-        internal Moradores Moradores { get => moradores; set => moradores = value; }
-        internal BA BA { get => bA; set => bA = value; }
+        public Moradores Moradores { get => moradores; set => moradores = value; }
+        public BA BA { get => bA; set => bA = value; }
     }
 }

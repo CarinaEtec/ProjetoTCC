@@ -16,14 +16,16 @@ namespace Projeto_TCC.Model
 
         public Veiculos()
         {
-            BA = new BA();
+            bA = new BA();
+            moradores = new Moradores();
+
         }
 
         public string Placa { get => placa; set => placa = value; }
         public string Modelo { get => modelo; set => modelo = value; }
         public string Cor { get => cor; set => cor = value; }
 
-        internal Moradores Moradores { get => moradores; set => moradores = value; }
-        internal BA BA { get => bA; set => bA = value; }
+        public Moradores Moradores { get => moradores; set => moradores = value; }
+        public BA BA { get => bA; set => bA = value; }
     }
 }

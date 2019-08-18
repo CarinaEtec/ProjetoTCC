@@ -18,7 +18,7 @@ namespace Projeto_TCC.Model
 
         public Moradores()
         {
-            BA = new BA();
+            bA = new BA();
         }
 
         public int CodMorador { get => codMorador; set => codMorador = value; }
@@ -27,6 +27,6 @@ namespace Projeto_TCC.Model
         public string Situacao { get => situacao; set => situacao = value; }
         public string Telefone { get => telefone; set => telefone = value; }
         public string Celular { get => celular; set => celular = value; }
-        internal BA BA { get => bA; set => bA = value; }
+        public BA BA { get => bA; set => bA = value; }
     }
 }

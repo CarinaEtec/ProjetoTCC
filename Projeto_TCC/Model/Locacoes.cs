@@ -16,7 +16,9 @@ namespace Projeto_TCC.Model
 
         public Locacoes()
         {
-            BA = new BA();
+            bA = new BA();
+            moradores = new Moradores();
+
         }
 
         internal Moradores Moradores { get => moradores; set => moradores = value; }
@@ -24,7 +26,7 @@ namespace Projeto_TCC.Model
         public int CodLocacao { get => codLocacao; set => codLocacao = value; }
         public DateTime Inicio { get => inicio; set => inicio = value; }
         public DateTime Termino { get => termino; set => termino = value; }
-        internal BA BA { get => bA; set => bA = value; }
+        public BA BA { get => bA; set => bA = value; }
 
     }
 }

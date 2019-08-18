@@ -172,6 +172,8 @@ namespace Projeto_TCC.DAO
                     moradores.Celular = (string)dr["celular"];
                     moradores.BA.Ba_Cod = (int)dr["Ba_Cod"];
 
+
+
                     mor.Add(moradores);
                 }
             }
