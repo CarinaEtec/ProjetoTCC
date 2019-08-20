@@ -47,6 +47,7 @@
             this.btnVoltar = new System.Windows.Forms.Button();
             this.btnCadastrar = new System.Windows.Forms.Button();
             this.txtSituacao = new System.Windows.Forms.TextBox();
+            this.lblBACod = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -223,12 +224,22 @@
             this.txtSituacao.Size = new System.Drawing.Size(145, 29);
             this.txtSituacao.TabIndex = 138;
             // 
+            // lblBACod
+            // 
+            this.lblBACod.AutoSize = true;
+            this.lblBACod.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lblBACod.Location = new System.Drawing.Point(289, 168);
+            this.lblBACod.Name = "lblBACod";
+            this.lblBACod.Size = new System.Drawing.Size(2, 15);
+            this.lblBACod.TabIndex = 139;
+            // 
             // frmCriancas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.ClientSize = new System.Drawing.Size(684, 691);
+            this.Controls.Add(this.lblBACod);
             this.Controls.Add(this.txtSituacao);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btnVoltar);
@@ -250,6 +261,7 @@
             this.Name = "frmCriancas";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmCriancas";
+            this.Load += new System.EventHandler(this.frmCriancas_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -275,5 +287,6 @@
         private System.Windows.Forms.Button btnVoltar;
         private System.Windows.Forms.Button btnCadastrar;
         private System.Windows.Forms.TextBox txtSituacao;
+        private System.Windows.Forms.Label lblBACod;
     }
 }

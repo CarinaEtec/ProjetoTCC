@@ -153,8 +153,12 @@
     </Compile>
     <Compile Include="BO\BABO.cs" />
     <Compile Include="BO\FuncionariosBO.cs" />
+    <Compile Include="BO\LocacoesBO.cs" />
     <Compile Include="BO\MoradoresBO.cs" />
+    <Compile Include="BO\ObrasBO.cs" />
+    <Compile Include="BO\OcorrenciasBO.cs" />
     <Compile Include="BO\PetsBO.cs" />
+    <Compile Include="BO\VeiculosBO.cs" />
     <Compile Include="Connected Services\WSCorreios\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -205,8 +209,12 @@
     <Compile Include="DAO\BADAO.cs" />
     <Compile Include="DAO\ConexaoBanco.cs" />
     <Compile Include="DAO\FuncionariosDAO.cs" />
+    <Compile Include="DAO\LocacoesDAO.cs" />
     <Compile Include="DAO\MoradorDAO.cs" />
+    <Compile Include="DAO\ObrasDAO.cs" />
+    <Compile Include="DAO\OcorrenciasDAO.cs" />
     <Compile Include="DAO\PetsDAO.cs" />
+    <Compile Include="DAO\VeiculosDAO.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>

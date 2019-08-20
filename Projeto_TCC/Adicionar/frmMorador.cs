@@ -33,31 +33,63 @@ namespace Projeto_TCC.Adicionar
         {
             try
             {
-                Moradores mor = new Moradores();
-                MoradoresBO morBO = new MoradoresBO();
+                //puxar codigo do ba
+                BA ba = new BA();
+                BABO babo = new BABO();
 
-                mor.Nome = txtNome.Text;
-                mor.DataNasc = Convert.ToDateTime(mskDataNasc.Text);
-                mor.Situacao = txtSituacao.Text;
-                mor.Telefone = mskTelefone.Text;
-                mor.Celular = mskCelular.Text;
-                mor.BA.Ba_Cod = Convert.ToInt16(txtApto.Text);
+                ba.Apto = txtApto.Text;
+                ba.Bloco = txtBloco.Text;
 
-                morBO.Gravar(mor);
-                MessageBox.Show("Morador cadastrado com sucesso");
+                babo.BuscaCodBA(ba);
 
-                txtApto.Clear();
-                txtBloco.Clear();
-                txtNome.Clear();
-                mskDataNasc.Clear();
-                txtSituacao.Clear();
-                mskTelefone.Clear();
-                mskCelular.Clear();
+                if ((ba.Bloco == "") && (ba.Apto == ""))
+                {
+                    MessageBox.Show("Bloco/Apartamento não encontrado");
+                }
+
+                else
+                {
+                    lblBACod.Text = Convert.ToString(ba.Ba_Cod);
+                    //cadastrar morador
+                    try
+                    {
+                        Moradores mor = new Moradores();
+                        MoradoresBO morBO = new MoradoresBO();
+
+                        mor.Nome = txtNome.Text;
+                        mor.DataNasc = Convert.ToDateTime(mskDataNasc.Text);
+                        mor.Situacao = txtSituacao.Text;
+                        mor.Telefone = mskTelefone.Text;
+                        mor.Celular = mskCelular.Text;
+                        mor.BA.Ba_Cod = Convert.ToInt16(lblBACod.Text);
+
+                        morBO.Gravar(mor);
+                        MessageBox.Show("Morador cadastrado com sucesso");
+
+                        txtApto.Clear();
+                        txtBloco.Clear();
+                        txtNome.Clear();
+                        mskDataNasc.Clear();
+                        txtSituacao.Clear();
+                        mskTelefone.Clear();
+                        mskCelular.Clear();
+                    }
+                    catch
+                    {
+                        MessageBox.Show("Verifique os dados e tente novamente");
+                    }
+                }
             }
             catch
             {
                 MessageBox.Show("Verifique os dados e tente novamente");
             }
+        }
+
+        private void frmMorador_Load(object sender, EventArgs e)
+        {
+            lblBACod.Visible = false;
+
         }
     }
 }
