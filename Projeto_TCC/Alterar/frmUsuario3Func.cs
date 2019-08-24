@@ -72,25 +72,22 @@ namespace Projeto_TCC.Alterar
 
                 funcBO.Editar(func);
                 MessageBox.Show("Funcionário editado com sucesso");
+
+                txtNome.Clear();
+                mskCPF.Clear();
+                txtFuncao.Clear(); ;
+                mskTelefone.Clear();
+                mskCelular.Clear();
+                txtBusca.Clear();
+                txtSenha.Clear();
+                panel1.Enabled = false;
+                btnAlterar.Enabled = false;
+                btnExcluir.Enabled = false;
             }
             catch
             {
                 MessageBox.Show("Verifique os dados e tente novamente");
-            }
-
-
-            txtNome.Clear();
-            mskCPF.Clear();
-            txtFuncao.Clear(); ;
-            mskTelefone.Clear();
-            mskCelular.Clear();
-            txtBusca.Clear();
-            txtSenha.Clear();
-            panel1.Enabled = false;
-            btnAlterar.Enabled = false;
-            btnExcluir.Enabled = false;
-
-
+            }       
         }
 
         private void btnExcluir_Click(object sender, EventArgs e)
@@ -109,21 +106,22 @@ namespace Projeto_TCC.Alterar
                 funcBO.Deletar(func);
 
                 MessageBox.Show("Funcionário excluído com sucesso");
+
+                txtNome.Clear();
+                mskCPF.Clear();
+                txtFuncao.Clear(); ;
+                mskTelefone.Clear();
+                mskCelular.Clear();
+                txtBusca.Clear();
+                txtSenha.Clear();
+                panel1.Enabled = false;
+                btnAlterar.Enabled = false;
+                btnExcluir.Enabled = false;
             }
             catch
             {
                 MessageBox.Show("Preencha corretamente os campos e/ou verifique se esses dados não estão sendo usados");
-            }
-            txtNome.Clear();
-            mskCPF.Clear();
-            txtFuncao.Clear(); ;
-            mskTelefone.Clear();
-            mskCelular.Clear();
-            txtBusca.Clear();
-            txtSenha.Clear();
-            panel1.Enabled = false;
-            btnAlterar.Enabled = false;
-            btnExcluir.Enabled = false;
+            }           
         }
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)

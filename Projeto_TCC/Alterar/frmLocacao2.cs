@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Projeto_TCC.BO;
+using Projeto_TCC.Model;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -39,6 +41,45 @@ namespace Projeto_TCC.Alterar
 
             btnAlterar.Enabled = false;
             btnExcluir.Enabled = false;
+
+            lblMoradorCod.Visible = false;
+            lblBACod.Visible = false;
+        }
+
+        private void btnExcluir_Click(object sender, EventArgs e)
+        {
+            for (int i = 0; i < dataGridView1.RowCount; i++)
+            {
+                dataGridView1.Rows[i].DataGridView.Columns.Clear();
+            }
+
+            Locacoes loc = new Locacoes();
+            LocacoesBO locBO = new LocacoesBO();
+
+            try
+            {
+                loc.CodLocacao = Convert.ToInt16(txtCod.Text);
+                locBO.Deletar(loc);
+
+                MessageBox.Show("Locação excluída com sucesso");
+
+                txtProprietario.Clear();
+                txtApto.Clear();
+                txtBloco.Clear();
+
+                mskHorarioInicio.Clear();
+                mskHorarioTermino.Clear();
+                txtBusca.Clear();
+                panel1.Enabled = false;
+                btnAlterar.Enabled = false;
+                btnExcluir.Enabled = false;
+
+                txtCod.Clear();
+            }
+            catch
+            {
+                MessageBox.Show("Verifique os dados e tente novamente");
+            }
         }
     }
 }

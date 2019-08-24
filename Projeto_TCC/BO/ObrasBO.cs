@@ -18,5 +18,13 @@ namespace Projeto_TCC.BO
                 obrasDao.Insert(obras);
             }
         }
+        public void Deletar(Obras obras)
+        {
+            ObrasDAO obrasDao = new ObrasDAO();
+            if (obras.CodObras != 0)
+            {
+                obrasDao.Delete(obras);
+            }
+        }
     }
 }

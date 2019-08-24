@@ -29,21 +29,24 @@ namespace Projeto_TCC.Alterar
 
         private void btnBuscar_Click(object sender, EventArgs e)
         {
-            Pets pet = new Pets();
-            PetsBO petBO = new PetsBO();
+            //Pets pet = new Pets();
+            //PetsBO petBO = new PetsBO();
 
-            //try
-            //{
-                pet.Nome = txtBusca.Text;
-                dataGridView1.DataSource = petBO.BuscarPorNomePets(pet);
-            //    panel1.Enabled = true;
-            //    btnAlterar.Enabled = true;
-            //    btnExcluir.Enabled = true;
-            //}
-            //catch
-            //{
-            //    MessageBox.Show("Preencha corretamente as informações");
-            //}
+            ////try
+            ////{
+            //    pet.Nome = txtBusca.Text;
+            //    dataGridView1.DataSource = petBO.BuscarPorNomePets(pet);
+            ////    panel1.Enabled = true;
+            ////    btnAlterar.Enabled = true;
+            ////    btnExcluir.Enabled = true;
+            ////}
+            ////catch
+            ////{
+            ////    MessageBox.Show("Preencha corretamente as informações");
+            ////}
+            panel1.Enabled = true;
+            btnAlterar.Enabled = true;
+            btnExcluir.Enabled = true;
 
         }
 

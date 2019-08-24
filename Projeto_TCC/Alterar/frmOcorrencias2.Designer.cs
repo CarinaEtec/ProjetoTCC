@@ -52,6 +52,8 @@
             this.btnBuscar = new System.Windows.Forms.Button();
             this.rbtNome = new System.Windows.Forms.RadioButton();
             this.rbtApto = new System.Windows.Forms.RadioButton();
+            this.lblMoradorCod = new System.Windows.Forms.Label();
+            this.lblBACod = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -192,6 +194,8 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.lblBACod);
+            this.panel1.Controls.Add(this.lblMoradorCod);
             this.panel1.Controls.Add(this.label7);
             this.panel1.Controls.Add(this.txtMotivo);
             this.panel1.Controls.Add(this.label1);
@@ -298,6 +302,24 @@
             this.rbtApto.Text = "Apto";
             this.rbtApto.UseVisualStyleBackColor = true;
             // 
+            // lblMoradorCod
+            // 
+            this.lblMoradorCod.AutoSize = true;
+            this.lblMoradorCod.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lblMoradorCod.Location = new System.Drawing.Point(251, 229);
+            this.lblMoradorCod.Name = "lblMoradorCod";
+            this.lblMoradorCod.Size = new System.Drawing.Size(2, 15);
+            this.lblMoradorCod.TabIndex = 151;
+            // 
+            // lblBACod
+            // 
+            this.lblBACod.AutoSize = true;
+            this.lblBACod.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lblBACod.Location = new System.Drawing.Point(251, 132);
+            this.lblBACod.Name = "lblBACod";
+            this.lblBACod.Size = new System.Drawing.Size(2, 15);
+            this.lblBACod.TabIndex = 152;
+            // 
             // frmOcorrencias2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -348,5 +370,7 @@
         private System.Windows.Forms.Button btnBuscar;
         private System.Windows.Forms.RadioButton rbtNome;
         private System.Windows.Forms.RadioButton rbtApto;
+        private System.Windows.Forms.Label lblMoradorCod;
+        private System.Windows.Forms.Label lblBACod;
     }
 }

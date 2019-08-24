@@ -18,5 +18,13 @@ namespace Projeto_TCC.BO
                 ocorrenciasDao.Insert(ocorrencias);
             }
         }
+        public void Deletar(Ocorrencias ocorrencias)
+        {
+            OcorrenciasDAO ocorrenciasDao = new OcorrenciasDAO();
+            if (ocorrencias.CodOcorrencia != 0)
+            {
+                ocorrenciasDao.Delete(ocorrencias);
+            }
+        }
     }
 }

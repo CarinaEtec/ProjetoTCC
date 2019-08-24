@@ -18,5 +18,14 @@ namespace Projeto_TCC.BO
                 locDao.Insert(loc);
             }
         }
+
+        public void Deletar(Locacoes loc)
+        {
+            LocacoesDAO locDao = new LocacoesDAO();
+            if (loc.CodLocacao != 0)
+            {
+                locDao.Delete(loc);
+            }
+        }
     }
 }

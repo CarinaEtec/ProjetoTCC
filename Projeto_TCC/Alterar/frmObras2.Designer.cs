@@ -51,6 +51,9 @@
             this.rbtApto = new System.Windows.Forms.RadioButton();
             this.rbtBloco = new System.Windows.Forms.RadioButton();
             this.label5 = new System.Windows.Forms.Label();
+            this.lblBACod = new System.Windows.Forms.Label();
+            this.lblMoradorCod = new System.Windows.Forms.Label();
+            this.txtCod = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -170,6 +173,7 @@
             this.btnExcluir.TabIndex = 7;
             this.btnExcluir.Text = "Excluir";
             this.btnExcluir.UseVisualStyleBackColor = true;
+            this.btnExcluir.Click += new System.EventHandler(this.btnExcluir_Click);
             // 
             // label7
             // 
@@ -183,6 +187,9 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.txtCod);
+            this.panel1.Controls.Add(this.lblMoradorCod);
+            this.panel1.Controls.Add(this.lblBACod);
             this.panel1.Controls.Add(this.label7);
             this.panel1.Controls.Add(this.mskData);
             this.panel1.Controls.Add(this.label1);
@@ -287,6 +294,32 @@
             this.label5.TabIndex = 60;
             this.label5.Text = "Buscar Obra";
             // 
+            // lblBACod
+            // 
+            this.lblBACod.AutoSize = true;
+            this.lblBACod.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lblBACod.Location = new System.Drawing.Point(264, 141);
+            this.lblBACod.Name = "lblBACod";
+            this.lblBACod.Size = new System.Drawing.Size(2, 15);
+            this.lblBACod.TabIndex = 149;
+            // 
+            // lblMoradorCod
+            // 
+            this.lblMoradorCod.AutoSize = true;
+            this.lblMoradorCod.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lblMoradorCod.Location = new System.Drawing.Point(264, 238);
+            this.lblMoradorCod.Name = "lblMoradorCod";
+            this.lblMoradorCod.Size = new System.Drawing.Size(2, 15);
+            this.lblMoradorCod.TabIndex = 150;
+            // 
+            // txtCod
+            // 
+            this.txtCod.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCod.Location = new System.Drawing.Point(309, 78);
+            this.txtCod.Name = "txtCod";
+            this.txtCod.Size = new System.Drawing.Size(71, 29);
+            this.txtCod.TabIndex = 151;
+            // 
             // frmObras2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -336,5 +369,8 @@
         private System.Windows.Forms.RadioButton rbtApto;
         private System.Windows.Forms.RadioButton rbtBloco;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label lblBACod;
+        private System.Windows.Forms.Label lblMoradorCod;
+        private System.Windows.Forms.TextBox txtCod;
     }
 }

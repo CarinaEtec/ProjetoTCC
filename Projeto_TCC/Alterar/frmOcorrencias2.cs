@@ -31,6 +31,9 @@ namespace Projeto_TCC.Alterar
             panel2.Visible = true;
 
             btnAlterar.Enabled = false;
+
+            lblMoradorCod.Visible = false;
+            lblBACod.Visible = false;
         }
 
         private void btnBuscar_Click(object sender, EventArgs e)

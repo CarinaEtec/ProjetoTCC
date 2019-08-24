@@ -45,8 +45,10 @@
             this.btnVoltar = new System.Windows.Forms.Button();
             this.btnExcluir = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
-            this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
+            this.mskPlaca = new System.Windows.Forms.MaskedTextBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.lblMoradorCod = new System.Windows.Forms.Label();
+            this.lblBACod = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.btnBuscar = new System.Windows.Forms.Button();
@@ -139,7 +141,7 @@
             this.txtBloco.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBloco.Location = new System.Drawing.Point(295, 159);
             this.txtBloco.Name = "txtBloco";
-            this.txtBloco.Size = new System.Drawing.Size(123, 29);
+            this.txtBloco.Size = new System.Drawing.Size(100, 29);
             this.txtBloco.TabIndex = 2;
             // 
             // txtApto
@@ -147,7 +149,7 @@
             this.txtApto.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtApto.Location = new System.Drawing.Point(295, 112);
             this.txtApto.Name = "txtApto";
-            this.txtApto.Size = new System.Drawing.Size(123, 29);
+            this.txtApto.Size = new System.Drawing.Size(100, 29);
             this.txtApto.TabIndex = 1;
             // 
             // label2
@@ -200,6 +202,7 @@
             this.btnExcluir.TabIndex = 8;
             this.btnExcluir.Text = "Excluir";
             this.btnExcluir.UseVisualStyleBackColor = true;
+            this.btnExcluir.Click += new System.EventHandler(this.btnExcluir_Click);
             // 
             // label7
             // 
@@ -211,19 +214,21 @@
             this.label7.TabIndex = 128;
             this.label7.Text = "Alterar Veículo";
             // 
-            // maskedTextBox1
+            // mskPlaca
             // 
-            this.maskedTextBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.maskedTextBox1.Location = new System.Drawing.Point(295, 259);
-            this.maskedTextBox1.Mask = "AAA-0000";
-            this.maskedTextBox1.Name = "maskedTextBox1";
-            this.maskedTextBox1.Size = new System.Drawing.Size(91, 29);
-            this.maskedTextBox1.TabIndex = 145;
+            this.mskPlaca.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mskPlaca.Location = new System.Drawing.Point(295, 259);
+            this.mskPlaca.Mask = "AAA-0000";
+            this.mskPlaca.Name = "mskPlaca";
+            this.mskPlaca.Size = new System.Drawing.Size(100, 29);
+            this.mskPlaca.TabIndex = 145;
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.lblMoradorCod);
+            this.panel1.Controls.Add(this.lblBACod);
             this.panel1.Controls.Add(this.label7);
-            this.panel1.Controls.Add(this.maskedTextBox1);
+            this.panel1.Controls.Add(this.mskPlaca);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.label5);
             this.panel1.Controls.Add(this.label2);
@@ -239,6 +244,24 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(644, 422);
             this.panel1.TabIndex = 146;
+            // 
+            // lblMoradorCod
+            // 
+            this.lblMoradorCod.AutoSize = true;
+            this.lblMoradorCod.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lblMoradorCod.Location = new System.Drawing.Point(249, 223);
+            this.lblMoradorCod.Name = "lblMoradorCod";
+            this.lblMoradorCod.Size = new System.Drawing.Size(2, 15);
+            this.lblMoradorCod.TabIndex = 149;
+            // 
+            // lblBACod
+            // 
+            this.lblBACod.AutoSize = true;
+            this.lblBACod.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lblBACod.Location = new System.Drawing.Point(249, 126);
+            this.lblBACod.Name = "lblBACod";
+            this.lblBACod.Size = new System.Drawing.Size(2, 15);
+            this.lblBACod.TabIndex = 148;
             // 
             // panel2
             // 
@@ -374,7 +397,7 @@
         private System.Windows.Forms.Button btnVoltar;
         private System.Windows.Forms.Button btnExcluir;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox1;
+        private System.Windows.Forms.MaskedTextBox mskPlaca;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.DataGridView dataGridView1;
@@ -384,5 +407,7 @@
         private System.Windows.Forms.RadioButton rbtApto;
         private System.Windows.Forms.RadioButton rbtBloco;
         private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label lblBACod;
+        private System.Windows.Forms.Label lblMoradorCod;
     }
 }

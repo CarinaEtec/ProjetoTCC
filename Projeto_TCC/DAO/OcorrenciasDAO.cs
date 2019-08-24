@@ -34,6 +34,24 @@ namespace Projeto_TCC.DAO
                 throw new Exception("Não foi possível se conectar" + ex.Message);
             }
         }
+
+        public void Delete(Ocorrencias ocorrencias)
+        {
+            try
+            {
+                MySqlCommand comando = new MySqlCommand();
+                comando.CommandType = CommandType.Text;
+                comando.CommandText = "Delete from Ocorrencia where CodOcorrencia=@CodOcorrencia";
+
+                comando.Parameters.AddWithValue("@CodOcorrencia", ocorrencias.CodOcorrencia);
+
+                ConexaoBanco.CRUD(comando);
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Não foi possível se conectar" + ex.Message);
+            }
+        }
     }
 }
 

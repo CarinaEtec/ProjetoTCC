@@ -45,6 +45,7 @@
             this.mskHorarioInicio = new System.Windows.Forms.MaskedTextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.txtCod = new System.Windows.Forms.TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.btnBuscar = new System.Windows.Forms.Button();
             this.txtBusca = new System.Windows.Forms.TextBox();
@@ -52,6 +53,8 @@
             this.rbtData = new System.Windows.Forms.RadioButton();
             this.label4 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.lblBACod = new System.Windows.Forms.Label();
+            this.lblMoradorCod = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -151,6 +154,7 @@
             this.btnExcluir.TabIndex = 8;
             this.btnExcluir.Text = "Excluir";
             this.btnExcluir.UseVisualStyleBackColor = true;
+            this.btnExcluir.Click += new System.EventHandler(this.btnExcluir_Click);
             // 
             // label7
             // 
@@ -204,6 +208,9 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.lblMoradorCod);
+            this.panel1.Controls.Add(this.lblBACod);
+            this.panel1.Controls.Add(this.txtCod);
             this.panel1.Controls.Add(this.label7);
             this.panel1.Controls.Add(this.mskHorarioTermino);
             this.panel1.Controls.Add(this.label1);
@@ -219,6 +226,14 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(641, 418);
             this.panel1.TabIndex = 126;
+            // 
+            // txtCod
+            // 
+            this.txtCod.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCod.Location = new System.Drawing.Point(291, 75);
+            this.txtCod.Name = "txtCod";
+            this.txtCod.Size = new System.Drawing.Size(71, 29);
+            this.txtCod.TabIndex = 180;
             // 
             // panel2
             // 
@@ -297,6 +312,24 @@
             this.dataGridView1.TabIndex = 58;
             this.dataGridView1.VirtualMode = true;
             // 
+            // lblBACod
+            // 
+            this.lblBACod.AutoSize = true;
+            this.lblBACod.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lblBACod.Location = new System.Drawing.Point(253, 133);
+            this.lblBACod.Name = "lblBACod";
+            this.lblBACod.Size = new System.Drawing.Size(2, 15);
+            this.lblBACod.TabIndex = 180;
+            // 
+            // lblMoradorCod
+            // 
+            this.lblMoradorCod.AutoSize = true;
+            this.lblMoradorCod.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lblMoradorCod.Location = new System.Drawing.Point(253, 230);
+            this.lblMoradorCod.Name = "lblMoradorCod";
+            this.lblMoradorCod.Size = new System.Drawing.Size(2, 15);
+            this.lblMoradorCod.TabIndex = 181;
+            // 
             // frmLocacao2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -347,5 +380,8 @@
         private System.Windows.Forms.RadioButton rbtData;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.TextBox txtCod;
+        private System.Windows.Forms.Label lblBACod;
+        private System.Windows.Forms.Label lblMoradorCod;
     }
 }
