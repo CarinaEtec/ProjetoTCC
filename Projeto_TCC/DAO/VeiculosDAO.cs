@@ -52,6 +52,29 @@ namespace Projeto_TCC.DAO
                 throw new Exception("Não foi possível se conectar" + ex.Message);
             }
         }
+
+        public void Update(Veiculos veiculos)
+        {
+            try
+            {
+                MySqlCommand comando = new MySqlCommand();
+                comando.CommandType = CommandType.Text;
+                comando.CommandText = "Update Veiculos set CodMorador=@CodMorador, placa=@placa, modelo=@modelo, " +
+                    "cor=@cor, Ba_Cod=@Ba_Cod where placa=@placa";
+
+                comando.Parameters.AddWithValue("@CodMorador", veiculos.Moradores.CodMorador);
+                comando.Parameters.AddWithValue("@Placa", veiculos.Placa);
+                comando.Parameters.AddWithValue("@Modelo", veiculos.Modelo);
+                comando.Parameters.AddWithValue("@Cor", veiculos.Cor);
+                comando.Parameters.AddWithValue("@Ba_Cod", veiculos.BA.Ba_Cod);
+
+                ConexaoBanco.CRUD(comando);
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Não foi possível se conectar" + ex.Message);
+            }
+        }
     }
 }
 

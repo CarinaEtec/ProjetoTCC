@@ -45,6 +45,8 @@
             this.mskHorarioInicio = new System.Windows.Forms.MaskedTextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.lblMoradorCod = new System.Windows.Forms.Label();
+            this.lblBACod = new System.Windows.Forms.Label();
             this.txtCod = new System.Windows.Forms.TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.btnBuscar = new System.Windows.Forms.Button();
@@ -53,8 +55,6 @@
             this.rbtData = new System.Windows.Forms.RadioButton();
             this.label4 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.lblBACod = new System.Windows.Forms.Label();
-            this.lblMoradorCod = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -133,6 +133,7 @@
             this.btnAlterar.TabIndex = 7;
             this.btnAlterar.Text = "Alterar";
             this.btnAlterar.UseVisualStyleBackColor = true;
+            this.btnAlterar.Click += new System.EventHandler(this.btnAlterar_Click);
             // 
             // btnVoltar
             // 
@@ -227,6 +228,24 @@
             this.panel1.Size = new System.Drawing.Size(641, 418);
             this.panel1.TabIndex = 126;
             // 
+            // lblMoradorCod
+            // 
+            this.lblMoradorCod.AutoSize = true;
+            this.lblMoradorCod.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lblMoradorCod.Location = new System.Drawing.Point(253, 230);
+            this.lblMoradorCod.Name = "lblMoradorCod";
+            this.lblMoradorCod.Size = new System.Drawing.Size(2, 15);
+            this.lblMoradorCod.TabIndex = 181;
+            // 
+            // lblBACod
+            // 
+            this.lblBACod.AutoSize = true;
+            this.lblBACod.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lblBACod.Location = new System.Drawing.Point(253, 133);
+            this.lblBACod.Name = "lblBACod";
+            this.lblBACod.Size = new System.Drawing.Size(2, 15);
+            this.lblBACod.TabIndex = 180;
+            // 
             // txtCod
             // 
             this.txtCod.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -311,24 +330,6 @@
             this.dataGridView1.Size = new System.Drawing.Size(434, 250);
             this.dataGridView1.TabIndex = 58;
             this.dataGridView1.VirtualMode = true;
-            // 
-            // lblBACod
-            // 
-            this.lblBACod.AutoSize = true;
-            this.lblBACod.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.lblBACod.Location = new System.Drawing.Point(253, 133);
-            this.lblBACod.Name = "lblBACod";
-            this.lblBACod.Size = new System.Drawing.Size(2, 15);
-            this.lblBACod.TabIndex = 180;
-            // 
-            // lblMoradorCod
-            // 
-            this.lblMoradorCod.AutoSize = true;
-            this.lblMoradorCod.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.lblMoradorCod.Location = new System.Drawing.Point(253, 230);
-            this.lblMoradorCod.Name = "lblMoradorCod";
-            this.lblMoradorCod.Size = new System.Drawing.Size(2, 15);
-            this.lblMoradorCod.TabIndex = 181;
             // 
             // frmLocacao2
             // 

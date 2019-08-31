@@ -80,5 +80,97 @@ namespace Projeto_TCC.Alterar
                 MessageBox.Show("Verifique os dados e tente novamente");
             }
         }
+
+        private void btnAlterar_Click(object sender, EventArgs e)
+        {
+            for (int i = 0; i < dataGridView1.RowCount; i++)
+            {
+                dataGridView1.Rows[i].DataGridView.Columns.Clear();
+            }
+
+
+            try
+            {
+                //pega codigo bloco apartamento
+            BA ba = new BA();
+            BABO babo = new BABO();
+
+            ba.Apto = txtApto.Text;
+            ba.Bloco = txtBloco.Text;
+
+            babo.BuscaCodBA(ba);
+
+            if ((ba.Bloco == "") && (ba.Apto == ""))
+            {
+                MessageBox.Show("Bloco/Apartamento não encontrado");
+            }
+
+            else
+            {
+                lblBACod.Text = Convert.ToString(ba.Ba_Cod);
+
+
+                try
+                    {   //pega codigo morador
+                    Moradores mor = new Moradores();
+                    MoradoresBO morBO = new MoradoresBO();
+
+
+                    mor.Nome = txtProprietario.Text;
+                    morBO.Buscar(mor);
+
+                    if (mor.Nome == "")
+                    {
+                        MessageBox.Show("Proprietário não encontrado");
+                        txtProprietario.Clear();
+                    }
+
+                    else
+                    {
+                        lblMoradorCod.Text = Convert.ToString(mor.CodMorador);
+                        //altera o pet
+                        try
+                        {
+                            Obras obras = new Obras();
+                            ObrasBO obrasBO = new ObrasBO();
+
+
+                            obras.Moradores.CodMorador = Convert.ToInt16(lblMoradorCod.Text);
+                            obras.BA.Ba_Cod = Convert.ToInt16(lblBACod.Text);
+                            obras.DataHora = Convert.ToDateTime(mskData.Text);
+                            obras.CodObras = Convert.ToInt16(txtCod.Text);
+
+                            obrasBO.Editar(obras);
+                            MessageBox.Show("Obra editada com sucesso");
+
+                            txtProprietario.Clear();
+                            txtApto.Clear();
+                            txtBloco.Clear();
+                            mskData.Clear();
+
+                            txtBusca.Clear();
+                            panel1.Enabled = false;
+                            btnAlterar.Enabled = false;
+                            btnExcluir.Enabled = false;
+                            txtCod.Clear();
+                        }
+                        catch
+                        {
+                            MessageBox.Show("Verifique os dados e tente novamente");
+                        }
+                    }
+                }
+
+                catch
+                {
+                    MessageBox.Show("Verifique os dados e tente novamente");
+                }
+            }
+            }
+            catch
+            {
+                MessageBox.Show("Verifique os dados e tente novamente");
+            }
+        }
     }
 }

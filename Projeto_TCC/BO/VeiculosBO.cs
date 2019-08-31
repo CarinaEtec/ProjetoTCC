@@ -26,5 +26,14 @@ namespace Projeto_TCC.BO
                 veiculosDao.Delete(veiculos);
             }
         }
+
+        public void Editar(Veiculos veiculos)
+        {
+            VeiculosDAO veiculosDao = new VeiculosDAO();
+            if (veiculos.Placa != null)
+            {
+                veiculosDao.Update(veiculos);
+            }
+        }
     }
 }

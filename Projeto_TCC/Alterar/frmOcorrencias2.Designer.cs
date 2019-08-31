@@ -44,6 +44,8 @@
             this.btnVoltar = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.lblBACod = new System.Windows.Forms.Label();
+            this.lblMoradorCod = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label6 = new System.Windows.Forms.Label();
             this.txtBusca = new System.Windows.Forms.TextBox();
@@ -52,8 +54,7 @@
             this.btnBuscar = new System.Windows.Forms.Button();
             this.rbtNome = new System.Windows.Forms.RadioButton();
             this.rbtApto = new System.Windows.Forms.RadioButton();
-            this.lblMoradorCod = new System.Windows.Forms.Label();
-            this.lblBACod = new System.Windows.Forms.Label();
+            this.txtCod = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -170,6 +171,7 @@
             this.btnAlterar.TabIndex = 6;
             this.btnAlterar.Text = "Alterar";
             this.btnAlterar.UseVisualStyleBackColor = true;
+            this.btnAlterar.Click += new System.EventHandler(this.btnAlterar_Click);
             // 
             // btnVoltar
             // 
@@ -194,6 +196,7 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.txtCod);
             this.panel1.Controls.Add(this.lblBACod);
             this.panel1.Controls.Add(this.lblMoradorCod);
             this.panel1.Controls.Add(this.label7);
@@ -211,6 +214,24 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(655, 410);
             this.panel1.TabIndex = 124;
+            // 
+            // lblBACod
+            // 
+            this.lblBACod.AutoSize = true;
+            this.lblBACod.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lblBACod.Location = new System.Drawing.Point(251, 132);
+            this.lblBACod.Name = "lblBACod";
+            this.lblBACod.Size = new System.Drawing.Size(2, 15);
+            this.lblBACod.TabIndex = 152;
+            // 
+            // lblMoradorCod
+            // 
+            this.lblMoradorCod.AutoSize = true;
+            this.lblMoradorCod.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lblMoradorCod.Location = new System.Drawing.Point(251, 229);
+            this.lblMoradorCod.Name = "lblMoradorCod";
+            this.lblMoradorCod.Size = new System.Drawing.Size(2, 15);
+            this.lblMoradorCod.TabIndex = 151;
             // 
             // panel2
             // 
@@ -302,23 +323,13 @@
             this.rbtApto.Text = "Apto";
             this.rbtApto.UseVisualStyleBackColor = true;
             // 
-            // lblMoradorCod
+            // txtCod
             // 
-            this.lblMoradorCod.AutoSize = true;
-            this.lblMoradorCod.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.lblMoradorCod.Location = new System.Drawing.Point(251, 229);
-            this.lblMoradorCod.Name = "lblMoradorCod";
-            this.lblMoradorCod.Size = new System.Drawing.Size(2, 15);
-            this.lblMoradorCod.TabIndex = 151;
-            // 
-            // lblBACod
-            // 
-            this.lblBACod.AutoSize = true;
-            this.lblBACod.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.lblBACod.Location = new System.Drawing.Point(251, 132);
-            this.lblBACod.Name = "lblBACod";
-            this.lblBACod.Size = new System.Drawing.Size(2, 15);
-            this.lblBACod.TabIndex = 152;
+            this.txtCod.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCod.Location = new System.Drawing.Point(298, 74);
+            this.txtCod.Name = "txtCod";
+            this.txtCod.Size = new System.Drawing.Size(71, 29);
+            this.txtCod.TabIndex = 152;
             // 
             // frmOcorrencias2
             // 
@@ -372,5 +383,6 @@
         private System.Windows.Forms.RadioButton rbtApto;
         private System.Windows.Forms.Label lblMoradorCod;
         private System.Windows.Forms.Label lblBACod;
+        private System.Windows.Forms.TextBox txtCod;
     }
 }

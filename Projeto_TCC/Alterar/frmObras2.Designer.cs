@@ -43,6 +43,9 @@
             this.btnExcluir = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.txtCod = new System.Windows.Forms.TextBox();
+            this.lblMoradorCod = new System.Windows.Forms.Label();
+            this.lblBACod = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.btnBuscar = new System.Windows.Forms.Button();
@@ -51,9 +54,6 @@
             this.rbtApto = new System.Windows.Forms.RadioButton();
             this.rbtBloco = new System.Windows.Forms.RadioButton();
             this.label5 = new System.Windows.Forms.Label();
-            this.lblBACod = new System.Windows.Forms.Label();
-            this.lblMoradorCod = new System.Windows.Forms.Label();
-            this.txtCod = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -152,6 +152,7 @@
             this.btnAlterar.TabIndex = 6;
             this.btnAlterar.Text = "Alterar";
             this.btnAlterar.UseVisualStyleBackColor = true;
+            this.btnAlterar.Click += new System.EventHandler(this.btnAlterar_Click);
             // 
             // btnVoltar
             // 
@@ -203,6 +204,32 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(654, 421);
             this.panel1.TabIndex = 147;
+            // 
+            // txtCod
+            // 
+            this.txtCod.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCod.Location = new System.Drawing.Point(309, 78);
+            this.txtCod.Name = "txtCod";
+            this.txtCod.Size = new System.Drawing.Size(71, 29);
+            this.txtCod.TabIndex = 151;
+            // 
+            // lblMoradorCod
+            // 
+            this.lblMoradorCod.AutoSize = true;
+            this.lblMoradorCod.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lblMoradorCod.Location = new System.Drawing.Point(264, 238);
+            this.lblMoradorCod.Name = "lblMoradorCod";
+            this.lblMoradorCod.Size = new System.Drawing.Size(2, 15);
+            this.lblMoradorCod.TabIndex = 150;
+            // 
+            // lblBACod
+            // 
+            this.lblBACod.AutoSize = true;
+            this.lblBACod.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lblBACod.Location = new System.Drawing.Point(264, 141);
+            this.lblBACod.Name = "lblBACod";
+            this.lblBACod.Size = new System.Drawing.Size(2, 15);
+            this.lblBACod.TabIndex = 149;
             // 
             // panel2
             // 
@@ -293,32 +320,6 @@
             this.label5.Size = new System.Drawing.Size(166, 31);
             this.label5.TabIndex = 60;
             this.label5.Text = "Buscar Obra";
-            // 
-            // lblBACod
-            // 
-            this.lblBACod.AutoSize = true;
-            this.lblBACod.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.lblBACod.Location = new System.Drawing.Point(264, 141);
-            this.lblBACod.Name = "lblBACod";
-            this.lblBACod.Size = new System.Drawing.Size(2, 15);
-            this.lblBACod.TabIndex = 149;
-            // 
-            // lblMoradorCod
-            // 
-            this.lblMoradorCod.AutoSize = true;
-            this.lblMoradorCod.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.lblMoradorCod.Location = new System.Drawing.Point(264, 238);
-            this.lblMoradorCod.Name = "lblMoradorCod";
-            this.lblMoradorCod.Size = new System.Drawing.Size(2, 15);
-            this.lblMoradorCod.TabIndex = 150;
-            // 
-            // txtCod
-            // 
-            this.txtCod.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCod.Location = new System.Drawing.Point(309, 78);
-            this.txtCod.Name = "txtCod";
-            this.txtCod.Size = new System.Drawing.Size(71, 29);
-            this.txtCod.TabIndex = 151;
             // 
             // frmObras2
             // 
