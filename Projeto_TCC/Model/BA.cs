@@ -12,7 +12,10 @@ namespace Projeto_TCC.Model
         private string apto;
         private string bloco;
 
-
+        public override string ToString()
+        {
+            return Ba_Cod.ToString();
+        }
 
         public int Ba_Cod { get => ba_Cod; set => ba_Cod = value; }
         public string Apto { get => apto; set => apto = value; }

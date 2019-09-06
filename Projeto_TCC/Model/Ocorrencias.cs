@@ -18,7 +18,11 @@ namespace Projeto_TCC.Model
         {
             bA = new BA();
             moradores = new Moradores();
+        }
 
+        public override string ToString()
+        {
+            return CodOcorrencia.ToString();
         }
 
         public int CodOcorrencia { get => codOcorrencia; set => codOcorrencia = value; }

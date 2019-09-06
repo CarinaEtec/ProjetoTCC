@@ -18,7 +18,7 @@ namespace Projeto_TCC.Model
 
         public Moradores()
         {
-            bA = new BA();
+            BA = new BA();
         }
 
         public int CodMorador { get => codMorador; set => codMorador = value; }
@@ -28,5 +28,10 @@ namespace Projeto_TCC.Model
         public string Telefone { get => telefone; set => telefone = value; }
         public string Celular { get => celular; set => celular = value; }
         public BA BA { get => bA; set => bA = value; }
+
+        public override string ToString()
+        {
+            return CodMorador.ToString();
+        }
     }
 }

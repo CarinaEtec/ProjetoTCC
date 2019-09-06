@@ -34,15 +34,15 @@ namespace Projeto_TCC.Consultar
                 Moradores moradores = new Moradores();
                 MoradoresBO moradoresBO = new MoradoresBO();
 
-                //try
-                //{
+                try
+                {
                     moradores.Nome = txtBusca.Text;
                     dataGridView1.DataSource = moradoresBO.CONSULTA_MaiorIdade(moradores);
-                //}
-                //catch
-                //{
-                //    MessageBox.Show("Preencha corretamente as informações");
-                //}
+                }
+                catch
+                {
+                    MessageBox.Show("Preencha corretamente as informações");
+                }
             }
         }
     }

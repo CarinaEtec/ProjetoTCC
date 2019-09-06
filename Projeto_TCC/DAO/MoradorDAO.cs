@@ -134,6 +134,9 @@ namespace Projeto_TCC.DAO
                     moradores.Celular = (string)dr["celular"];
                     moradores.BA.Ba_Cod = (int)dr["Ba_Cod"];
                     moradores.CodMorador = (int)dr["CodMorador"];
+                    //moradores.BA.Apto = (string)dr["Apto"];
+                    //  moradores.BA.Bloco = (string)dr["Bloco"];
+
 
                     mor.Add(moradores);
                 }
@@ -171,6 +174,8 @@ namespace Projeto_TCC.DAO
                     moradores.Telefone = (string)dr["telefone"];
                     moradores.Celular = (string)dr["celular"];
                     moradores.BA.Ba_Cod = (int)dr["Ba_Cod"];
+                    //moradores.BA.Apto = (string)dr["Apto"];
+                  //  moradores.BA.Bloco = (string)dr["Bloco"];
 
 
 

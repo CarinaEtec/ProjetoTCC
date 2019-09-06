@@ -15,6 +15,10 @@ namespace Projeto_TCC.Model
         private string celular;
         private string senha;
 
+        public override string ToString()
+        {
+            return Cpf.ToString();
+        }
 
         public string Nome { get => nome; set => nome = value; }
         public long Cpf { get => cpf; set => cpf = value; }

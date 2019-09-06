@@ -18,8 +18,8 @@ namespace Projeto_TCC.Model
         {
             bA = new BA();
             moradores = new Moradores();
-
         }
+
 
         public string Placa { get => placa; set => placa = value; }
         public string Modelo { get => modelo; set => modelo = value; }

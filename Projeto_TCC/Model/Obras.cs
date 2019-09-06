@@ -20,6 +20,11 @@ namespace Projeto_TCC.Model
 
         }
 
+        public override string ToString()
+        {
+            return CodObras.ToString();
+        }
+
         public int CodObras { get => codObras; set => codObras = value; }
         public DateTime DataHora { get => dataHora; set => dataHora = value; }
         public Moradores Moradores { get => moradores; set => moradores = value; }
