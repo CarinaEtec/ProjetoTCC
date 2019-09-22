@@ -1,4 +1,5 @@
 ﻿using Projeto_TCC.BO;
+using Projeto_TCC.DAO;
 using Projeto_TCC.Model;
 using System;
 using System.Collections.Generic;
@@ -31,18 +32,14 @@ namespace Projeto_TCC.Consultar
         {
             Funcionarios func = new Funcionarios();
             FuncionariosBO funcBO = new FuncionariosBO();
-            
+            FuncionariosDAO funcDAO = new FuncionariosDAO();
+
+
             try
             {
                 func.Nome = txtBusca.Text;
-                dataGridView1.DataSource = funcBO.BuscarPorNOME(func);
-
-                for (int i = 0; i == dataGridView1.RowCount; i++)
-                {
-                    MessageBox.Show("Nenhum usuário encontrado");
-                    txtBusca.Clear();
-                }
-
+                dataGridView1.DataSource = funcDAO.BuscaNome(txtBusca.Text);
+              
             }
             catch
             {

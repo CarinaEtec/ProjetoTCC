@@ -19,23 +19,6 @@ namespace Projeto_TCC.BO
             }
         }
 
-        public IList<Funcionarios> BuscarPorNOME(Funcionarios func)
-        {
-            FuncionariosDAO funcDao = new FuncionariosDAO();
-
-
-
-            if (func.Nome != "")
-            {
-                IList<Funcionarios> funcTemp = funcDao.BuscarPorNOME(func.Nome);
-                return funcTemp;
-            }
-            else
-            {
-                return null;
-
-            }
-        }
 
         public void Deletar(Funcionarios func)
         {
@@ -57,23 +40,23 @@ namespace Projeto_TCC.BO
             }
         }
 
-        public void BuscaPorCPF(Funcionarios func)
+      
+        public void BuscaCPF(Funcionarios func)
         {
             FuncionariosDAO funcDao = new FuncionariosDAO();
+
             if (func.Cpf != 0)
             {
-                var funcTemp = funcDao.BuscaPorCPF(func.Cpf);
+                var livroTemp = funcDao.BuscaCPF(func.Cpf);
 
-                func.Nome = funcTemp.Nome;
-                func.Funcao = funcTemp.Funcao;
-                func.Telefone = funcTemp.Telefone;
-                func.Celular = funcTemp.Celular;
-                func.Senha = funcTemp.Senha;
+                func.Nome = livroTemp.Nome;
+                func.Funcao = livroTemp.Funcao;
+                func.Telefone = livroTemp.Telefone;
+                func.Celular = livroTemp.Celular;
+                func.Senha = livroTemp.Senha;
 
             }
-
         }
-
 
 
     }

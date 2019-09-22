@@ -35,44 +35,6 @@ namespace Projeto_TCC.DAO
             }
         }
 
-        public IList<Funcionarios> BuscarPorNOME(string nome)
-        {
-            MySqlCommand comando = new MySqlCommand();
-            comando.CommandType = CommandType.Text;
-            comando.CommandText = "Select * from Funcionarios where nome like @nome";
-
-            comando.Parameters.AddWithValue("@nome", "%" + nome + "%");
-
-            MySqlDataReader dr = ConexaoBanco.Selecionar(comando);
-
-            IList<Funcionarios> funcs = new List<Funcionarios>();
-
-            if (dr.HasRows)
-            {
-                while (dr.Read())
-                {
-
-                    Funcionarios funcionarios = new Funcionarios();
-
-                    funcionarios.Nome = (string)dr["nome"];
-
-                    //funcionarios.Cpf = (long)dr["INFORMAÇÃO PRIVADA"];
-                    funcionarios.Funcao = (string)dr["Funcao"];
-                    funcionarios.Telefone = (string)dr["telefone"];
-                    funcionarios.Celular = (string)dr["celular"];
-                    //funcionarios.Senha = (string)dr["senha"];
-                    funcionarios.Senha = "INFORMAÇÃO PRIVADA";
-
-                    funcs.Add(funcionarios);
-                }
-            }
-            else
-            {
-                funcs = null;
-            }
-            return funcs;
-        }
-
         public void Delete(Funcionarios func)
         {
             try
@@ -90,7 +52,6 @@ namespace Projeto_TCC.DAO
                 throw new Exception("Não foi possível se conectar" + ex.Message);
             }
         }
-
 
         public void Update(Funcionarios func)
         {
@@ -118,11 +79,7 @@ namespace Projeto_TCC.DAO
 
         }
 
-
-
-
-
-        public Funcionarios BuscaPorCPF(long cpf) // o SELECT retorna um valor, que é o livro buscado
+        public Funcionarios BuscaCPF(long cpf) 
         {
             MySqlCommand comando = new MySqlCommand();
             comando.CommandType = CommandType.Text;
@@ -132,24 +89,54 @@ namespace Projeto_TCC.DAO
 
             MySqlDataReader dr = ConexaoBanco.Selecionar(comando);
 
-            Funcionarios func = new Funcionarios();//instancia para poder retornar um valor
+            Funcionarios funcionarios = new Funcionarios();
             if (dr.HasRows)
             {
                 dr.Read();
-                Funcionarios funcionarios = new Funcionarios();
                 funcionarios.Nome = (string)dr["nome"];
                 funcionarios.Cpf = (long)dr["cpf"];
-                funcionarios.Funcao = (string)dr["Funcao"];
-                funcionarios.Telefone = (string)dr["telefone"];
-                funcionarios.Celular = (string)dr["celular"];
-                funcionarios.Senha = (string)dr["senha"];
+                funcionarios.Funcao = (string)dr["funcao"];
+                funcionarios.Telefone = (string)dr["Telefone"];
+                funcionarios.Celular = (string)dr["Celular"];
+                funcionarios.Senha = (string)dr["Senha"];
             }
             else
             {
-                func = null;
-
+                funcionarios = null;
             }
-            return func;
+            return funcionarios;
+        }
+
+        public DataTable BuscaNome (string nome)
+        {
+            MySqlConnection con = ConexaoBanco.Conectar();
+            MySqlCommand comando = new MySqlCommand();
+            comando.CommandType = CommandType.Text;
+
+            //MySqlCommand cmd = CN.CreateCommand();
+            MySqlDataAdapter da;
+
+            comando.CommandText = "select nome, funcao as Função, telefone, celular" +
+                 " from Funcionarios where" +
+                 " nome like @nome";
+
+            try
+            {
+                comando = new MySqlCommand(comando.CommandText, con);
+
+                comando.Parameters.AddWithValue("@nome", "%" + nome + "%");
+
+
+                da = new MySqlDataAdapter(comando);
+                //
+                DataTable dtDados = new DataTable();
+                da.Fill(dtDados);
+                return dtDados;
+            }
+            catch (MySqlException ex)
+            {
+                throw new ApplicationException(ex.ToString());
+            }
         }
     }
 }

@@ -1,4 +1,5 @@
 ﻿using Projeto_TCC.BO;
+using Projeto_TCC.DAO;
 using Projeto_TCC.Model;
 using System;
 using System.Collections.Generic;
@@ -31,6 +32,8 @@ namespace Projeto_TCC.Alterar
         {
             Funcionarios func = new Funcionarios();
             FuncionariosBO funcBO = new FuncionariosBO();
+            FuncionariosDAO funcDAO = new FuncionariosDAO();
+
             if (rbtNome.Checked)
             {
 
@@ -38,7 +41,7 @@ namespace Projeto_TCC.Alterar
                 {
                     func.Nome = txtBusca.Text;
 
-                    dataGridView1.DataSource = funcBO.BuscarPorNOME(func);
+                    dataGridView1.DataSource = funcDAO.BuscaNome(txtBusca.Text);
                 }
                 catch
                 {
@@ -51,7 +54,7 @@ namespace Projeto_TCC.Alterar
                 try
                 {
                     func.Cpf = Convert.ToInt64(mskBuscaCPF.Text);
-                    funcBO.BuscaPorCPF(func);
+                    funcBO.BuscaCPF(func);
 
 
                     if (func.Cpf == 0)
@@ -68,6 +71,16 @@ namespace Projeto_TCC.Alterar
                         mskCelular.Text = func.Celular;
                         txtSenha.Text = func.Senha;
 
+                        panel1.Enabled = true;
+                        btnAlterar.Enabled = true;
+                        btnExcluir.Enabled = true;
+                        mskBuscaCPF.Clear();
+
+                        mskBuscaCPF.Visible = false;
+                        txtBusca.Visible = true;
+                        txtBusca.Enabled = true;
+                        rbtNome.Checked = true;
+                        rbtCPF.Checked = false;
                     }
                 }
                 catch
@@ -84,11 +97,9 @@ namespace Projeto_TCC.Alterar
             btnAlterar.Enabled = false;
             btnExcluir.Enabled = false;
 
-            txtBusca.Enabled = true;
-            mskBuscaCPF.Enabled = false;
-
-            txtBusca.Visible = false;
             mskBuscaCPF.Visible = false;
+            rbtNome.Checked = true;
+
         }
 
         private void btnAlterar_Click(object sender, EventArgs e)
@@ -166,21 +177,21 @@ namespace Projeto_TCC.Alterar
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            DataGridViewRow linhaSelecionada;
-            linhaSelecionada = dataGridView1.CurrentRow;
+            //DataGridViewRow linhaSelecionada;
+            //linhaSelecionada = dataGridView1.CurrentRow;
 
-            txtNome.Text = linhaSelecionada.Cells[0].Value.ToString();
+            //txtNome.Text = linhaSelecionada.Cells[0].Value.ToString();
             //mskCPF.Text = linhaSelecionada.Cells[1].Value.ToString();
-            txtFuncao.Text = linhaSelecionada.Cells[2].Value.ToString();
-            mskTelefone.Text = linhaSelecionada.Cells[3].Value.ToString();
-            mskCelular.Text = linhaSelecionada.Cells[4].Value.ToString();
-          //  txtSenha.Text = linhaSelecionada.Cells[5].Value.ToString();
+            //txtFuncao.Text = linhaSelecionada.Cells[2].Value.ToString();
+            //mskTelefone.Text = linhaSelecionada.Cells[3].Value.ToString();
+            //mskCelular.Text = linhaSelecionada.Cells[4].Value.ToString();
+            //txtSenha.Text = linhaSelecionada.Cells[5].Value.ToString();
             
 
-            panel1.Enabled = true;
-            btnAlterar.Enabled = true;
-            btnExcluir.Enabled = true;
-            mskCPF.Enabled = false;
+            //panel1.Enabled = true;
+            //btnAlterar.Enabled = true;
+            //btnExcluir.Enabled = true;
+            //mskCPF.Enabled = false;
 
         }
 
@@ -215,11 +226,10 @@ namespace Projeto_TCC.Alterar
 
             mskBuscaCPF.Clear();
             mskBuscaCPF.Enabled = true;
+        }
 
-            
-
-
-
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
 
         }
     }

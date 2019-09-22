@@ -53,7 +53,6 @@
             this.rbtBloco = new System.Windows.Forms.RadioButton();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.btnBuscar = new System.Windows.Forms.Button();
-            this.rbtNome = new System.Windows.Forms.RadioButton();
             this.rbtApto = new System.Windows.Forms.RadioButton();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
@@ -248,7 +247,6 @@
             this.panel2.Controls.Add(this.rbtBloco);
             this.panel2.Controls.Add(this.dataGridView1);
             this.panel2.Controls.Add(this.btnBuscar);
-            this.panel2.Controls.Add(this.rbtNome);
             this.panel2.Controls.Add(this.rbtApto);
             this.panel2.Location = new System.Drawing.Point(701, 33);
             this.panel2.Name = "panel2";
@@ -268,16 +266,16 @@
             // txtBusca
             // 
             this.txtBusca.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBusca.Location = new System.Drawing.Point(204, 88);
+            this.txtBusca.Location = new System.Drawing.Point(285, 100);
             this.txtBusca.Name = "txtBusca";
-            this.txtBusca.Size = new System.Drawing.Size(263, 29);
+            this.txtBusca.Size = new System.Drawing.Size(116, 29);
             this.txtBusca.TabIndex = 65;
             // 
             // rbtBloco
             // 
             this.rbtBloco.AutoSize = true;
             this.rbtBloco.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rbtBloco.Location = new System.Drawing.Point(33, 88);
+            this.rbtBloco.Location = new System.Drawing.Point(137, 100);
             this.rbtBloco.Name = "rbtBloco";
             this.rbtBloco.Size = new System.Drawing.Size(76, 28);
             this.rbtBloco.TabIndex = 62;
@@ -300,31 +298,19 @@
             // btnBuscar
             // 
             this.btnBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBuscar.Location = new System.Drawing.Point(382, 147);
+            this.btnBuscar.Location = new System.Drawing.Point(285, 172);
             this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(85, 35);
+            this.btnBuscar.Size = new System.Drawing.Size(116, 35);
             this.btnBuscar.TabIndex = 66;
             this.btnBuscar.Text = "Buscar";
             this.btnBuscar.UseVisualStyleBackColor = true;
             this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
-            // rbtNome
-            // 
-            this.rbtNome.AutoSize = true;
-            this.rbtNome.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rbtNome.Location = new System.Drawing.Point(33, 154);
-            this.rbtNome.Name = "rbtNome";
-            this.rbtNome.Size = new System.Drawing.Size(124, 28);
-            this.rbtNome.TabIndex = 64;
-            this.rbtNome.TabStop = true;
-            this.rbtNome.Text = "Proprietário";
-            this.rbtNome.UseVisualStyleBackColor = true;
-            // 
             // rbtApto
             // 
             this.rbtApto.AutoSize = true;
             this.rbtApto.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rbtApto.Location = new System.Drawing.Point(33, 122);
+            this.rbtApto.Location = new System.Drawing.Point(137, 134);
             this.rbtApto.Name = "rbtApto";
             this.rbtApto.Size = new System.Drawing.Size(67, 28);
             this.rbtApto.TabIndex = 63;
@@ -380,7 +366,6 @@
         private System.Windows.Forms.RadioButton rbtBloco;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button btnBuscar;
-        private System.Windows.Forms.RadioButton rbtNome;
         private System.Windows.Forms.RadioButton rbtApto;
         private System.Windows.Forms.Label lblMoradorCod;
         private System.Windows.Forms.Label lblBACod;

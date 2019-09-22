@@ -51,11 +51,11 @@
             this.lblBACod = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.btnBuscar = new System.Windows.Forms.Button();
-            this.txtBusca = new System.Windows.Forms.TextBox();
-            this.rbtApto = new System.Windows.Forms.RadioButton();
-            this.rbtBloco = new System.Windows.Forms.RadioButton();
             this.label5 = new System.Windows.Forms.Label();
+            this.txtBusca = new System.Windows.Forms.TextBox();
+            this.rbtBloco = new System.Windows.Forms.RadioButton();
+            this.btnBuscar = new System.Windows.Forms.Button();
+            this.rbtApto = new System.Windows.Forms.RadioButton();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -263,11 +263,11 @@
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.dataGridView1);
-            this.panel2.Controls.Add(this.btnBuscar);
             this.panel2.Controls.Add(this.txtBusca);
-            this.panel2.Controls.Add(this.rbtApto);
             this.panel2.Controls.Add(this.rbtBloco);
+            this.panel2.Controls.Add(this.btnBuscar);
+            this.panel2.Controls.Add(this.rbtApto);
+            this.panel2.Controls.Add(this.dataGridView1);
             this.panel2.Controls.Add(this.label5);
             this.panel2.Location = new System.Drawing.Point(704, 45);
             this.panel2.Name = "panel2";
@@ -286,58 +286,57 @@
             this.dataGridView1.TabIndex = 59;
             this.dataGridView1.VirtualMode = true;
             // 
-            // btnBuscar
+            // label5
             // 
-            this.btnBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBuscar.Location = new System.Drawing.Point(382, 151);
-            this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(85, 35);
-            this.btnBuscar.TabIndex = 57;
-            this.btnBuscar.Text = "Buscar";
-            this.btnBuscar.UseVisualStyleBackColor = true;
-            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(153, 40);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(188, 31);
+            this.label5.TabIndex = 60;
+            this.label5.Text = "Buscar Animal";
             // 
             // txtBusca
             // 
             this.txtBusca.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBusca.Location = new System.Drawing.Point(204, 88);
+            this.txtBusca.Location = new System.Drawing.Point(271, 79);
             this.txtBusca.Name = "txtBusca";
-            this.txtBusca.Size = new System.Drawing.Size(263, 29);
-            this.txtBusca.TabIndex = 56;
-            // 
-            // rbtApto
-            // 
-            this.rbtApto.AutoSize = true;
-            this.rbtApto.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rbtApto.Location = new System.Drawing.Point(33, 122);
-            this.rbtApto.Name = "rbtApto";
-            this.rbtApto.Size = new System.Drawing.Size(67, 28);
-            this.rbtApto.TabIndex = 54;
-            this.rbtApto.TabStop = true;
-            this.rbtApto.Text = "Apto";
-            this.rbtApto.UseVisualStyleBackColor = true;
+            this.txtBusca.Size = new System.Drawing.Size(116, 29);
+            this.txtBusca.TabIndex = 69;
             // 
             // rbtBloco
             // 
             this.rbtBloco.AutoSize = true;
             this.rbtBloco.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rbtBloco.Location = new System.Drawing.Point(33, 88);
+            this.rbtBloco.Location = new System.Drawing.Point(123, 79);
             this.rbtBloco.Name = "rbtBloco";
             this.rbtBloco.Size = new System.Drawing.Size(76, 28);
-            this.rbtBloco.TabIndex = 53;
+            this.rbtBloco.TabIndex = 67;
             this.rbtBloco.TabStop = true;
             this.rbtBloco.Text = "Bloco";
             this.rbtBloco.UseVisualStyleBackColor = true;
             // 
-            // label5
+            // btnBuscar
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(132, 51);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(188, 31);
-            this.label5.TabIndex = 60;
-            this.label5.Text = "Buscar Animal";
+            this.btnBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBuscar.Location = new System.Drawing.Point(271, 151);
+            this.btnBuscar.Name = "btnBuscar";
+            this.btnBuscar.Size = new System.Drawing.Size(116, 35);
+            this.btnBuscar.TabIndex = 70;
+            this.btnBuscar.Text = "Buscar";
+            this.btnBuscar.UseVisualStyleBackColor = true;
+            // 
+            // rbtApto
+            // 
+            this.rbtApto.AutoSize = true;
+            this.rbtApto.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbtApto.Location = new System.Drawing.Point(123, 113);
+            this.rbtApto.Name = "rbtApto";
+            this.rbtApto.Size = new System.Drawing.Size(67, 28);
+            this.rbtApto.TabIndex = 68;
+            this.rbtApto.TabStop = true;
+            this.rbtApto.Text = "Apto";
+            this.rbtApto.UseVisualStyleBackColor = true;
             // 
             // frmPets2
             // 
@@ -385,14 +384,14 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.Button btnBuscar;
-        private System.Windows.Forms.TextBox txtBusca;
-        private System.Windows.Forms.RadioButton rbtApto;
-        private System.Windows.Forms.RadioButton rbtBloco;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label lblMoradorCod;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label lblBACod;
         private System.Windows.Forms.TextBox txtCod;
+        private System.Windows.Forms.TextBox txtBusca;
+        private System.Windows.Forms.RadioButton rbtBloco;
+        private System.Windows.Forms.Button btnBuscar;
+        private System.Windows.Forms.RadioButton rbtApto;
     }
 }

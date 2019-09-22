@@ -30,7 +30,6 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmOcorrencias));
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.rbtProprietario = new System.Windows.Forms.RadioButton();
             this.btnBuscar = new System.Windows.Forms.Button();
             this.txtBusca = new System.Windows.Forms.TextBox();
             this.rbtApto = new System.Windows.Forms.RadioButton();
@@ -52,18 +51,6 @@
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.Size = new System.Drawing.Size(683, 339);
             this.dataGridView1.TabIndex = 6;
-            // 
-            // rbtProprietario
-            // 
-            this.rbtProprietario.AutoSize = true;
-            this.rbtProprietario.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rbtProprietario.Location = new System.Drawing.Point(357, 166);
-            this.rbtProprietario.Name = "rbtProprietario";
-            this.rbtProprietario.Size = new System.Drawing.Size(124, 28);
-            this.rbtProprietario.TabIndex = 3;
-            this.rbtProprietario.TabStop = true;
-            this.rbtProprietario.Text = "Proprietário";
-            this.rbtProprietario.UseVisualStyleBackColor = true;
             // 
             // btnBuscar
             // 
@@ -145,7 +132,6 @@
             this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.ClientSize = new System.Drawing.Size(684, 691);
             this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.rbtProprietario);
             this.Controls.Add(this.btnBuscar);
             this.Controls.Add(this.txtBusca);
             this.Controls.Add(this.rbtApto);
@@ -166,7 +152,6 @@
         #endregion
 
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.RadioButton rbtProprietario;
         private System.Windows.Forms.Button btnBuscar;
         private System.Windows.Forms.TextBox txtBusca;
         private System.Windows.Forms.RadioButton rbtApto;
