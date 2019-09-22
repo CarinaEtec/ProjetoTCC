@@ -32,18 +32,7 @@ namespace Projeto_TCC.Alterar
             //Pets pet = new Pets();
             //PetsBO petBO = new PetsBO();
 
-            ////try
-            ////{
-            //    pet.Nome = txtBusca.Text;
-            //    dataGridView1.DataSource = petBO.BuscarPorNomePets(pet);
-            ////    panel1.Enabled = true;
-            ////    btnAlterar.Enabled = true;
-            ////    btnExcluir.Enabled = true;
-            ////}
-            ////catch
-            ////{
-            ////    MessageBox.Show("Preencha corretamente as informações");
-            ////}
+
             panel1.Enabled = true;
             btnAlterar.Enabled = true;
             btnExcluir.Enabled = true;
@@ -60,13 +49,7 @@ namespace Projeto_TCC.Alterar
             pet.BA.Apto = txtBusca.Text;
             pet.BA.Bloco = txtBusca.Text;
 
-            //dataGridView1.DataSource = morBO.BuscarPorNOME(mor);
 
-            for (int i = 0; i == dataGridView1.RowCount; i++)
-            {
-                MessageBox.Show("Nenhum pet encontrado");
-                txtBusca.Clear();
-            }
 
         }
 

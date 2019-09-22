@@ -12,7 +12,7 @@ namespace Projeto_TCC.DAO
     {
         public static MySqlConnection Conectar()
         {
-            string stringConexao = "SERVER=localhost;DATABASE=sgc;UID=root;PASSWORD=;";
+            string stringConexao = "SERVER=localhost;DATABASE=sgc_antilles;UID=root;PASSWORD=12345;";
             MySqlConnection conexao = new MySqlConnection(stringConexao);
             conexao.Open();
             return conexao;

@@ -1,4 +1,5 @@
 ﻿using Projeto_TCC.BO;
+using Projeto_TCC.DAO;
 using Projeto_TCC.Model;
 using System;
 using System.Collections.Generic;
@@ -35,17 +36,34 @@ namespace Projeto_TCC.Consultar
 
             Pets pet = new Pets();
             PetsBO petBO = new PetsBO();
+            PetsDAO petsDAO = new PetsDAO();
 
 
-            pet.BA.Apto = txtBusca.Text;
-            pet.BA.Bloco = txtBusca.Text;
-
-            //dataGridView1.DataSource = morBO.BuscarPorNOME(mor);
-
-            for (int i = 0; i == dataGridView1.RowCount; i++)
+            if (rbtApto.Checked)
             {
-                MessageBox.Show("Nenhum pet encontrado");
-                txtBusca.Clear();
+                try
+                {
+                    pet.BA.Apto = txtBusca.Text;
+
+                    dataGridView1.DataSource = petsDAO.BuscaApto(txtBusca.Text);
+                }
+                catch
+                {
+                    MessageBox.Show("Preencha corretamente as informações");
+                }
+            }
+            if (rbtBloco.Checked)
+            {
+                try
+                {
+                    pet.BA.Bloco = txtBusca.Text;
+
+                    dataGridView1.DataSource = petsDAO.BuscaBloco(txtBusca.Text);
+                }
+                catch
+                {
+                    MessageBox.Show("Preencha corretamente as informações");
+                }
             }
         }
     }

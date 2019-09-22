@@ -74,16 +74,6 @@ namespace Projeto_TCC.DAO
             }
         }
 
-
-
-
-        //SELECT M.NOME, L.INICIO, L.TERMINO, BA.BLOCO, BA.APTO FROM MORADORES M, locacoes L, BA BA
-        //WHERE L.CODMORADOR=M.CODMORADOR AND L.BA_COD= BA.BA_COD;
-
-
-
-
-
         public DataTable BuscaData(DateTime inicio)
         {
             MySqlConnection con = ConexaoBanco.Conectar();

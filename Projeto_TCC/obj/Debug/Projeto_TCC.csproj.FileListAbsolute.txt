@@ -259,3 +259,4 @@ C:\Users\30658.ETECPAOF.003\Downloads\ProjetoTCC-39Atualizacao\ProjetoTCC-39Atua
 C:\Users\30658.ETECPAOF.003\Downloads\ProjetoTCC-39Atualizacao\ProjetoTCC-39Atualizacao\Projeto_TCC\obj\Debug\Projeto_TCC.csproj.CopyComplete
 C:\Users\30658.ETECPAOF.003\Downloads\ProjetoTCC-39Atualizacao\ProjetoTCC-39Atualizacao\Projeto_TCC\obj\Debug\Projeto_TCC.exe
 C:\Users\30658.ETECPAOF.003\Downloads\ProjetoTCC-39Atualizacao\ProjetoTCC-39Atualizacao\Projeto_TCC\obj\Debug\Projeto_TCC.pdb
+C:\Users\carina\Downloads\tcc\ProjetoTCC\Projeto_TCC\obj\Debug\Projeto_TCC.Consultar.frmUsuarios.resources

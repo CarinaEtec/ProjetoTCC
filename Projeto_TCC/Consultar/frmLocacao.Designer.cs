@@ -56,6 +56,7 @@
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.AllowUserToDeleteRows = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(0, 255);
@@ -84,6 +85,7 @@
             this.rbtData.TabStop = true;
             this.rbtData.Text = "Data";
             this.rbtData.UseVisualStyleBackColor = true;
+            this.rbtData.CheckedChanged += new System.EventHandler(this.rbtData_CheckedChanged);
             // 
             // btnBuscar
             // 
@@ -115,6 +117,7 @@
             this.rbtApto.TabStop = true;
             this.rbtApto.Text = "Apto";
             this.rbtApto.UseVisualStyleBackColor = true;
+            this.rbtApto.CheckedChanged += new System.EventHandler(this.rbtApto_CheckedChanged);
             // 
             // rbtBloco
             // 
@@ -127,6 +130,7 @@
             this.rbtBloco.TabStop = true;
             this.rbtBloco.Text = "Bloco";
             this.rbtBloco.UseVisualStyleBackColor = true;
+            this.rbtBloco.CheckedChanged += new System.EventHandler(this.rbtBloco_CheckedChanged);
             // 
             // label1
             // 

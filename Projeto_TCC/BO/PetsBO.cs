@@ -39,24 +39,7 @@ namespace Projeto_TCC.BO
             }
         }
 
-
-
-
-
-        public IList<Pets> BuscarPorNomePets(Pets pets)
-        {
-            PetsDAO petsDao = new PetsDAO();
-            if (pets.Nome != "")
-            {
-                IList<Pets> petsTemp = petsDao.BuscarPorNomePets(pets.Nome);
-                return petsTemp;
-
-            }
-            else
-            {
-                return null;
-            }
-        }
+     
 
     }
 }

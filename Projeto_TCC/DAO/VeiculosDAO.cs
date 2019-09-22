@@ -75,6 +75,99 @@ namespace Projeto_TCC.DAO
                 throw new Exception("Não foi possível se conectar" + ex.Message);
             }
         }
+
+
+        public DataTable BuscaApto(string apto)
+        {
+            MySqlConnection con = ConexaoBanco.Conectar();
+            MySqlCommand comando = new MySqlCommand();
+            comando.CommandType = CommandType.Text;
+
+            MySqlDataAdapter da;
+
+            comando.CommandText = "select m.nome,  ba.apto, ba.bloco, v.placa, v.modelo, v.cor" +
+                             " from MORADORES M, BA BA, VEICULOS v where" +
+                             " V.ba_cod = ba.ba_cod AND V.CODMORADOR = M.CODMORADOR AND apto like @apto";
+            try
+            {
+                comando = new MySqlCommand(comando.CommandText, con);
+
+                comando.Parameters.AddWithValue("@apto", "%" + apto + "%");
+
+
+                da = new MySqlDataAdapter(comando);
+                //
+                DataTable dtDados = new DataTable();
+                da.Fill(dtDados);
+                return dtDados;
+            }
+            catch (MySqlException ex)
+            {
+                throw new ApplicationException(ex.ToString());
+            }
+        }
+
+        public DataTable BuscaBloco(string bloco)
+        {
+            MySqlConnection con = ConexaoBanco.Conectar();
+            MySqlCommand comando = new MySqlCommand();
+            comando.CommandType = CommandType.Text;
+
+            MySqlDataAdapter da;
+
+            comando.CommandText = "select m.nome,  ba.apto, ba.bloco, v.placa, v.modelo, v.cor" +
+                             " from MORADORES M, BA BA, VEICULOS v where" +
+                             " V.ba_cod = ba.ba_cod AND V.CODMORADOR = M.CODMORADOR AND bloco like @bloco";
+            try
+            {
+                comando = new MySqlCommand(comando.CommandText, con);
+
+                comando.Parameters.AddWithValue("@bloco", "%" + bloco + "%");
+
+
+                da = new MySqlDataAdapter(comando);
+                //
+                DataTable dtDados = new DataTable();
+                da.Fill(dtDados);
+                return dtDados;
+            }
+            catch (MySqlException ex)
+            {
+                throw new ApplicationException(ex.ToString());
+            }
+        }
+
+        public DataTable BuscaPlaca(string placa)
+        {
+            MySqlConnection con = ConexaoBanco.Conectar();
+            MySqlCommand comando = new MySqlCommand();
+            comando.CommandType = CommandType.Text;
+
+            MySqlDataAdapter da;
+
+            comando.CommandText = "select m.nome,  ba.apto, ba.bloco, v.placa, v.modelo, v.cor" +
+                             " from MORADORES M, BA BA, VEICULOS v where" +
+                             " V.ba_cod = ba.ba_cod AND V.CODMORADOR = M.CODMORADOR AND placa=@placa";
+            try
+            {
+                comando = new MySqlCommand(comando.CommandText, con);
+
+                comando.Parameters.AddWithValue("@Placa", placa);
+
+
+
+                da = new MySqlDataAdapter(comando);
+                //
+                DataTable dtDados = new DataTable();
+                da.Fill(dtDados);
+                return dtDados;
+            }
+            catch (MySqlException ex)
+            {
+                throw new ApplicationException(ex.ToString());
+            }
+        }
+
     }
 }
 

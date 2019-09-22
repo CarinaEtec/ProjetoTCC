@@ -1,4 +1,5 @@
 ﻿using Projeto_TCC.BO;
+using Projeto_TCC.DAO;
 using Projeto_TCC.Model;
 using System;
 using System.Collections.Generic;
@@ -35,16 +36,82 @@ namespace Projeto_TCC.Consultar
 
             Veiculos veiculos = new Veiculos();
             VeiculosBO veiculosBO = new VeiculosBO();
+            VeiculosDAO veiculosdao = new VeiculosDAO();
 
 
-            veiculos.Placa = txtBusca.Text;
-            //dataGridView1.DataSource = morBO.BuscarPorNOME(mor);
-
-            for (int i = 0; i == dataGridView1.RowCount; i++)
+            if (rbtPlaca.Checked)
             {
-                MessageBox.Show("Nenhum veículo encontrado");
-                txtBusca.Clear();
+                try
+                {
+                    veiculos.Placa = mskPlaca.Text;
+
+                    dataGridView1.DataSource = veiculosdao.BuscaPlaca(mskPlaca.Text);
+                }
+                catch
+                {
+                    MessageBox.Show("Preencha corretamente as informações");
+                }
             }
+
+            if (rbtApto.Checked)
+            {
+                try
+                {
+                    veiculos.BA.Apto = txtBusca.Text;
+
+                    dataGridView1.DataSource = veiculosdao.BuscaApto(txtBusca.Text);
+                }
+                catch
+                {
+                    MessageBox.Show("Preencha corretamente as informações");
+                }
+            }
+
+            if (rbtBloco.Checked)
+            {
+                try
+                {
+                    veiculos.BA.Bloco = txtBusca.Text;
+
+                    dataGridView1.DataSource = veiculosdao.BuscaBloco(txtBusca.Text);
+                }
+                catch
+                {
+                    MessageBox.Show("Preencha corretamente as informações");
+                }
+            }
+
+
+
+        }
+
+        private void frmVeiculos_Load(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void rbtBloco_CheckedChanged(object sender, EventArgs e)
+        {
+            mskPlaca.Visible = false;
+            txtBusca.Visible = true;
+            txtBusca.Clear();
+            mskPlaca.Clear();
+        }
+
+        private void rbtApto_CheckedChanged(object sender, EventArgs e)
+        {
+            mskPlaca.Visible = false;
+            txtBusca.Visible = true;
+            txtBusca.Clear();
+            mskPlaca.Clear();
+        }
+
+        private void rbtPlaca_CheckedChanged(object sender, EventArgs e)
+        {
+            mskPlaca.Visible = true;
+            txtBusca.Visible = false;
+            txtBusca.Clear();
+            mskPlaca.Clear();
         }
     }
 }

@@ -38,6 +38,7 @@
             this.rbtBloco = new System.Windows.Forms.RadioButton();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.mskPlaca = new System.Windows.Forms.MaskedTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -55,6 +56,7 @@
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.AllowUserToDeleteRows = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(0, 255);
@@ -67,20 +69,21 @@
             // 
             this.rbtPlaca.AutoSize = true;
             this.rbtPlaca.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rbtPlaca.Location = new System.Drawing.Point(357, 164);
+            this.rbtPlaca.Location = new System.Drawing.Point(358, 147);
             this.rbtPlaca.Name = "rbtPlaca";
             this.rbtPlaca.Size = new System.Drawing.Size(74, 28);
             this.rbtPlaca.TabIndex = 3;
             this.rbtPlaca.TabStop = true;
             this.rbtPlaca.Text = "Placa";
             this.rbtPlaca.UseVisualStyleBackColor = true;
+            this.rbtPlaca.CheckedChanged += new System.EventHandler(this.rbtPlaca_CheckedChanged);
             // 
             // btnBuscar
             // 
             this.btnBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBuscar.Location = new System.Drawing.Point(486, 158);
+            this.btnBuscar.Location = new System.Drawing.Point(487, 189);
             this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(100, 34);
+            this.btnBuscar.Size = new System.Drawing.Size(112, 34);
             this.btnBuscar.TabIndex = 5;
             this.btnBuscar.Text = "Buscar";
             this.btnBuscar.UseVisualStyleBackColor = true;
@@ -89,34 +92,36 @@
             // txtBusca
             // 
             this.txtBusca.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBusca.Location = new System.Drawing.Point(486, 96);
+            this.txtBusca.Location = new System.Drawing.Point(487, 79);
             this.txtBusca.Name = "txtBusca";
-            this.txtBusca.Size = new System.Drawing.Size(100, 29);
+            this.txtBusca.Size = new System.Drawing.Size(112, 29);
             this.txtBusca.TabIndex = 4;
             // 
             // rbtApto
             // 
             this.rbtApto.AutoSize = true;
             this.rbtApto.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rbtApto.Location = new System.Drawing.Point(357, 130);
+            this.rbtApto.Location = new System.Drawing.Point(358, 113);
             this.rbtApto.Name = "rbtApto";
             this.rbtApto.Size = new System.Drawing.Size(67, 28);
             this.rbtApto.TabIndex = 2;
             this.rbtApto.TabStop = true;
             this.rbtApto.Text = "Apto";
             this.rbtApto.UseVisualStyleBackColor = true;
+            this.rbtApto.CheckedChanged += new System.EventHandler(this.rbtApto_CheckedChanged);
             // 
             // rbtBloco
             // 
             this.rbtBloco.AutoSize = true;
             this.rbtBloco.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rbtBloco.Location = new System.Drawing.Point(357, 96);
+            this.rbtBloco.Location = new System.Drawing.Point(358, 79);
             this.rbtBloco.Name = "rbtBloco";
             this.rbtBloco.Size = new System.Drawing.Size(76, 28);
             this.rbtBloco.TabIndex = 1;
             this.rbtBloco.TabStop = true;
             this.rbtBloco.Text = "Bloco";
             this.rbtBloco.UseVisualStyleBackColor = true;
+            this.rbtBloco.CheckedChanged += new System.EventHandler(this.rbtBloco_CheckedChanged);
             // 
             // label1
             // 
@@ -137,12 +142,22 @@
             this.pictureBox1.TabIndex = 50;
             this.pictureBox1.TabStop = false;
             // 
+            // mskPlaca
+            // 
+            this.mskPlaca.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mskPlaca.Location = new System.Drawing.Point(487, 147);
+            this.mskPlaca.Mask = "aaa-0000";
+            this.mskPlaca.Name = "mskPlaca";
+            this.mskPlaca.Size = new System.Drawing.Size(112, 29);
+            this.mskPlaca.TabIndex = 77;
+            // 
             // frmVeiculos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.ClientSize = new System.Drawing.Size(684, 691);
+            this.Controls.Add(this.mskPlaca);
             this.Controls.Add(this.btnVoltar);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.rbtPlaca);
@@ -155,6 +170,7 @@
             this.Name = "frmVeiculos";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "SGC - SISTEMA DE GESTÃO PARA CONDOMÍNIOS";
+            this.Load += new System.EventHandler(this.frmVeiculos_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
@@ -173,5 +189,6 @@
         private System.Windows.Forms.RadioButton rbtBloco;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.MaskedTextBox mskPlaca;
     }
 }

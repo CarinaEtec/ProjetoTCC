@@ -76,5 +76,29 @@ namespace Projeto_TCC.Consultar
             }
 
         }
+
+        private void rbtBloco_CheckedChanged(object sender, EventArgs e)
+        {
+            mskHorarioInicio.Visible = false;
+            txtBusca.Visible = true;
+            txtBusca.Clear();
+            mskHorarioInicio.Clear();
+        }
+
+        private void rbtApto_CheckedChanged(object sender, EventArgs e)
+        {
+            mskHorarioInicio.Visible = false;
+            txtBusca.Visible = true;
+            txtBusca.Clear();
+            mskHorarioInicio.Clear();
+        }
+
+        private void rbtData_CheckedChanged(object sender, EventArgs e)
+        {
+            mskHorarioInicio.Visible = true;
+            txtBusca.Visible = false;
+            txtBusca.Clear();
+            mskHorarioInicio.Clear();
+        }
     }
 }
