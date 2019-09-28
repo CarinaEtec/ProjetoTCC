@@ -146,9 +146,9 @@
             // 
             this.mskHorarioInicio.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mskHorarioInicio.Location = new System.Drawing.Point(491, 163);
-            this.mskHorarioInicio.Mask = "00/00/0000";
+            this.mskHorarioInicio.Mask = "00/00/0000 00:00:00";
             this.mskHorarioInicio.Name = "mskHorarioInicio";
-            this.mskHorarioInicio.Size = new System.Drawing.Size(112, 29);
+            this.mskHorarioInicio.Size = new System.Drawing.Size(181, 29);
             this.mskHorarioInicio.TabIndex = 123;
             this.mskHorarioInicio.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 

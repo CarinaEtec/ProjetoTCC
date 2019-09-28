@@ -30,21 +30,17 @@ namespace Projeto_TCC.Consultar
 
         private void btnBuscar_Click(object sender, EventArgs e)
         {
+            Moradores moradores = new Moradores();
+            MoradoresBO moradoresBO = new MoradoresBO();
+            MoradorDAO moradordao = new MoradorDAO();
             if (rbtNome.Checked)
             {
-                Moradores moradores = new Moradores();
-                MoradoresBO moradoresBO = new MoradoresBO();
-                MoradorDAO moradordao = new MoradorDAO();
-
                 try
                 {
-                    moradores.Nome = txtBusca.Text;
+                    moradores.Nome = txtBuscaNome.Text;
 
-                    dataGridView1.DataSource = moradordao.BuscaMaior(txtBusca.Text);
+                    dataGridView1.DataSource = moradordao.BuscaMaior(txtBuscaNome.Text);
 
-                    // CÓDIGO PARA VERIFICAR SE A BUSCA TEVE RESULTADOS
-                    //COMO O CÓDIGO DA BUSCA AINDA NÃO FOI CONCLUÍDO, NÃO VAI FUNCIONAR 
-                    //NA PARTE DE USUÁRIOS ESTÁ COMPLETO E FUNCIONANDO 
                     for (int i = 0; i == dataGridView1.RowCount; i++)
                     {
                         MessageBox.Show("Nenhum morador encontrado");
@@ -58,19 +54,12 @@ namespace Projeto_TCC.Consultar
             }
             if (rbtApto.Checked)
             {
-                Moradores moradores = new Moradores();
-                MoradoresBO moradoresBO = new MoradoresBO();
-                MoradorDAO moradordao = new MoradorDAO();
-
                 try
                 {
                     moradores.BA.Apto = txtBusca.Text;
 
                     dataGridView1.DataSource = moradordao.BuscaAptoMaior(txtBusca.Text);
 
-                    // CÓDIGO PARA VERIFICAR SE A BUSCA TEVE RESULTADOS
-                    //COMO O CÓDIGO DA BUSCA AINDA NÃO FOI CONCLUÍDO, NÃO VAI FUNCIONAR 
-                    //NA PARTE DE USUÁRIOS ESTÁ COMPLETO E FUNCIONANDO 
                     for (int i = 0; i == dataGridView1.RowCount; i++)
                     {
                         MessageBox.Show("Nenhum morador encontrado");
@@ -84,19 +73,11 @@ namespace Projeto_TCC.Consultar
             }
             if (rbtBloco.Checked)
             {
-                Moradores moradores = new Moradores();
-                MoradoresBO moradoresBO = new MoradoresBO();
-                MoradorDAO moradordao = new MoradorDAO();
-
                 try
                 {
                     moradores.BA.Bloco = txtBusca.Text;
 
                     dataGridView1.DataSource = moradordao.BuscaBlocoMaior(txtBusca.Text);
-
-                    // CÓDIGO PARA VERIFICAR SE A BUSCA TEVE RESULTADOS
-                    //COMO O CÓDIGO DA BUSCA AINDA NÃO FOI CONCLUÍDO, NÃO VAI FUNCIONAR 
-                    //NA PARTE DE USUÁRIOS ESTÁ COMPLETO E FUNCIONANDO 
                     for (int i = 0; i == dataGridView1.RowCount; i++)
                     {
                         MessageBox.Show("Nenhum morador encontrado");
@@ -108,6 +89,30 @@ namespace Projeto_TCC.Consultar
                     MessageBox.Show("Preencha corretamente as informações");
                 }
             }
+        }
+
+        private void rbtBloco_CheckedChanged(object sender, EventArgs e)
+        {
+            txtBuscaNome.Clear();
+            txtBuscaNome.Enabled = false;
+            txtBusca.Enabled = true;
+
+        }
+
+        private void rbtApto_CheckedChanged(object sender, EventArgs e)
+        {
+            txtBuscaNome.Clear();
+            txtBuscaNome.Enabled = false;
+            txtBusca.Enabled = true;
+
+        }
+
+        private void rbtNome_CheckedChanged(object sender, EventArgs e)
+        {
+            txtBusca.Clear();
+            txtBusca.Enabled = false;
+            txtBuscaNome.Enabled = true;
+            txtBuscaNome.Clear();
         }
     }
 }

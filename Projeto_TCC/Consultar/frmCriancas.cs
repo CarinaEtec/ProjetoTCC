@@ -30,17 +30,23 @@ namespace Projeto_TCC.Consultar
 
         private void btnBuscar_Click(object sender, EventArgs e)
         {
+            Moradores moradores = new Moradores();
+            MoradoresBO moradoresBO = new MoradoresBO();
+            MoradorDAO moradordao = new MoradorDAO();
+
             if (rbtNome.Checked)
             {
-                Moradores moradores = new Moradores();
-                MoradoresBO moradoresBO = new MoradoresBO();
-                MoradorDAO moradordao = new MoradorDAO();
-
                 try
                 {
-                    moradores.Nome = txtBusca.Text;
+                    moradores.Nome = txtBuscaNome.Text;
 
-                    dataGridView1.DataSource = moradordao.BuscaMenor(txtBusca.Text);
+                    dataGridView1.DataSource = moradordao.BuscaMenor(txtBuscaNome.Text);
+
+                    for (int i = 0; i == dataGridView1.RowCount; i++)
+                    {
+                        MessageBox.Show("Nenhuma criança encontrada");
+                        txtBuscaNome.Clear();
+                    }
                 }
                 catch
                 {
@@ -48,20 +54,18 @@ namespace Projeto_TCC.Consultar
                 }
             }
 
-
-
             if (rbtApto.Checked)
             {
-                Moradores moradores = new Moradores();
-                MoradoresBO moradoresBO = new MoradoresBO();
-                MoradorDAO moradordao = new MoradorDAO();
-
                 try
                 {
                     moradores.BA.Apto = txtBusca.Text;
 
                     dataGridView1.DataSource = moradordao.BuscaAptoMenor(txtBusca.Text);
-               
+                    for (int i = 0; i == dataGridView1.RowCount; i++)
+                    {
+                        MessageBox.Show("Nenhuma criança encontrada");
+                        txtBuscaNome.Clear();
+                    }
                 }
                 catch
                 {
@@ -70,22 +74,48 @@ namespace Projeto_TCC.Consultar
             }
             if (rbtBloco.Checked)
             {
-                Moradores moradores = new Moradores();
-                MoradoresBO moradoresBO = new MoradoresBO();
-                MoradorDAO moradordao = new MoradorDAO();
-
                 try
                 {
                     moradores.BA.Bloco = txtBusca.Text;
 
                     dataGridView1.DataSource = moradordao.BuscaBlocoMenor(txtBusca.Text);
-
+                    for (int i = 0; i == dataGridView1.RowCount; i++)
+                    {
+                        MessageBox.Show("Nenhuma criança encontrada");
+                        txtBuscaNome.Clear();
+                    }
                 }
                 catch
                 {
                     MessageBox.Show("Preencha corretamente as informações");
                 }
             }
+        }
+
+        private void rbtBloco_CheckedChanged(object sender, EventArgs e)
+        {
+            txtBuscaNome.Clear();
+            txtBuscaNome.Enabled = false;
+            txtBusca.Enabled = true;
+
+
+        }
+
+        private void rbtApto_CheckedChanged(object sender, EventArgs e)
+        {
+            txtBuscaNome.Clear();
+            txtBuscaNome.Enabled = false;
+            txtBusca.Enabled = true;
+
+        }
+
+        private void rbtNome_CheckedChanged(object sender, EventArgs e)
+        {
+            txtBusca.Clear();
+            txtBusca.Enabled = false;
+            txtBuscaNome.Enabled = true;
+            txtBuscaNome.Clear();
+
         }
     }
 }

@@ -38,6 +38,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.btnVoltar = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.txtBuscaNome = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -54,7 +55,7 @@
             // btnBuscar
             // 
             this.btnBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBuscar.Location = new System.Drawing.Point(563, 162);
+            this.btnBuscar.Location = new System.Drawing.Point(395, 202);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(85, 34);
             this.btnBuscar.TabIndex = 5;
@@ -65,52 +66,55 @@
             // txtBusca
             // 
             this.txtBusca.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBusca.Location = new System.Drawing.Point(385, 96);
+            this.txtBusca.Location = new System.Drawing.Point(395, 84);
             this.txtBusca.Name = "txtBusca";
-            this.txtBusca.Size = new System.Drawing.Size(263, 29);
+            this.txtBusca.Size = new System.Drawing.Size(112, 29);
             this.txtBusca.TabIndex = 4;
             // 
             // rbtNome
             // 
             this.rbtNome.AutoSize = true;
             this.rbtNome.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rbtNome.Location = new System.Drawing.Point(289, 162);
+            this.rbtNome.Location = new System.Drawing.Point(290, 150);
             this.rbtNome.Name = "rbtNome";
             this.rbtNome.Size = new System.Drawing.Size(80, 28);
             this.rbtNome.TabIndex = 3;
             this.rbtNome.TabStop = true;
             this.rbtNome.Text = "Nome";
             this.rbtNome.UseVisualStyleBackColor = true;
+            this.rbtNome.CheckedChanged += new System.EventHandler(this.rbtNome_CheckedChanged);
             // 
             // rbtApto
             // 
             this.rbtApto.AutoSize = true;
             this.rbtApto.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rbtApto.Location = new System.Drawing.Point(289, 130);
+            this.rbtApto.Location = new System.Drawing.Point(290, 118);
             this.rbtApto.Name = "rbtApto";
             this.rbtApto.Size = new System.Drawing.Size(67, 28);
             this.rbtApto.TabIndex = 2;
             this.rbtApto.TabStop = true;
             this.rbtApto.Text = "Apto";
             this.rbtApto.UseVisualStyleBackColor = true;
+            this.rbtApto.CheckedChanged += new System.EventHandler(this.rbtApto_CheckedChanged);
             // 
             // rbtBloco
             // 
             this.rbtBloco.AutoSize = true;
             this.rbtBloco.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rbtBloco.Location = new System.Drawing.Point(289, 96);
+            this.rbtBloco.Location = new System.Drawing.Point(290, 84);
             this.rbtBloco.Name = "rbtBloco";
             this.rbtBloco.Size = new System.Drawing.Size(76, 28);
             this.rbtBloco.TabIndex = 1;
             this.rbtBloco.TabStop = true;
             this.rbtBloco.Text = "Bloco";
             this.rbtBloco.UseVisualStyleBackColor = true;
+            this.rbtBloco.CheckedChanged += new System.EventHandler(this.rbtBloco_CheckedChanged);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(409, 34);
+            this.label1.Location = new System.Drawing.Point(410, 22);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(178, 29);
             this.label1.TabIndex = 38;
@@ -138,12 +142,21 @@
             this.dataGridView1.Size = new System.Drawing.Size(682, 339);
             this.dataGridView1.TabIndex = 6;
             // 
+            // txtBuscaNome
+            // 
+            this.txtBuscaNome.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBuscaNome.Location = new System.Drawing.Point(395, 149);
+            this.txtBuscaNome.Name = "txtBuscaNome";
+            this.txtBuscaNome.Size = new System.Drawing.Size(243, 29);
+            this.txtBuscaNome.TabIndex = 47;
+            // 
             // frmMoradores
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.ClientSize = new System.Drawing.Size(684, 691);
+            this.Controls.Add(this.txtBuscaNome);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btnBuscar);
@@ -173,5 +186,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnVoltar;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.TextBox txtBuscaNome;
     }
 }

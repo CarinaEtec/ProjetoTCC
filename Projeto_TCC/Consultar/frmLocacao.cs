@@ -41,6 +41,11 @@ namespace Projeto_TCC.Consultar
                 loc.Inicio = Convert.ToDateTime(mskHorarioInicio.Text);
 
                 dataGridView1.DataSource = locDAO.BuscaData(loc.Inicio);
+                for (int i = 0; i == dataGridView1.RowCount; i++)
+                {
+                    MessageBox.Show("Nenhuma locação encontrada");
+                    mskHorarioInicio.Clear();
+                }
                 //}
                 //catch
                 //{
@@ -54,6 +59,11 @@ namespace Projeto_TCC.Consultar
                     loc.BA.Apto = txtBusca.Text;
 
                     dataGridView1.DataSource = locDAO.BuscaApto(txtBusca.Text);
+                    for (int i = 0; i == dataGridView1.RowCount; i++)
+                    {
+                        MessageBox.Show("Nenhuma locação encontrada");
+                        txtBusca.Clear();
+                    }
                 }
                 catch
                 {
@@ -68,6 +78,11 @@ namespace Projeto_TCC.Consultar
                     loc.BA.Bloco = txtBusca.Text;
 
                     dataGridView1.DataSource = locDAO.BuscaBloco(txtBusca.Text);
+                    for (int i = 0; i == dataGridView1.RowCount; i++)
+                    {
+                        MessageBox.Show("Nenhuma locação encontrada");
+                        txtBusca.Clear();
+                    }
                 }
                 catch
                 {
@@ -79,25 +94,23 @@ namespace Projeto_TCC.Consultar
 
         private void rbtBloco_CheckedChanged(object sender, EventArgs e)
         {
-            mskHorarioInicio.Visible = false;
-            txtBusca.Visible = true;
-            txtBusca.Clear();
             mskHorarioInicio.Clear();
+            mskHorarioInicio.Enabled = false;
+            txtBusca.Enabled = true;
         }
 
         private void rbtApto_CheckedChanged(object sender, EventArgs e)
         {
-            mskHorarioInicio.Visible = false;
-            txtBusca.Visible = true;
-            txtBusca.Clear();
             mskHorarioInicio.Clear();
+            mskHorarioInicio.Enabled = false;
+            txtBusca.Enabled = true;
         }
 
         private void rbtData_CheckedChanged(object sender, EventArgs e)
         {
-            mskHorarioInicio.Visible = true;
-            txtBusca.Visible = false;
             txtBusca.Clear();
+            txtBusca.Enabled = false;
+            mskHorarioInicio.Enabled = true;
             mskHorarioInicio.Clear();
         }
     }

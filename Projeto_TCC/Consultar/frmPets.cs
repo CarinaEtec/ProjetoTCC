@@ -30,10 +30,6 @@ namespace Projeto_TCC.Consultar
 
         private void btnBuscar_Click(object sender, EventArgs e)
         {
-            // CÓDIGO PARA VERIFICAR SE A BUSCA TEVE RESULTADOS
-            //COMO O CÓDIGO DA BUSCA AINDA NÃO FOI CONCLUÍDO, NÃO VAI FUNCIONAR 
-            //NA PARTE DE USUÁRIOS ESTÁ COMPLETO E FUNCIONANDO 
-
             Pets pet = new Pets();
             PetsBO petBO = new PetsBO();
             PetsDAO petsDAO = new PetsDAO();
@@ -46,6 +42,12 @@ namespace Projeto_TCC.Consultar
                     pet.BA.Apto = txtBusca.Text;
 
                     dataGridView1.DataSource = petsDAO.BuscaApto(txtBusca.Text);
+
+                    for (int i = 0; i == dataGridView1.RowCount; i++)
+                    {
+                        MessageBox.Show("Nenhum pet encontrado");
+                        txtBusca.Clear();
+                    }
                 }
                 catch
                 {
@@ -59,6 +61,11 @@ namespace Projeto_TCC.Consultar
                     pet.BA.Bloco = txtBusca.Text;
 
                     dataGridView1.DataSource = petsDAO.BuscaBloco(txtBusca.Text);
+                    for (int i = 0; i == dataGridView1.RowCount; i++)
+                    {
+                        MessageBox.Show("Nenhum pet encontrado");
+                        txtBusca.Clear();
+                    }
                 }
                 catch
                 {

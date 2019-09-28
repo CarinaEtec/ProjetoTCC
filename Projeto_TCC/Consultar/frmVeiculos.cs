@@ -30,11 +30,7 @@ namespace Projeto_TCC.Consultar
 
         private void btnBuscar_Click(object sender, EventArgs e)
         {
-            //CÓDIGO PARA VERIFICAR SE A BUSCA TEVE RESULTADOS
-            //COMO O CÓDIGO DA BUSCA AINDA NÃO FOI CONCLUÍDO, NÃO VAI FUNCIONAR 
-            //NA PARTE DE USUÁRIOS ESTÁ COMPLETO E FUNCIONANDO 
-
-            Veiculos veiculos = new Veiculos();
+           Veiculos veiculos = new Veiculos();
             VeiculosBO veiculosBO = new VeiculosBO();
             VeiculosDAO veiculosdao = new VeiculosDAO();
 
@@ -46,6 +42,11 @@ namespace Projeto_TCC.Consultar
                     veiculos.Placa = mskPlaca.Text;
 
                     dataGridView1.DataSource = veiculosdao.BuscaPlaca(mskPlaca.Text);
+                    for (int i = 0; i == dataGridView1.RowCount; i++)
+                    {
+                        MessageBox.Show("Nenhum veículo encontrado");
+                        mskPlaca.Clear();
+                    }
                 }
                 catch
                 {
@@ -60,6 +61,11 @@ namespace Projeto_TCC.Consultar
                     veiculos.BA.Apto = txtBusca.Text;
 
                     dataGridView1.DataSource = veiculosdao.BuscaApto(txtBusca.Text);
+                    for (int i = 0; i == dataGridView1.RowCount; i++)
+                    {
+                        MessageBox.Show("Nenhum veículo encontrado");
+                        txtBusca.Clear();
+                    }
                 }
                 catch
                 {
@@ -74,6 +80,11 @@ namespace Projeto_TCC.Consultar
                     veiculos.BA.Bloco = txtBusca.Text;
 
                     dataGridView1.DataSource = veiculosdao.BuscaBloco(txtBusca.Text);
+                    for (int i = 0; i == dataGridView1.RowCount; i++)
+                    {
+                        MessageBox.Show("Nenhum veículo encontrado");
+                        txtBusca.Clear();
+                    }
                 }
                 catch
                 {
@@ -92,26 +103,25 @@ namespace Projeto_TCC.Consultar
 
         private void rbtBloco_CheckedChanged(object sender, EventArgs e)
         {
-            mskPlaca.Visible = false;
-            txtBusca.Visible = true;
-            txtBusca.Clear();
             mskPlaca.Clear();
+            mskPlaca.Enabled = false;
+            txtBusca.Enabled = true;
         }
 
         private void rbtApto_CheckedChanged(object sender, EventArgs e)
         {
-            mskPlaca.Visible = false;
-            txtBusca.Visible = true;
-            txtBusca.Clear();
             mskPlaca.Clear();
+            mskPlaca.Enabled = false;
+            txtBusca.Enabled = true;
         }
 
         private void rbtPlaca_CheckedChanged(object sender, EventArgs e)
         {
-            mskPlaca.Visible = true;
-            txtBusca.Visible = false;
-            txtBusca.Clear();
             mskPlaca.Clear();
+            mskPlaca.Enabled = true;
+            txtBusca.Enabled = false;
+            txtBusca.Clear();
+
         }
     }
 }
