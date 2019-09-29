@@ -46,8 +46,8 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnVoltar = new System.Windows.Forms.Button();
             this.btnCadastrar = new System.Windows.Forms.Button();
-            this.txtSituacao = new System.Windows.Forms.TextBox();
             this.lblBACod = new System.Windows.Forms.Label();
+            this.cbbSituacao = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -216,14 +216,6 @@
             this.btnCadastrar.UseVisualStyleBackColor = true;
             this.btnCadastrar.Click += new System.EventHandler(this.btnCadastrar_Click);
             // 
-            // txtSituacao
-            // 
-            this.txtSituacao.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSituacao.Location = new System.Drawing.Point(315, 321);
-            this.txtSituacao.Name = "txtSituacao";
-            this.txtSituacao.Size = new System.Drawing.Size(145, 29);
-            this.txtSituacao.TabIndex = 138;
-            // 
             // lblBACod
             // 
             this.lblBACod.AutoSize = true;
@@ -233,14 +225,27 @@
             this.lblBACod.Size = new System.Drawing.Size(2, 15);
             this.lblBACod.TabIndex = 139;
             // 
+            // cbbSituacao
+            // 
+            this.cbbSituacao.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbbSituacao.FormattingEnabled = true;
+            this.cbbSituacao.Items.AddRange(new object[] {
+            "Inquilino",
+            "Proprietário",
+            "Morador"});
+            this.cbbSituacao.Location = new System.Drawing.Point(316, 321);
+            this.cbbSituacao.Name = "cbbSituacao";
+            this.cbbSituacao.Size = new System.Drawing.Size(145, 32);
+            this.cbbSituacao.TabIndex = 140;
+            // 
             // frmCriancas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.ClientSize = new System.Drawing.Size(684, 691);
+            this.Controls.Add(this.cbbSituacao);
             this.Controls.Add(this.lblBACod);
-            this.Controls.Add(this.txtSituacao);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btnVoltar);
             this.Controls.Add(this.btnCadastrar);
@@ -286,7 +291,7 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button btnVoltar;
         private System.Windows.Forms.Button btnCadastrar;
-        private System.Windows.Forms.TextBox txtSituacao;
         private System.Windows.Forms.Label lblBACod;
+        private System.Windows.Forms.ComboBox cbbSituacao;
     }
 }

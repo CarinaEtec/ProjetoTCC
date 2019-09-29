@@ -104,7 +104,7 @@ namespace Projeto_TCC.Alterar
                 mor.CodMorador = Convert.ToInt16(lblMoradorCod.Text);    
                 mor.Nome = txtNome.Text;
                 mor.DataNasc = Convert.ToDateTime(mskDataNasc.Text);
-                mor.Situacao = txtSituacao.Text;
+                mor.Situacao = cbbSituacao.SelectedItem.ToString();
                 mor.Telefone = mskTelefone.Text;
                 mor.Celular = mskCelular.Text;
                 mor.BA.Ba_Cod = Convert.ToInt16(lblBACod.Text);
@@ -114,7 +114,7 @@ namespace Projeto_TCC.Alterar
 
                 txtNome.Clear();
                 mskDataNasc.Clear();
-                txtSituacao.Clear();
+                cbbSituacao.SelectedIndex = -1;
                 mskTelefone.Clear();
                 mskCelular.Clear();
                 txtApto.Clear();
@@ -146,7 +146,7 @@ namespace Projeto_TCC.Alterar
                 MessageBox.Show("Criança excluída com sucesso");
                 txtNome.Clear();
                 mskDataNasc.Clear();
-                txtSituacao.Clear();
+                cbbSituacao.SelectedIndex = -1;
                 mskTelefone.Clear();
                 mskCelular.Clear();
                 txtApto.Clear();
@@ -161,7 +161,7 @@ namespace Projeto_TCC.Alterar
                 MessageBox.Show("Preencha corretamente os campos e/ou verifique se esses dados não estão sendo usados");
                 txtNome.Clear();
                 mskDataNasc.Clear();
-                txtSituacao.Clear();
+                cbbSituacao.SelectedIndex = -1;
                 mskTelefone.Clear();
                 mskCelular.Clear();
                 txtApto.Clear();
@@ -181,7 +181,7 @@ namespace Projeto_TCC.Alterar
             txtApto.Text = linhaSelecionada.Cells[0].Value.ToString();
             txtBloco.Text = linhaSelecionada.Cells[1].Value.ToString();
             txtNome.Text = linhaSelecionada.Cells[2].Value.ToString();
-            txtSituacao.Text = linhaSelecionada.Cells[3].Value.ToString();
+            cbbSituacao.Text = linhaSelecionada.Cells[3].Value.ToString();
             mskTelefone.Text = linhaSelecionada.Cells[4].Value.ToString();
             mskCelular.Text = linhaSelecionada.Cells[5].Value.ToString();
             mskDataNasc.Text = linhaSelecionada.Cells[6].Value.ToString();

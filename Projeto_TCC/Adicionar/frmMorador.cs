@@ -58,7 +58,7 @@ namespace Projeto_TCC.Adicionar
 
                         mor.Nome = txtNome.Text;
                         mor.DataNasc = Convert.ToDateTime(mskDataNasc.Text);
-                        mor.Situacao = txtSituacao.Text;
+                        mor.Situacao = cbbSituacao.SelectedItem.ToString();
                         mor.Telefone = mskTelefone.Text;
                         mor.Celular = mskCelular.Text;
                         mor.BA.Ba_Cod = Convert.ToInt16(lblBACod.Text);
@@ -70,7 +70,7 @@ namespace Projeto_TCC.Adicionar
                         txtBloco.Clear();
                         txtNome.Clear();
                         mskDataNasc.Clear();
-                        txtSituacao.Clear();
+                        cbbSituacao.SelectedIndex = -1;
                         mskTelefone.Clear();
                         mskCelular.Clear();
                     }

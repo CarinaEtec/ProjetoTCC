@@ -48,7 +48,8 @@
             this.btnExcluir = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.txtSituacao = new System.Windows.Forms.TextBox();
+            this.lblBACod = new System.Windows.Forms.Label();
+            this.lblMoradorCod = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.btnBuscar = new System.Windows.Forms.Button();
@@ -57,8 +58,7 @@
             this.rbtApto = new System.Windows.Forms.RadioButton();
             this.rbtBloco = new System.Windows.Forms.RadioButton();
             this.label10 = new System.Windows.Forms.Label();
-            this.lblBACod = new System.Windows.Forms.Label();
-            this.lblMoradorCod = new System.Windows.Forms.Label();
+            this.cbbSituacao = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -243,8 +243,8 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.cbbSituacao);
             this.panel1.Controls.Add(this.lblBACod);
-            this.panel1.Controls.Add(this.txtSituacao);
             this.panel1.Controls.Add(this.lblMoradorCod);
             this.panel1.Controls.Add(this.label7);
             this.panel1.Controls.Add(this.label1);
@@ -265,13 +265,23 @@
             this.panel1.Size = new System.Drawing.Size(660, 420);
             this.panel1.TabIndex = 134;
             // 
-            // txtSituacao
+            // lblBACod
             // 
-            this.txtSituacao.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSituacao.Location = new System.Drawing.Point(294, 302);
-            this.txtSituacao.Name = "txtSituacao";
-            this.txtSituacao.Size = new System.Drawing.Size(143, 29);
-            this.txtSituacao.TabIndex = 134;
+            this.lblBACod.AutoSize = true;
+            this.lblBACod.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lblBACod.Location = new System.Drawing.Point(262, 150);
+            this.lblBACod.Name = "lblBACod";
+            this.lblBACod.Size = new System.Drawing.Size(2, 15);
+            this.lblBACod.TabIndex = 163;
+            // 
+            // lblMoradorCod
+            // 
+            this.lblMoradorCod.AutoSize = true;
+            this.lblMoradorCod.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lblMoradorCod.Location = new System.Drawing.Point(262, 107);
+            this.lblMoradorCod.Name = "lblMoradorCod";
+            this.lblMoradorCod.Size = new System.Drawing.Size(2, 15);
+            this.lblMoradorCod.TabIndex = 162;
             // 
             // panel2
             // 
@@ -365,23 +375,18 @@
             this.label10.TabIndex = 60;
             this.label10.Text = "Buscar Morador";
             // 
-            // lblBACod
+            // cbbSituacao
             // 
-            this.lblBACod.AutoSize = true;
-            this.lblBACod.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.lblBACod.Location = new System.Drawing.Point(262, 150);
-            this.lblBACod.Name = "lblBACod";
-            this.lblBACod.Size = new System.Drawing.Size(2, 15);
-            this.lblBACod.TabIndex = 163;
-            // 
-            // lblMoradorCod
-            // 
-            this.lblMoradorCod.AutoSize = true;
-            this.lblMoradorCod.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.lblMoradorCod.Location = new System.Drawing.Point(262, 107);
-            this.lblMoradorCod.Name = "lblMoradorCod";
-            this.lblMoradorCod.Size = new System.Drawing.Size(2, 15);
-            this.lblMoradorCod.TabIndex = 162;
+            this.cbbSituacao.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbbSituacao.FormattingEnabled = true;
+            this.cbbSituacao.Items.AddRange(new object[] {
+            "Inquilino",
+            "Proprietário",
+            "Morador"});
+            this.cbbSituacao.Location = new System.Drawing.Point(295, 302);
+            this.cbbSituacao.Name = "cbbSituacao";
+            this.cbbSituacao.Size = new System.Drawing.Size(145, 32);
+            this.cbbSituacao.TabIndex = 164;
             // 
             // frmMorador2
             // 
@@ -437,8 +442,8 @@
         private System.Windows.Forms.RadioButton rbtApto;
         private System.Windows.Forms.RadioButton rbtBloco;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.TextBox txtSituacao;
         private System.Windows.Forms.Label lblBACod;
         private System.Windows.Forms.Label lblMoradorCod;
+        private System.Windows.Forms.ComboBox cbbSituacao;
     }
 }
