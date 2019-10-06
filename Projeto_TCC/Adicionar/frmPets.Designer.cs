@@ -34,7 +34,6 @@
             this.btnCadastrar = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.txtEspecie = new System.Windows.Forms.TextBox();
             this.txtTutor = new System.Windows.Forms.TextBox();
             this.txtNome = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
@@ -45,6 +44,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.lblMoradorCod = new System.Windows.Forms.Label();
             this.lblBACod = new System.Windows.Forms.Label();
+            this.cbbEspecie = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -98,14 +98,6 @@
             this.label6.Size = new System.Drawing.Size(84, 24);
             this.label6.TabIndex = 53;
             this.label6.Text = "Espécie ";
-            // 
-            // txtEspecie
-            // 
-            this.txtEspecie.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtEspecie.Location = new System.Drawing.Point(312, 329);
-            this.txtEspecie.Name = "txtEspecie";
-            this.txtEspecie.Size = new System.Drawing.Size(334, 29);
-            this.txtEspecie.TabIndex = 5;
             // 
             // txtTutor
             // 
@@ -197,12 +189,27 @@
             this.lblBACod.Size = new System.Drawing.Size(2, 15);
             this.lblBACod.TabIndex = 93;
             // 
+            // cbbEspecie
+            // 
+            this.cbbEspecie.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbbEspecie.FormattingEnabled = true;
+            this.cbbEspecie.Items.AddRange(new object[] {
+            "Ave",
+            "Cachorro",
+            "Gato",
+            "Outros"});
+            this.cbbEspecie.Location = new System.Drawing.Point(312, 321);
+            this.cbbEspecie.Name = "cbbEspecie";
+            this.cbbEspecie.Size = new System.Drawing.Size(121, 32);
+            this.cbbEspecie.TabIndex = 95;
+            // 
             // frmPets
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.ClientSize = new System.Drawing.Size(684, 691);
+            this.Controls.Add(this.cbbEspecie);
             this.Controls.Add(this.lblMoradorCod);
             this.Controls.Add(this.lblBACod);
             this.Controls.Add(this.pictureBox1);
@@ -210,7 +217,6 @@
             this.Controls.Add(this.btnCadastrar);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.txtEspecie);
             this.Controls.Add(this.txtTutor);
             this.Controls.Add(this.txtNome);
             this.Controls.Add(this.label4);
@@ -236,7 +242,6 @@
         private System.Windows.Forms.Button btnCadastrar;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox txtEspecie;
         private System.Windows.Forms.TextBox txtTutor;
         private System.Windows.Forms.TextBox txtNome;
         private System.Windows.Forms.Label label4;
@@ -247,5 +252,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lblMoradorCod;
         private System.Windows.Forms.Label lblBACod;
+        private System.Windows.Forms.ComboBox cbbEspecie;
     }
 }

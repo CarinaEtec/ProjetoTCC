@@ -50,6 +50,9 @@ namespace Projeto_TCC.Adicionar
                 if ((ba.Bloco == "") && (ba.Apto == ""))
                 {
                     MessageBox.Show("Bloco/Apartamento não encontrado");
+                    txtApto.Clear();
+                    txtBloco.Clear();
+
                 }
 
                 else

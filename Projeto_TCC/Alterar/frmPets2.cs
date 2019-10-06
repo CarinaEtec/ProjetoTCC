@@ -120,26 +120,36 @@ namespace Projeto_TCC.Alterar
                             {
                                 Pets pets = new Pets();
                                 PetsBO petsBO = new PetsBO();
-
-                                pets.CodPet = Convert.ToInt16(lblCodPet.Text);
                                 pets.Nome = txtNome.Text;
-                                pets.Moradores.CodMorador = Convert.ToInt16(lblMoradorCod.Text);
-                                pets.BA.Ba_Cod = Convert.ToInt16(lblBACod.Text);
-                                pets.Especie = txtEspecie.Text;
 
-                                petsBO.Editar(pets);
-                                MessageBox.Show("Pet editado com sucesso");
 
-                                txtNome.Clear();
-                                txtApto.Clear();
-                                txtBloco.Clear(); ;
-                                txtTutor.Clear();
-                                txtEspecie.Clear();
-                                txtBusca.Clear();
-                                panel1.Enabled = false;
-                                btnAlterar.Enabled = false;
-                                btnExcluir.Enabled = false;
-                                lblCodPet.Text="";
+                                if ((pets.Nome == "") || (pets.Nome == null))
+                                {
+                                    MessageBox.Show("Nome do pet não identificado");
+                                }
+                                else
+                                {
+
+                                    pets.CodPet = Convert.ToInt16(lblCodPet.Text);
+                                    pets.Nome = txtNome.Text;
+                                    pets.Moradores.CodMorador = Convert.ToInt16(lblMoradorCod.Text);
+                                    pets.BA.Ba_Cod = Convert.ToInt16(lblBACod.Text);
+                                    pets.Especie = cbbEspecie.SelectedItem.ToString();
+
+                                    petsBO.Editar(pets);
+                                    MessageBox.Show("Pet editado com sucesso");
+
+                                    txtNome.Clear();
+                                    txtApto.Clear();
+                                    txtBloco.Clear(); ;
+                                    txtTutor.Clear();
+                                    cbbEspecie.SelectedIndex = -1;
+                                    txtBusca.Clear();
+                                    panel1.Enabled = false;
+                                    btnAlterar.Enabled = false;
+                                    btnExcluir.Enabled = false;
+                                    lblCodPet.Text = "";
+                                }
                             }
                             catch
                             {
@@ -187,7 +197,7 @@ namespace Projeto_TCC.Alterar
                 txtApto.Clear();
                 txtBloco.Clear(); ;
                 txtTutor.Clear();
-                txtEspecie.Clear();
+                cbbEspecie.SelectedIndex = -1;
                 txtBusca.Clear();
                 panel1.Enabled = false;
                 btnAlterar.Enabled = false;
@@ -257,7 +267,7 @@ namespace Projeto_TCC.Alterar
             txtApto.Text = linhaSelecionada.Cells[1].Value.ToString();
             txtBloco.Text = linhaSelecionada.Cells[2].Value.ToString();
             txtNome.Text = linhaSelecionada.Cells[3].Value.ToString();
-            txtEspecie.Text = linhaSelecionada.Cells[4].Value.ToString();
+            cbbEspecie.Text = linhaSelecionada.Cells[4].Value.ToString();
             lblCodPet.Text = linhaSelecionada.Cells[5].Value.ToString();
 
 

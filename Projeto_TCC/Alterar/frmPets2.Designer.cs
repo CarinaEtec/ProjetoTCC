@@ -31,7 +31,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmPets2));
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.txtEspecie = new System.Windows.Forms.TextBox();
             this.txtTutor = new System.Windows.Forms.TextBox();
             this.txtNome = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
@@ -45,6 +44,7 @@
             this.btnExcluir = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.lblCodPet = new System.Windows.Forms.Label();
             this.lblMoradorCod = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.lblBACod = new System.Windows.Forms.Label();
@@ -55,7 +55,7 @@
             this.rbtApto = new System.Windows.Forms.RadioButton();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.label5 = new System.Windows.Forms.Label();
-            this.lblCodPet = new System.Windows.Forms.Label();
+            this.cbbEspecie = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -80,14 +80,6 @@
             this.label6.Size = new System.Drawing.Size(84, 24);
             this.label6.TabIndex = 89;
             this.label6.Text = "Espécie ";
-            // 
-            // txtEspecie
-            // 
-            this.txtEspecie.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtEspecie.Location = new System.Drawing.Point(300, 319);
-            this.txtEspecie.Name = "txtEspecie";
-            this.txtEspecie.Size = new System.Drawing.Size(334, 29);
-            this.txtEspecie.TabIndex = 5;
             // 
             // txtTutor
             // 
@@ -206,6 +198,7 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.cbbEspecie);
             this.panel1.Controls.Add(this.lblCodPet);
             this.panel1.Controls.Add(this.lblMoradorCod);
             this.panel1.Controls.Add(this.label8);
@@ -214,7 +207,6 @@
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.label6);
             this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.txtEspecie);
             this.panel1.Controls.Add(this.txtApto);
             this.panel1.Controls.Add(this.txtTutor);
             this.panel1.Controls.Add(this.txtBloco);
@@ -226,6 +218,16 @@
             this.panel1.Size = new System.Drawing.Size(656, 375);
             this.panel1.TabIndex = 91;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // lblCodPet
+            // 
+            this.lblCodPet.AutoSize = true;
+            this.lblCodPet.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lblCodPet.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCodPet.Location = new System.Drawing.Point(300, 68);
+            this.lblCodPet.Name = "lblCodPet";
+            this.lblCodPet.Size = new System.Drawing.Size(2, 26);
+            this.lblCodPet.TabIndex = 154;
             // 
             // lblMoradorCod
             // 
@@ -332,15 +334,19 @@
             this.label5.TabIndex = 60;
             this.label5.Text = "Buscar Animal";
             // 
-            // lblCodPet
+            // cbbEspecie
             // 
-            this.lblCodPet.AutoSize = true;
-            this.lblCodPet.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.lblCodPet.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCodPet.Location = new System.Drawing.Point(300, 68);
-            this.lblCodPet.Name = "lblCodPet";
-            this.lblCodPet.Size = new System.Drawing.Size(2, 26);
-            this.lblCodPet.TabIndex = 154;
+            this.cbbEspecie.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbbEspecie.FormattingEnabled = true;
+            this.cbbEspecie.Items.AddRange(new object[] {
+            "Ave",
+            "Cachorro",
+            "Gato",
+            "Outros"});
+            this.cbbEspecie.Location = new System.Drawing.Point(300, 319);
+            this.cbbEspecie.Name = "cbbEspecie";
+            this.cbbEspecie.Size = new System.Drawing.Size(121, 32);
+            this.cbbEspecie.TabIndex = 155;
             // 
             // frmPets2
             // 
@@ -372,7 +378,6 @@
 
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox txtEspecie;
         private System.Windows.Forms.TextBox txtTutor;
         private System.Windows.Forms.TextBox txtNome;
         private System.Windows.Forms.Label label4;
@@ -397,5 +402,6 @@
         private System.Windows.Forms.Button btnBuscar;
         private System.Windows.Forms.RadioButton rbtApto;
         private System.Windows.Forms.Label lblCodPet;
+        private System.Windows.Forms.ComboBox cbbEspecie;
     }
 }

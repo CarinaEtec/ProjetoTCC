@@ -14,7 +14,7 @@ namespace Projeto_TCC.BO
         public void Gravar(Pets pets)
         {
             PetsDAO petsDao = new PetsDAO();
-            if ((pets.Nome != "") && (pets.Moradores.CodMorador != 0) && (pets.BA.Ba_Cod != 0))
+            if ((pets.Nome != null) && (pets.Moradores.CodMorador != 0) && (pets.BA.Ba_Cod != 0) && (pets.Especie != null))
             {
                 petsDao.Insert(pets);
             }

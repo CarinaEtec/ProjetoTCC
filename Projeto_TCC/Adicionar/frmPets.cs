@@ -45,6 +45,9 @@ namespace Projeto_TCC.Adicionar
                 if ((ba.Bloco == "") && (ba.Apto == ""))
                 {
                     MessageBox.Show("Bloco/Apartamento não encontrado");
+                    txtApto.Clear();
+                    txtBloco.Clear();
+
                 }
 
                 else
@@ -77,19 +80,27 @@ namespace Projeto_TCC.Adicionar
                                 PetsBO petsBO = new PetsBO();
 
                                 pets.Nome = txtNome.Text;
-                                pets.Moradores.CodMorador = Convert.ToInt16(lblMoradorCod.Text);
-                                pets.BA.Ba_Cod = Convert.ToInt16(lblBACod.Text);
-                                pets.Especie = txtEspecie.Text;
 
-                                petsBO.Gravar(pets);
-                                MessageBox.Show("Pet cadastrado com sucesso");
+                                if ((pets.Nome == "") || (pets.Nome == null))
+                                {
+                                    MessageBox.Show("Nome do pet não identificado");
+                                }                              
+                                else
+                                {
 
-                                txtNome.Clear();
-                                txtApto.Clear();
-                                txtBloco.Clear();
-                                txtTutor.Clear();
-                                txtEspecie.Clear();
+                                    pets.Nome = txtNome.Text;
+                                    pets.Moradores.CodMorador = Convert.ToInt16(lblMoradorCod.Text);
+                                    pets.BA.Ba_Cod = Convert.ToInt16(lblBACod.Text);
+                                    pets.Especie = cbbEspecie.SelectedItem.ToString();
+                                    petsBO.Gravar(pets);
+                                    MessageBox.Show("Pet cadastrado com sucesso");
 
+                                    txtNome.Clear();
+                                    txtApto.Clear();
+                                    txtBloco.Clear();
+                                    txtTutor.Clear();
+                                    cbbEspecie.SelectedIndex = -1;
+                                }
                             }
                             catch
                             {
