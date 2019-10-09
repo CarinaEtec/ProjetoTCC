@@ -28,31 +28,7 @@ namespace Projeto_TCC.Alterar
             menuzinho.Show();
         }
 
-        private void btnBuscar_Click(object sender, EventArgs e)
-        {
-            //Pets pet = new Pets();
-            //PetsBO petBO = new PetsBO();
 
-
-            panel1.Enabled = true;
-            btnAlterar.Enabled = true;
-            btnExcluir.Enabled = true;
-
-
-            // CÓDIGO PARA VERIFICAR SE A BUSCA TEVE RESULTADOS
-            //COMO O CÓDIGO DA BUSCA AINDA NÃO FOI CONCLUÍDO, NÃO VAI FUNCIONAR 
-            //NA PARTE DE USUÁRIOS ESTÁ COMPLETO E FUNCIONANDO 
-
-            Pets pet = new Pets();
-            PetsBO petBO = new PetsBO();
-
-
-            pet.BA.Apto = txtBusca.Text;
-            pet.BA.Bloco = txtBusca.Text;
-
-
-
-        }
 
         private void frmPets2_Load(object sender, EventArgs e)
         {
@@ -227,11 +203,16 @@ namespace Projeto_TCC.Alterar
 
                     dataGridView1.DataSource = petsDAO.BuscaApto_COD(txtBusca.Text);
 
+                    panel1.Enabled = true;
+                    btnAlterar.Enabled = true;
+                    btnExcluir.Enabled = true;
+
                     for (int i = 0; i == dataGridView1.RowCount; i++)
                     {
                         MessageBox.Show("Nenhum pet encontrado");
                         txtBusca.Clear();
                     }
+
                 }
                 catch
                 {
@@ -245,6 +226,11 @@ namespace Projeto_TCC.Alterar
                     pet.BA.Bloco = txtBusca.Text;
 
                     dataGridView1.DataSource = petsDAO.BuscaBloco_COD(txtBusca.Text);
+
+                    panel1.Enabled = true;
+                    btnAlterar.Enabled = true;
+                    btnExcluir.Enabled = true;
+
                     for (int i = 0; i == dataGridView1.RowCount; i++)
                     {
                         MessageBox.Show("Nenhum pet encontrado");

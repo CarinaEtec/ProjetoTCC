@@ -45,6 +45,8 @@ namespace Projeto_TCC.Adicionar
                 if ((ba.Bloco == "") && (ba.Apto == ""))
                 {
                     MessageBox.Show("Bloco/Apartamento não encontrado");
+                    txtApto.Clear();
+                    txtBloco.Clear();
                 }
 
                 else
@@ -57,22 +59,32 @@ namespace Projeto_TCC.Adicionar
                         MoradoresBO morBO = new MoradoresBO();
 
                         mor.Nome = txtNome.Text;
-                        mor.DataNasc = Convert.ToDateTime(mskDataNasc.Text);
-                        mor.Situacao = cbbSituacao.SelectedItem.ToString();
-                        mor.Telefone = mskTelefone.Text;
-                        mor.Celular = mskCelular.Text;
-                        mor.BA.Ba_Cod = Convert.ToInt16(lblBACod.Text);
 
-                        morBO.Gravar(mor);
-                        MessageBox.Show("Morador cadastrado com sucesso");
+                        if ((mor.Nome == "") || (mor.Nome == null))
+                        {
+                            MessageBox.Show("Nome do morador não identificado");
+                        }
+                        else
+                        {
+                            mor.Nome = txtNome.Text;
+                            mor.DataNasc = Convert.ToDateTime(mskDataNasc.Text);
+                            mor.Situacao = cbbSituacao.SelectedItem.ToString();
+                            mor.Telefone = mskTelefone.Text;
+                            mor.Celular = mskCelular.Text;
+                            mor.BA.Ba_Cod = Convert.ToInt16(lblBACod.Text);
 
-                        txtApto.Clear();
-                        txtBloco.Clear();
-                        txtNome.Clear();
-                        mskDataNasc.Clear();
-                        cbbSituacao.SelectedIndex = -1;
-                        mskTelefone.Clear();
-                        mskCelular.Clear();
+                            morBO.Gravar(mor);
+                            MessageBox.Show("Morador cadastrado com sucesso");
+
+                            txtApto.Clear();
+                            txtBloco.Clear();
+                            txtNome.Clear();
+                            mskDataNasc.Clear();
+                            cbbSituacao.SelectedIndex = -1;
+                            mskTelefone.Clear();
+                            mskCelular.Clear();
+                        }
+
                     }
                     catch
                     {

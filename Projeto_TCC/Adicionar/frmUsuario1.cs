@@ -41,26 +41,33 @@ namespace Projeto_TCC.Adicionar
                     FuncionariosBO funcBO = new FuncionariosBO();
 
                     func.Nome = txtNome.Text;
-                    func.Cpf = Convert.ToInt64(mskCPF.Text);
-
-                    func.Funcao = cbbFuncao.SelectedItem.ToString();///
-
-                    func.Telefone = mskTelefone.Text;
-                    func.Celular = mskCelular.Text;
                     func.Senha = txtSenha.Text;
 
 
-                    funcBO.Gravar(func);
-                    MessageBox.Show("Funcionário cadastrado com sucesso");
+                    if ((func.Nome == "") || (func.Nome == null) || (func.Senha == "") || (func.Senha == null))
+                    {
+                        MessageBox.Show("Verifique os campos de nome e senha");
+                    }
+                    else
+                    {
 
-                    txtNome.Clear();
-                    mskCPF.Clear();
+                        func.Nome = txtNome.Text;
+                        func.Cpf = Convert.ToInt64(mskCPF.Text);
+                        func.Funcao = cbbFuncao.SelectedItem.ToString();
+                        func.Telefone = mskTelefone.Text;
+                        func.Celular = mskCelular.Text;
+                        func.Senha = txtSenha.Text;
 
-                    cbbFuncao.SelectedIndex = -1; //
+                        funcBO.Gravar(func);
+                        MessageBox.Show("Funcionário cadastrado com sucesso");
 
-                    mskTelefone.Clear();
-                    mskCelular.Clear();
-                    txtSenha.Clear();
+                        txtNome.Clear();
+                        mskCPF.Clear();
+                        cbbFuncao.SelectedIndex = -1;
+                        mskTelefone.Clear();
+                        mskCelular.Clear();
+                        txtSenha.Clear();
+                    }
                 }
                 else
                 {

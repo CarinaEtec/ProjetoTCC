@@ -85,7 +85,6 @@ namespace Projeto_TCC.Adicionar
                                 VeiculosBO veiculosBO = new VeiculosBO();
                                 veiculos.Modelo = txtModelo.Text;
 
-
                                 if ((veiculos.Modelo == "") || (veiculos.Modelo == null))
                                 {
                                     MessageBox.Show("Modelo não identificado");

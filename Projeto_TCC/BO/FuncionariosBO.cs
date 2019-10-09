@@ -19,18 +19,6 @@ namespace Projeto_TCC.BO
             }
         }
 
-
-        public void Deletar(Funcionarios func)
-        {
-            FuncionariosDAO funcDao = new FuncionariosDAO();
-
-            if (func.Cpf > 0)
-            {
-                funcDao.Delete(func);
-            }
-        }
-
-
         public void Editar(Funcionarios func)
         {
             FuncionariosDAO funcDao = new FuncionariosDAO();

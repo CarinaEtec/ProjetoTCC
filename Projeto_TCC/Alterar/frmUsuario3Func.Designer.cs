@@ -32,7 +32,6 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnAlterar = new System.Windows.Forms.Button();
             this.btnVoltar = new System.Windows.Forms.Button();
-            this.btnExcluir = new System.Windows.Forms.Button();
             this.mskCelular = new System.Windows.Forms.MaskedTextBox();
             this.mskTelefone = new System.Windows.Forms.MaskedTextBox();
             this.label8 = new System.Windows.Forms.Label();
@@ -73,7 +72,7 @@
             // btnAlterar
             // 
             this.btnAlterar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAlterar.Location = new System.Drawing.Point(510, 433);
+            this.btnAlterar.Location = new System.Drawing.Point(510, 478);
             this.btnAlterar.Name = "btnAlterar";
             this.btnAlterar.Size = new System.Drawing.Size(139, 59);
             this.btnAlterar.TabIndex = 7;
@@ -91,17 +90,6 @@
             this.btnVoltar.Text = "Voltar";
             this.btnVoltar.UseVisualStyleBackColor = true;
             this.btnVoltar.Click += new System.EventHandler(this.btnVoltar_Click);
-            // 
-            // btnExcluir
-            // 
-            this.btnExcluir.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnExcluir.Location = new System.Drawing.Point(510, 515);
-            this.btnExcluir.Name = "btnExcluir";
-            this.btnExcluir.Size = new System.Drawing.Size(139, 59);
-            this.btnExcluir.TabIndex = 8;
-            this.btnExcluir.Text = "Excluir";
-            this.btnExcluir.UseVisualStyleBackColor = true;
-            this.btnExcluir.Click += new System.EventHandler(this.btnExcluir_Click);
             // 
             // mskCelular
             // 
@@ -355,7 +343,6 @@
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btnAlterar);
             this.Controls.Add(this.btnVoltar);
-            this.Controls.Add(this.btnExcluir);
             this.Name = "frmUsuario3Func";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "SGC - SISTEMA DE GESTÃO PARA CONDOMÍNIOS";
@@ -375,7 +362,6 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button btnAlterar;
         private System.Windows.Forms.Button btnVoltar;
-        private System.Windows.Forms.Button btnExcluir;
         private System.Windows.Forms.MaskedTextBox mskCelular;
         private System.Windows.Forms.MaskedTextBox mskTelefone;
         private System.Windows.Forms.Label label8;

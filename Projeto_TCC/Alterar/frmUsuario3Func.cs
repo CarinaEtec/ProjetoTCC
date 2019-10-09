@@ -141,40 +141,6 @@ namespace Projeto_TCC.Alterar
             }       
         }
 
-        private void btnExcluir_Click(object sender, EventArgs e)
-        {
-            for (int i = 0; i < dataGridView1.RowCount; i++)
-            {
-                dataGridView1.Rows[i].DataGridView.Columns.Clear();
-            }
-
-            Funcionarios func = new Funcionarios();
-            FuncionariosBO funcBO = new FuncionariosBO();
-
-            try
-            {
-                func.Cpf = Convert.ToInt64(mskCPF.Text);
-                funcBO.Deletar(func);
-
-                MessageBox.Show("Funcionário excluído com sucesso");
-
-                txtNome.Clear();
-                mskCPF.Clear();
-                cbbFuncao.SelectedIndex = -1; //
-                mskTelefone.Clear();
-                mskCelular.Clear();
-                txtBusca.Clear();
-                txtSenha.Clear();
-                panel1.Enabled = false;
-                btnAlterar.Enabled = false;
-                btnExcluir.Enabled = false;
-            }
-            catch
-            {
-                MessageBox.Show("Preencha corretamente os campos e/ou verifique se esses dados não estão sendo usados");
-            }           
-        }
-
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
         }

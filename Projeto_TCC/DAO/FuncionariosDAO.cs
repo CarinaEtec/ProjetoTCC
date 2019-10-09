@@ -33,25 +33,7 @@ namespace Projeto_TCC.DAO
             {
                 throw new Exception("Não foi possível se conectar" + ex.Message);
             }
-        }
-
-        public void Delete(Funcionarios func)
-        {
-            try
-            {
-                MySqlCommand comando = new MySqlCommand();
-                comando.CommandType = CommandType.Text;
-                comando.CommandText = "Delete from Funcionarios where cpf=@cpf";
-
-                comando.Parameters.AddWithValue("@cpf", func.Cpf);
-
-                ConexaoBanco.CRUD(comando);
-            }
-            catch (Exception ex)
-            {
-                throw new Exception("Não foi possível se conectar" + ex.Message);
-            }
-        }
+        }    
 
         public void Update(Funcionarios func)
         {

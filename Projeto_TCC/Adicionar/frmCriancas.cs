@@ -44,36 +44,46 @@ namespace Projeto_TCC.Adicionar
                 if ((ba.Bloco == "") && (ba.Apto == ""))
                 {
                     MessageBox.Show("Bloco/Apartamento não encontrado");
+                    txtApto.Clear();
+                    txtBloco.Clear();
                 }
 
                 else
                 {
                     lblBACod.Text = Convert.ToString(ba.Ba_Cod);
-                    //cadastrar morador
                     try
                     {
                         Moradores mor = new Moradores();
                         MoradoresBO morBO = new MoradoresBO();
 
                         mor.Nome = txtNome.Text;
-                        mor.DataNasc = Convert.ToDateTime(mskDataNasc.Text);
-                        mor.Situacao = cbbSituacao.SelectedItem.ToString();
-                        mor.Telefone = mskTelefone.Text;
-                        mor.Celular = mskCelular.Text;
-                        mor.BA.Ba_Cod = Convert.ToInt16(lblBACod.Text);
 
-                        morBO.Gravar(mor);
-                        MessageBox.Show("Criança cadastrada com sucesso");
+                        if ((mor.Nome == "") || (mor.Nome == null))
+                        {
+                            MessageBox.Show("Nome da criança não identificado");
+                        }
+                        else
+                        {
 
-                        txtApto.Clear();
-                        txtBloco.Clear();
-                        txtNome.Clear();
-                        mskDataNasc.Clear();
-                        mskTelefone.Clear();
-                        mskCelular.Clear();
+                            mor.Nome = txtNome.Text;
+                            mor.DataNasc = Convert.ToDateTime(mskDataNasc.Text);
+                            mor.Situacao = cbbSituacao.SelectedItem.ToString();
+                            mor.Telefone = mskTelefone.Text;
+                            mor.Celular = mskCelular.Text;
+                            mor.BA.Ba_Cod = Convert.ToInt16(lblBACod.Text);
 
-                        cbbSituacao.SelectedIndex = -1;
+                            morBO.Gravar(mor);
+                            MessageBox.Show("Criança cadastrada com sucesso");
 
+                            txtApto.Clear();
+                            txtBloco.Clear();
+                            txtNome.Clear();
+                            mskDataNasc.Clear();
+                            mskTelefone.Clear();
+                            mskCelular.Clear();
+
+                            cbbSituacao.SelectedIndex = -1;
+                        }
 
                     }
                     catch
