@@ -151,7 +151,6 @@
     <Compile Include="Alterar\frmVeiculos2.Designer.cs">
       <DependentUpon>frmVeiculos2.cs</DependentUpon>
     </Compile>
-    <Compile Include="AutoSize.cs" />
     <Compile Include="BO\BABO.cs" />
     <Compile Include="BO\FuncionariosBO.cs" />
     <Compile Include="BO\LocacoesBO.cs" />

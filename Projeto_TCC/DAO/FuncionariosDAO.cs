@@ -27,13 +27,13 @@ namespace Projeto_TCC.DAO
                 comando.Parameters.AddWithValue("@celular", func.Celular);
                 comando.Parameters.AddWithValue("@senha", func.Senha);
 
-        ConexaoBanco.CRUD(comando);
+                ConexaoBanco.CRUD(comando);
             }
             catch (Exception ex)
             {
                 throw new Exception("Não foi possível se conectar" + ex.Message);
             }
-        }    
+        }
 
         public void Update(Funcionarios func)
         {
@@ -61,7 +61,7 @@ namespace Projeto_TCC.DAO
 
         }
 
-        public Funcionarios BuscaCPF(long cpf) 
+        public Funcionarios BuscaCPF(long cpf)
         {
             MySqlCommand comando = new MySqlCommand();
             comando.CommandType = CommandType.Text;
@@ -89,7 +89,7 @@ namespace Projeto_TCC.DAO
             return funcionarios;
         }
 
-        public DataTable BuscaNome (string nome)
+        public DataTable BuscaNome(string nome)
         {
             MySqlConnection con = ConexaoBanco.Conectar();
             MySqlCommand comando = new MySqlCommand();
@@ -120,5 +120,39 @@ namespace Projeto_TCC.DAO
                 throw new ApplicationException(ex.ToString());
             }
         }
+
+
+        public bool tem = false;
+        public bool Login(long cpf, String senha)
+        {
+            try
+            {
+                MySqlCommand comando = new MySqlCommand();
+                comando.CommandType = CommandType.Text;
+                comando.CommandText = "Select * from Funcionarios where cpf=@cpf and senha=@senha";
+
+                comando.Parameters.AddWithValue("@cpf", cpf);
+                comando.Parameters.AddWithValue("@senha", senha);
+
+
+                MySqlDataReader dr = ConexaoBanco.Selecionar(comando);
+                Funcionarios funcionarios = new Funcionarios();
+
+                if (dr.HasRows)
+                {
+                    tem = true;
+                }
+                else
+                {
+                    tem = false;
+                }
+
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Não foi possível se conectar" + ex.Message);
+            }
+            return tem;
+        } 
     }
 }

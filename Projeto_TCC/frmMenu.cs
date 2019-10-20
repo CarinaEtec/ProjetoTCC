@@ -38,7 +38,10 @@ namespace Projeto_TCC
 
         private void btnSair_Click(object sender, EventArgs e)
         {
-            Close();
+            this.Hide();
+            Form1 login = new Form1();
+            login.Closed += (s, args) => this.Close();
+            login.Show();
         }
 
 

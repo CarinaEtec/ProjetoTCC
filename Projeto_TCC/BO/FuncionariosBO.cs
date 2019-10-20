@@ -28,7 +28,7 @@ namespace Projeto_TCC.BO
             }
         }
 
-      
+
         public void BuscaCPF(Funcionarios func)
         {
             FuncionariosDAO funcDao = new FuncionariosDAO();
@@ -46,6 +46,20 @@ namespace Projeto_TCC.BO
             }
         }
 
+        public bool tem=false;
+        public void Login(Funcionarios func)
+        {
+            FuncionariosDAO funcDao = new FuncionariosDAO();
+            tem = funcDao.Login(func.Cpf,func.Senha);
+            if ((func.Cpf != 0) && (func.Senha != null))
+            {
+                funcDao.Login(func.Cpf, func.Senha);
+            }
+        }
+
+
 
     }
+
+
 }

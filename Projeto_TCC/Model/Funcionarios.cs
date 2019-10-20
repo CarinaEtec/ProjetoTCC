@@ -28,6 +28,9 @@ namespace Projeto_TCC.Model
         public string Celular { get => celular; set => celular = value; }
         public string Senha { get => senha; set => senha = value; }
 
-        
+
+
+
+
     }
 }

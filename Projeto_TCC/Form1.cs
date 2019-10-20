@@ -1,4 +1,6 @@
 ﻿using Projeto_TCC.Adicionar;
+using Projeto_TCC.BO;
+using Projeto_TCC.Model;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -20,10 +22,32 @@ namespace Projeto_TCC
 
         private void btnEnrar_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            frmMenu menuzin = new frmMenu();
-            menuzin.Closed += (s, args) => this.Close();
-            menuzin.Show();
+            try
+            {    
+                FuncionariosBO funcBo = new FuncionariosBO();
+                Funcionarios func = new Funcionarios();
+                func.Cpf = Convert.ToInt64(mskCPF.Text);
+                func.Senha = txtSenha.Text;
+
+                funcBo.Login(func);
+                if (funcBo.tem == true)
+                {
+                    MessageBox.Show("Logado com sucesso", "Entrando", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                    this.Hide();
+                    frmMenu menuzin = new frmMenu();
+                    menuzin.Closed += (s, args) => this.Close();
+                    menuzin.Show();
+                }
+                else
+                {
+                    MessageBox.Show("Login não encontrado");
+                }
+            }
+            catch
+            {
+                MessageBox.Show("Verifique os dados e tente novamente");
+            }
         }
 
         private void btnSair_Click(object sender, EventArgs e)
@@ -38,5 +62,8 @@ namespace Projeto_TCC
             add.Closed += (s, args) => this.Close();
             add.Show();
         }
+
+
+
     }
 }
