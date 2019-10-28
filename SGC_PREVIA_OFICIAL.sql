@@ -3,7 +3,7 @@ USE SGC;
 	/* ------------------------------------------- */   
     CREATE TABLE Funcionarios(
 	Nome VARCHAR(50) NOT NULL,
-	Cpf BIGINT (11) NOT NULL PRIMARY KEY UNIQUE,
+	Cpf BIGINT (11) NOT NULL PRIMARY KEY,
 	Funcao VARCHAR(25) NOT NULL,
 	Telefone VARCHAR (15), 
 	Celular VARCHAR (15),

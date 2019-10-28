@@ -115,7 +115,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(43, 152);
+            this.label8.Location = new System.Drawing.Point(43, 200);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(47, 24);
             this.label8.TabIndex = 162;
@@ -173,7 +173,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(43, 203);
+            this.label1.Location = new System.Drawing.Point(43, 148);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(61, 24);
             this.label1.TabIndex = 156;
@@ -186,8 +186,8 @@
             this.panel1.Controls.Add(this.txtSenha);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label7);
-            this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.label3);
+            this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.txtNome);
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.label5);
@@ -209,19 +209,19 @@
             "ADMINISTRADOR",
             "PORTEIRO ",
             "ZELADOR"});
-            this.cbbFuncao.Location = new System.Drawing.Point(295, 203);
+            this.cbbFuncao.Location = new System.Drawing.Point(295, 148);
             this.cbbFuncao.Name = "cbbFuncao";
             this.cbbFuncao.Size = new System.Drawing.Size(195, 32);
-            this.cbbFuncao.TabIndex = 9;
+            this.cbbFuncao.TabIndex = 8;
             // 
             // mskCPF
             // 
             this.mskCPF.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mskCPF.Location = new System.Drawing.Point(295, 152);
+            this.mskCPF.Location = new System.Drawing.Point(295, 200);
             this.mskCPF.Mask = "00000000000";
             this.mskCPF.Name = "mskCPF";
             this.mskCPF.Size = new System.Drawing.Size(154, 29);
-            this.mskCPF.TabIndex = 8;
+            this.mskCPF.TabIndex = 9;
             // 
             // txtSenha
             // 

@@ -63,7 +63,7 @@ namespace Projeto_TCC.Alterar
 
                 babo.BuscaCodBA(ba);
 
-                if ((ba.Bloco == "") && (ba.Apto == ""))
+                if ((ba.Bloco == "") || (ba.Apto == ""))
                 {
                     MessageBox.Show("Bloco/Apartamento não encontrado");
                 }

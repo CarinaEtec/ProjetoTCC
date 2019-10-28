@@ -193,7 +193,7 @@
             this.mskCPF.Mask = "00000000000";
             this.mskCPF.Name = "mskCPF";
             this.mskCPF.Size = new System.Drawing.Size(154, 29);
-            this.mskCPF.TabIndex = 2;
+            this.mskCPF.TabIndex = 3;
             // 
             // cbbFuncao
             // 
@@ -206,7 +206,7 @@
             this.cbbFuncao.Location = new System.Drawing.Point(314, 178);
             this.cbbFuncao.Name = "cbbFuncao";
             this.cbbFuncao.Size = new System.Drawing.Size(195, 32);
-            this.cbbFuncao.TabIndex = 3;
+            this.cbbFuncao.TabIndex = 2;
             // 
             // frmUsuario1
             // 

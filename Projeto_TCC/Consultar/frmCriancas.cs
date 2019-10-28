@@ -63,7 +63,7 @@ namespace Projeto_TCC.Consultar
                     for (int i = 0; i == dataGridView1.RowCount; i++)
                     {
                         MessageBox.Show("Nenhuma criança encontrada");
-                        txtBuscaNome.Clear();
+                        txtBusca.Clear();
                     }
                 }
                 catch
@@ -81,7 +81,7 @@ namespace Projeto_TCC.Consultar
                     for (int i = 0; i == dataGridView1.RowCount; i++)
                     {
                         MessageBox.Show("Nenhuma criança encontrada");
-                        txtBuscaNome.Clear();
+                        txtBusca.Clear();
                     }
                 }
                 catch

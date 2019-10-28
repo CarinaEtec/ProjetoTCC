@@ -105,7 +105,7 @@
             this.txtTutor.Location = new System.Drawing.Point(312, 225);
             this.txtTutor.Name = "txtTutor";
             this.txtTutor.Size = new System.Drawing.Size(334, 29);
-            this.txtTutor.TabIndex = 4;
+            this.txtTutor.TabIndex = 3;
             // 
             // txtNome
             // 
@@ -113,7 +113,7 @@
             this.txtNome.Location = new System.Drawing.Point(312, 273);
             this.txtNome.Name = "txtNome";
             this.txtNome.Size = new System.Drawing.Size(334, 29);
-            this.txtNome.TabIndex = 3;
+            this.txtNome.TabIndex = 4;
             // 
             // label4
             // 

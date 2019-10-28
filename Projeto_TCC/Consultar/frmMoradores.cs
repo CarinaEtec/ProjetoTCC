@@ -45,7 +45,7 @@ namespace Projeto_TCC.Consultar
                     for (int i = 0; i == dataGridView1.RowCount; i++)
                     {
                         MessageBox.Show("Nenhum morador encontrado");
-                        txtBusca.Clear();
+                        txtBuscaNome.Clear();
                     }
                 }
                 catch

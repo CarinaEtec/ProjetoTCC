@@ -41,7 +41,7 @@ namespace Projeto_TCC.Adicionar
 
                 babo.BuscaCodBA(ba);
 
-                if ((ba.Bloco == "") && (ba.Apto == ""))
+                if ((ba.Bloco == "") || (ba.Apto == ""))
                 {
                     MessageBox.Show("Bloco/Apartamento não encontrado");
                     txtApto.Clear();
