@@ -86,7 +86,7 @@ namespace Projeto_TCC.Alterar
 
             lblMoradorCod.Visible = false;
             lblBACod.Visible = false;
-
+            lblCodLocacao.Visible = false;
             rbtApto.Checked = true;
         }
 

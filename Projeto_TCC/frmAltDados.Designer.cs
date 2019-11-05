@@ -126,7 +126,7 @@
             this.btnLocacao.Name = "btnLocacao";
             this.btnLocacao.Size = new System.Drawing.Size(220, 75);
             this.btnLocacao.TabIndex = 5;
-            this.btnLocacao.Text = "        Locação";
+            this.btnLocacao.Text = "        Locações";
             this.btnLocacao.UseVisualStyleBackColor = true;
             this.btnLocacao.Click += new System.EventHandler(this.btnLocacao_Click_1);
             // 

@@ -62,16 +62,16 @@
             this.btnAdicionarDados.Name = "btnAdicionarDados";
             this.btnAdicionarDados.Size = new System.Drawing.Size(209, 75);
             this.btnAdicionarDados.TabIndex = 9;
-            this.btnAdicionarDados.Text = "Adicionar Dados";
+            this.btnAdicionarDados.Text = "Incluir Dados";
             this.btnAdicionarDados.UseVisualStyleBackColor = true;
             this.btnAdicionarDados.Click += new System.EventHandler(this.btnAdicionarDados_Click);
             // 
             // btnSair
             // 
             this.btnSair.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSair.Location = new System.Drawing.Point(496, 627);
+            this.btnSair.Location = new System.Drawing.Point(480, 627);
             this.btnSair.Name = "btnSair";
-            this.btnSair.Size = new System.Drawing.Size(114, 52);
+            this.btnSair.Size = new System.Drawing.Size(130, 52);
             this.btnSair.TabIndex = 11;
             this.btnSair.Text = "Sair";
             this.btnSair.UseVisualStyleBackColor = true;
@@ -138,7 +138,7 @@
             this.btnLocacao.Name = "btnLocacao";
             this.btnLocacao.Size = new System.Drawing.Size(209, 75);
             this.btnLocacao.TabIndex = 5;
-            this.btnLocacao.Text = "        Locação";
+            this.btnLocacao.Text = "        Locações";
             this.btnLocacao.UseVisualStyleBackColor = true;
             this.btnLocacao.Click += new System.EventHandler(this.btnLocacao_Click);
             // 

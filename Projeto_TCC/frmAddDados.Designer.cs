@@ -60,9 +60,9 @@
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(125, 50);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(437, 29);
+            this.label1.Size = new System.Drawing.Size(399, 29);
             this.label1.TabIndex = 28;
-            this.label1.Text = "O QUE VOCÊ DESEJA ADICIONAR?";
+            this.label1.Text = "O QUE VOCÊ DESEJA INCLUIR?";
             this.label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // btnMoradores
@@ -126,7 +126,7 @@
             this.btnLocacao.Name = "btnLocacao";
             this.btnLocacao.Size = new System.Drawing.Size(209, 75);
             this.btnLocacao.TabIndex = 5;
-            this.btnLocacao.Text = "        Locação";
+            this.btnLocacao.Text = "        Locações";
             this.btnLocacao.UseVisualStyleBackColor = true;
             this.btnLocacao.Click += new System.EventHandler(this.btnLocacao_Click_1);
             // 
